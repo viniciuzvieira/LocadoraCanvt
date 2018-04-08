@@ -41,8 +41,8 @@
             minDate: 0,
             onClose: function (selectedDate) {
                 var newDate = new Date(selectedDate),
-                    tomorrow = new Date(newDate.getTime() + 24 * 60 * 60 * 1000),
-                    nextDate = (tomorrow.getMonth() + 1) + '/' + tomorrow.getDate() + '/' + tomorrow.getFullYear();
+                        tomorrow = new Date(newDate.getTime() + 24 * 60 * 60 * 1000),
+                        nextDate = (tomorrow.getMonth() + 1) + '/' + tomorrow.getDate() + '/' + tomorrow.getFullYear();
                 $(".awe-calendar.to").datepicker("option", "minDate", nextDate).focus();
             }
         });
@@ -97,11 +97,11 @@
     function MenuSticky() {
         if ($('#header_content').length) {
             var $this = $('#header_content'),
-                size_point = $this.data().responsive,
-                window_w = $(window).innerWidth(),
-                window_scroll = $(window).scrollTop(),
-                top_h = $('#header .header_top').innerHeight(),
-                this_h = $this.innerHeight();
+                    size_point = $this.data().responsive,
+                    window_w = $(window).innerWidth(),
+                    window_scroll = $(window).scrollTop(),
+                    top_h = $('#header .header_top').innerHeight(),
+                    this_h = $this.innerHeight();
 
             if (size_point == undefined || size_point == '') {
                 size_point = 1199;
@@ -133,11 +133,11 @@
         if ($('#header_content').length) {
 
             var $this = $('#header_content'),
-                size_point = $this.data().responsive,
-                window_scroll = $(window).scrollTop(),
-                top_h = $('#header .header_top').innerHeight(),
-                this_h = $this.innerHeight(),
-                window_w = $(window).innerWidth();
+                    size_point = $this.data().responsive,
+                    window_scroll = $(window).scrollTop(),
+                    top_h = $('#header .header_top').innerHeight(),
+                    this_h = $this.innerHeight(),
+                    window_w = $(window).innerWidth();
 
             if (size_point == undefined || size_point == '') {
                 size_point = 1199;
@@ -175,8 +175,8 @@
             event.preventDefault();
 
             var $this = $(this),
-                $parent_li = $this.parent('a').parent('li'),
-                $parent_ul = $parent_li.parent('ul');
+                    $parent_li = $this.parent('a').parent('li'),
+                    $parent_ul = $parent_li.parent('ul');
 
             if ($parent_li.find('> ul').is(':hidden')) {
                 $parent_ul.find('> li > ul').slideUp();
@@ -200,7 +200,7 @@
 
         $('.awe-ajax').on('click', function (event) {
             var $this = $(this),
-                link_href = $this.attr('href');
+                    link_href = $this.attr('href');
 
             $('body').addClass('awe-overflow-h');
             $('#awe-popup-overlay, #awe-popup-wrap').addClass('in');
@@ -227,9 +227,9 @@
         if ($('#awe-popup-wrap').hasClass('in')) {
 
             var $this = $('#awe-popup-wrap .awe-popup-content'),
-                window_h = $(window).innerHeight(),
-                height_e = $this.innerHeight(),
-                height_part = (window_h - height_e) / 2;
+                    window_h = $(window).innerHeight(),
+                    height_e = $this.innerHeight(),
+                    height_part = (window_h - height_e) / 2;
 
             if (height_e < window_h && height_e > 0) {
 
@@ -259,21 +259,21 @@
                 }
             }
         })
-            .done(function (data) {
+                .done(function (data) {
 
-                $(id).html(data);
+                    $(id).html(data);
 
-                // Apply callback
-                if (callback) {
-                    callback();
-                }
-            })
-            .fail(function () {
-                console.log("error");
-            })
-            .always(function () {
-                console.log("complete");
-            });
+                    // Apply callback
+                    if (callback) {
+                        callback();
+                    }
+                })
+                .fail(function () {
+                    console.log("error");
+                })
+                .always(function () {
+                    console.log("complete");
+                });
     }
 
     /*Banner Slide*/
@@ -290,8 +290,8 @@
                 navigationText: ['<i class="lotus-icon-left-arrow"></i>', '<i class="lotus-icon-right-arrow"></i>'],
                 beforeInit: function () {
                     var height = $('#banner-slider').data().height,
-                        window_h = $(window).height(),
-                        window_w = $(window).width();
+                            window_h = $(window).height(),
+                            window_w = $(window).width();
 
                     $('.slider-item').each(function (index, el) {
                         var url = $(this).data().image;
@@ -317,7 +317,7 @@
                 },
                 beforeUpdate: function () {
                     var height = $('#banner-slider').data().height,
-                        window_w = $(window).width();
+                            window_w = $(window).width();
 
                     if (!(height != '' && height != undefined)) {
                         $('.slider-item').each(function (index, el) {
@@ -403,7 +403,6 @@
                 autoHeight: "off",
                 forceFullWidth: "off",
 
-
                 hideThumbsOnMobile: "off",
                 hideNavDelayOnMobile: 1500,
                 hideBulletsOnMobile: "off",
@@ -424,8 +423,8 @@
         if ($('.gallery').length) {
             $('.gallery').each(function (index, el) {
                 var $this = $(this),
-                    $isotope = $this.find('.gallery-isotope'),
-                    $filter = $this.find('.gallery-cat');
+                        $isotope = $this.find('.gallery-isotope'),
+                        $filter = $this.find('.gallery-cat');
 
                 if ($isotope.length) {
                     var isotope_run = function (filter) {
@@ -467,12 +466,12 @@
     /* Modal*/
     $(".btn-play").click(function (event) {
         var target = $(this).attr('href'),
-            url = $(target).data('video');
+                url = $(target).data('video');
 
         var has_query_string = url.split('?', url);
-        if(typeof has_query_string[1] == 'string'){
-            url += '&' +$(target).data('query-string');
-        }else{
+        if (typeof has_query_string[1] == 'string') {
+            url += '&' + $(target).data('query-string');
+        } else {
             url += '?' + $(target).data('query-string');
         }
         $(target).find('iframe').attr('src', url);
@@ -503,11 +502,11 @@
                 if (typeof single_item == 'boolean' && single_item == false) {
                     options['singleItem'] = false;
                     var mobile = parseInt($this.data("mobile")),
-                        tablet = parseInt($this.data("tablet")),
-                        small_desktop = parseInt($this.data("small_desktop")),
-                        desktop = parseInt($this.data("desktop")),
-                        nav = ($this.data("nav")) ? true : false,
-                        pagination = ($this.data("pagination")) ? true : false;
+                            tablet = parseInt($this.data("tablet")),
+                            small_desktop = parseInt($this.data("small_desktop")),
+                            desktop = parseInt($this.data("desktop")),
+                            nav = ($this.data("nav")) ? true : false,
+                            pagination = ($this.data("pagination")) ? true : false;
                     options['items'] = desktop;
                     options['itemsDesktop'] = [1200, desktop];
                     options['itemsDesktopSmall'] = [992, small_desktop];
@@ -538,10 +537,10 @@
             var nextYear = new Date(new Date().getFullYear() + 1, 1 - 1, 26);
             $('#countdown').countdown(nextYear, function (event) {
                 var $this = $(this).html(event.strftime(''
-                    + '<div class="item"><span class="count">%D</span><span>Days</span></div>'
-                    + '<div class="item"><span class="count">%H</span><span>Hours</span></div>'
-                    + '<div class="item"><span class="count">%M</span><span>Minutes</span></div>'
-                    + '<div class="item"><span class="count">%S</span><span>Seconds</span></div>'));
+                        + '<div class="item"><span class="count">%D</span><span>Days</span></div>'
+                        + '<div class="item"><span class="count">%H</span><span>Hours</span></div>'
+                        + '<div class="item"><span class="count">%M</span><span>Minutes</span></div>'
+                        + '<div class="item"><span class="count">%S</span><span>Seconds</span></div>'));
             });
         }
     }
@@ -552,14 +551,14 @@
         if ($('.count-date').length) {
             $('.count-date').each(function (index, el) {
                 var $this = $(this),
-                    end_date = $this.attr('data-end');
+                        end_date = $this.attr('data-end');
 
                 if ($this.attr('data-end') !== '' && typeof $this.attr('data-end') !== 'undefined') {
 
                     $this.countdown(end_date, function (event) {
                         $(this).html(
-                            event.strftime('<span> %D <span>Days</span></span> <span> %H <span>HOURS</span></span> <span> %M <span>MINUTES</span></span> <span> %S <span>SECONDS</span></span>')
-                        );
+                                event.strftime('<span> %D <span>Days</span></span> <span> %H <span>HOURS</span></span> <span> %M <span>MINUTES</span></span> <span> %S <span>SECONDS</span></span>')
+                                );
                     });
 
                 }
@@ -626,7 +625,7 @@
                 $('.room-detail_thumbs').on('click', '.owl-item', function (event) {
 
                     var $this = $(this),
-                        index = $this.index();
+                            index = $this.index();
                     $('.room-detail_thumbs').find('.active').removeClass('active');
                     $this.addClass('active');
                     $(".room-detail_img").data("owlCarousel").goTo(index);
@@ -656,7 +655,7 @@
     function BackgroundRoomItem() {
         $('.room_item-6, .room_item-5').each(function (index, el) {
             var $this = $(this),
-                link_src = $this.data().background;
+                    link_src = $this.data().background;
 
             if (link_src != undefined && link_src != '') {
                 $this.css('background-image', 'url(' + link_src + ')');
@@ -679,9 +678,9 @@
     function ContactMap() {
         if ($('#map').length) {
             var $this = $('#map'),
-                center = ($this.data().center).split(','),
-                locations = ($this.data().locations).split('--'),
-                styles = $this.data('styles');
+                    center = ($this.data().center).split(','),
+                    locations = ($this.data().locations).split('--'),
+                    styles = $this.data('styles');
 
             var LatLng_center = new google.maps.LatLng(center[0], center[1]);
 
@@ -901,7 +900,7 @@
             $('.location-item').on('click', function (event) {
                 event.preventDefault();
                 var $this = $(this),
-                    location_item = ($this.data().location).split(',');
+                        location_item = ($this.data().location).split(',');
 
                 var location_center = new google.maps.LatLng(location_item[0], location_item[1]);
 
@@ -937,7 +936,7 @@
         if ($('#attraction-maps').length) {
             var infoWindow = new google.maps.InfoWindow();
             var $firstload = $('#attraction_location').find('.active a'),
-                firstlocation = ($firstload.data().latlng).split(',');
+                    firstlocation = ($firstload.data().latlng).split(',');
 
             var latlng = new google.maps.LatLng(firstlocation[0], firstlocation[1]);
 
@@ -962,10 +961,10 @@
                 event.preventDefault();
 
                 var $this = $(this),
-                    url = $this.attr('href'),
-                    location = ($this.data().latlng).split(','),
-                    title = $this.data().title,
-                    address = $this.data().address;
+                        url = $this.attr('href'),
+                        location = ($this.data().latlng).split(','),
+                        title = $this.data().title,
+                        address = $this.data().address;
 
                 $this.parents('#attraction_location').find('.active').removeClass('active');
                 $this.parent('li').addClass('active');
