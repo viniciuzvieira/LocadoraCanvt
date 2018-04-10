@@ -1,17 +1,17 @@
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>oiem</title>
+        <title>Aluguel de Carros</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" href="images/favicon.png"/>
-
+        <link rel="shortcut icon" href="images/logo-header.png"/>
+        <link href="../../images/css/lib/images.css" rel="stylesheet" type="text/css"/>
         <!-- GOOGLE FONT -->
         <link href='http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700' rel='stylesheet' type='text/css'>
 
@@ -65,24 +65,6 @@
                                 <a href="login.html">Login</a>
                                 <a href="register.html">register</a>
                             </span>
-
-                            <!--                        <div class="dropdown currency">
-                                                        <span>USD <i class="fa fa"></i></span>
-                                                        <ul>
-                                                            <li class="active"><a href="#">USD</a></li>
-                                                            <li><a href="#">EUR</a></li>
-                                                        </ul>
-                                                    </div>
-                            
-                                                    <div class="dropdown language">
-                                                        <span>ENG</span>
-                            
-                                                        <ul>
-                                                            <li class="active"><a href="#">ENG</a></li>
-                                                            <li><a href="#">FR</a></li>
-                                                        </ul>
-                                                    </div>-->
-
                         </div>
                     </div>
                 </div>
@@ -98,15 +80,10 @@
                         <nav class="header_menu">
                             <ul class="menu">
                                 <li class="current-menu-item">
-                                    <a href="index.html">Home <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li class="current-menu-item"><a href="index.html">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                        <li><a href="index-3.html">Home 3</a></li>
-                                        <li><a href="index-4.html">Home 4</a></li>
-                                    </ul>
+                                    <a href="home">Home </a>
+
                                 </li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.html">A Canvt</a></li>
 
                                 <li>
                                     <a href="#">Room <span class="fa fa-caret-down"></span></a>
@@ -120,84 +97,13 @@
                                         <li><a href="room-detail.html">Room Detail</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#">Restaurant <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="restaurants-1.html">Restaurant 1</a></li>
-                                        <li><a href="restaurants-2.html">Restaurant 2</a></li>
-                                        <li><a href="restaurants-3.html">Restaurant 3</a></li>
-                                        <li><a href="restaurants-4.html">Restaurant 4</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Reservation <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="reservation-step-1.html">Reservation Step 1</a></li>
-                                        <li><a href="reservation-step-2.html">Reservation Step 2</a></li>
-                                        <li><a href="reservation-step-3.html">Reservation Step 3</a></li>
-                                        <li><a href="reservation-step-4.html">Reservation Step 4</a></li>
-                                        <li><a href="reservation-step-5.html">Reservation Step 5</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Page <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Guest Book <span class="fa fa-caret-right"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="guest-book.html">Guest Book 1</a></li>
-                                                <li><a href="guest-book-2.html">Guest Book 2</a></li>
-                                            </ul>
-                                        </li>
 
-                                        <li>
-                                            <a href="#">Event <span class="fa fa-caret-right"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="events.html">Events</a></li>
-                                                <li><a href="events-fullwidth.html">Events Fullwidth</a></li>
-                                                <li><a href="events-detail.html">Events Detail</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="attractions.html">Attractions</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Term Condition <span class="fa fa-caret-right"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="term-condition.html">Term Condition 1</a></li>
-                                                <li><a href="term-condition-2.html">Term Condition 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="">Activiti <span class="fa fa-caret-down"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="activiti.html">Activiti</a></li>
-                                                <li><a href="activiti-detail.html">Activiti Detail</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="check-out.html">Check Out</a></li>
-                                        <li><a href="shortcode.html">ShortCode</a></li>
-                                        <li><a href="page-404.html">404 Page</a></li>
-                                        <li><a href="comingsoon.html">Comming Soon</a></li>
-                                    </ul>
-                                </li>
                                 <li>
-                                    <a href="#">Gallery <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="gallery.html">Gallery Style 1</a></li>
-                                        <li><a href="gallery-2.html">Gallery Style 2</a></li>
-                                        <li><a href="gallery-3.html">Gallery Style 3</a></li>
-                                    </ul>
+                                    <a href="reserva">Reserva</a>
+
                                 </li>
-                                <li>
-                                    <a href="#">Blog <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                                        <li><a href="blog-detail-fullwidth.html">Blog Detail Fullwidth</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+
+                                <li><a href="contact.html">Contato</a></li>
                             </ul>
                         </nav>
 
@@ -214,30 +120,27 @@
                 <h1 class="element-invisible">Slider</h1>
                 <div id="slider-revolution">
                     <ul>
-                        <!--                    <li data-transition="fade">
-                                                <img src="images/slider/img-1.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-                                             
-                                            </li> -->
+
 
                         <li data-transition="fade">
                             <img class="img-responsive" src="images/slider/img-1.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-<!--                            
--->                            <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300" data-easing="easeOutBack">
-                              <img src="images/icon-slider-1.png" alt="">
+                            <!--                            
+                            -->                            <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300" data-easing="easeOutBack">
+                                <img src="images/icon-slider-1.png" alt="">
                             </div>
-                
-                             <div class="tp-caption sft fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                               EACH HOTEL IS
+
+                            <div class="tp-caption sft fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                                Esportivo
                             </div>
-    
+
                             <div class="tp-caption sfb fadeout slider-caption slider-caption-3" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack"  data-start="2000">
-                                UNIQUE 60%
+                                15% Desconto
                             </div>
-                            
-                            <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2200">JUST LIKE YOU</div>
-    
+
+                            <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2200">APENAS PARA VOCÊ</div>
+
                             <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="395" data-easing="easeOutBack" data-speed="700" data-start="2400"><img src="images/icon-slider-2.png" alt=""></div>
-                       
+
                         </li> 
 
                         <li data-transition="fade">
@@ -283,13 +186,13 @@
             <!-- END / CHECK AVAILABILITY -->
 
             <!-- ACCOMD ODATIONS -->
-            <section class="section-accomd awe-parallax bg-14">
+            <section class="section-accomd awe-parallax">
                 <div class="container">
                     <div class="accomd-modations">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="accomd-modations-header">
-                                    <h2 class="heading">ROOMS & RATES</h2>
+                                    <h2 class="heading">Carros & Destaques</h2>
                                     <img src="images/icon-accmod.png" alt="icon">
                                     <p>Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.</p>
                                 </div>
@@ -303,10 +206,10 @@
                                         <div class="col-xs-4">
                                             <div class="accomd-modations-room">
                                                 <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                    <a href="#"><img src="images/Cars/MC250_1.jpg" class="cars" alt="Mercedes-Bens azul"></a>
                                                 </div>
                                                 <div class="text">
-                                                    <h2><a href="#">Luxury Room</a></h2>
+                                                    <h2><a href="#">Mercedes-Benz C250</a></h2>
                                                     <p class="price">
                                                         <span class="amout">$320</span>/days
                                                     </p>
@@ -319,10 +222,10 @@
                                         <div class="col-xs-4">
                                             <div class="accomd-modations-room">
                                                 <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                    <a href="#"><img src="images/Cars/LDEvoqueC.jpg"   class="cars"alt=""></a>
                                                 </div>
                                                 <div class="text">
-                                                    <h2><a href="#">Family Room</a></h2>
+                                                    <h2><a href="#">RANGE ROVER EVOQUE HSE DYNAMIC CONVERSÍVEL</a></h2>
                                                     <p class="price">
                                                         <span class="amout">$320</span>/days
                                                     </p>
@@ -335,10 +238,11 @@
                                         <div class="col-xs-4">
                                             <div class="accomd-modations-room">
                                                 <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                    <a href="#"><img src="images/Cars/300C.jpg" alt=""></a>
                                                 </div>
                                                 <div class="text">
-                                                    <h2><a href="#">Couple Room</a></h2>
+                                                    <h2><a href="#">CHRYSLER 300C
+                                                        </a></h2>
                                                     <p class="price">
                                                         <span class="amout">$320</span>/days
                                                     </p>
@@ -351,10 +255,10 @@
                                         <div class="col-xs-4">
                                             <div class="accomd-modations-room">
                                                 <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                    <a href="#"><img src="images/Cars/AgeraRS_1.jpg" alt=""></a>
                                                 </div>
                                                 <div class="text">
-                                                    <h2><a href="#">Standard</a></h2>
+                                                    <h2><a href="#">Agera RS</a></h2>
                                                     <p class="price">
                                                         <span class="amout">$320</span>/day
                                                     </p>
@@ -367,10 +271,10 @@
                                         <div class="col-xs-4">
                                             <div class="accomd-modations-room">
                                                 <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                    <a href="#"><img src="images/Cars/KRegera.jpg" alt=""></a>
                                                 </div>
                                                 <div class="text">
-                                                    <h2><a href="#">Standard</a></h2>
+                                                    <h2><a href="#">Regera </a></h2>
                                                     <p class="price">
                                                         <span class="amout">$320</span>/day
                                                     </p>
@@ -384,10 +288,10 @@
                                         <div class="col-xs-4">
                                             <div class="accomd-modations-room">
                                                 <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                    <a href="#"><img src="images/Cars/BMWI8.jpg" alt=""></a>
                                                 </div>
                                                 <div class="text">
-                                                    <h2><a href="#">Standard</a></h2>
+                                                    <h2><a href="#">BMWI8</a></h2>
                                                     <p class="price">
                                                         <span class="amout">$320</span>/day
                                                     </p>
@@ -520,7 +424,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="text">
-                                    <h2 class="heading">ABOUT US</h2>
+                                    <h2 class="heading">Sobre Nós</h2>
                                     <span class="box-border"></span>
                                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source</p>
                                     <a href="#" class="awe-btn awe-btn-default">READ MORE</a>
@@ -541,21 +445,21 @@
 
                             <div class="col-md-6 col-md-push-6">
                                 <div class="img">
-                                    <img src="images/home/ourbest/img-1.jpg" alt="">
+                                    <img src="images/Cars/BMWI8.jpg" alt="">
                                 </div>
                             </div>
 
                             <div class="col-md-6 col-md-pull-6 ">
                                 <div class="text">
-                                    <h2 class="heading">Our Best</h2>
-                                    <p>One of Catalina Island's best-loved hotels, Hotel Vista Del Mar is recognized as one of Avalon's leading hotels with gracious island hospitality, thoughtful amenities and distinctive .</p>
+                                    <h2 class="heading">Um dos Melhores</h2>
+                                    <p>O BMW i8 Roadster revela-se como futurista nos mais ínfimos detalhes. As linhas modernas transmitem um conceito que dificilmente poderia ser mais dinâmico. O componente mais apelativo: as imponentes portas de baixo peso em fibra de carbono com abertura ascendente que podem ser facilmente abertas.</p>
                                     <ul>
-                                        <li><img src="images/home/ourbest/icon-3.png" alt="icon">250 Best Rooms  5 Star</li>
-                                        <li><img src="images/home/ourbest/icon-2.png" alt="icon">Wet Bar with Refrigerator</li>
-                                        <li><img src="images/home/ourbest/icon-4.png" alt="icon">Double Whirlpool Jacuzzi Tub</li>
-                                        <li><img src="images/home/ourbest/icon-5.png" alt="icon">Luxurious High Thread Count </li>
-                                        <li><img src="images/home/ourbest/icon-1.png" alt="icon">Breakfast each morning</li>
-                                        <li><img src="images/home/ourbest/icon-6.png" alt="icon">Ocean Views to lotus Hotel</li>
+                                        <li><img src="images/icons/snow-icon.png" alt="icon">Ar-condicionado digital bi-zone</li>
+                                        <li><img src="images/icons/price-icon.png" alt="icon">2.000R$/diaria</li>
+                                        <li><img src="images/icons/engine-icon.png" alt="icon">Motor elétrico 1.5 (362 cv)</li>
+                                        <li><img src="images/icons/bag-icon.png" alt="icon">Abertura da bagageira pelo interior     </li>
+                                        <li><img src="images/icons/controlP-icon.png" alt="icon">Computador de bordo</li>
+                                        <li><img src="images/icons/five-icon.png" alt="icon">5 Airbags inclusos</li>
                                     </ul>
                                 </div>
                             </div>
@@ -567,52 +471,7 @@
             </section>
             <!-- END / OUR BEST -->
 
-            <!-- HOME GUEST BOOK -->
-            <div class="section-home-guestbook awe-parallax bg-13">
-                <div class="container">
-                    <div class="home-guestbook"> 
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <div class="guestbook-content owl-single">
-
-                                    <!-- ITEM -->
-                                    <div class="guestbook-item">
-                                        <div class="img">
-                                            <img src="images/avatar/img-5.jpg" alt="">
-                                        </div>
-
-                                        <div class="text">
-                                            <p>This is the only place to stay in Catalina! I have stayed in the cheaper hotels and they were fine, but this is just the icing on the cake! After spending the day bike riding and hiking to come back and enjoy a glass of wine while looking out your ocean view window and then to top it all off...</p>
-                                            <span><strong>Seelentag</strong></span><br>
-                                            <span>From Los Angeles, California</span>
-                                        </div> 
-                                    </div>
-                                    <!-- ITEM -->
-
-                                    <!-- ITEM -->
-                                    <div class="guestbook-item">
-                                        <div class="img">
-                                            <img src="images/avatar/img-5.jpg" alt="">
-                                        </div>
-
-                                        <div class="text">
-                                            <p>This is the only place to stay in Catalina! I have stayed in the cheaper hotels and they were fine, but this is just the icing on the cake! After spending the day bike riding and hiking to come back and enjoy a glass of wine while looking out your ocean view window and then to top it all off...</p>
-                                            <span><strong>Seelentag</strong></span><br>
-                                            <span>From Los Angeles, California</span>
-                                        </div> 
-                                    </div>
-                                    <!-- ITEM -->
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- END / HOME GUEST BOOK -->
-
+            
             <!-- HOME NEW -->
             <section class="section-event-news bg-white">
                 <div class="container">
@@ -706,11 +565,11 @@
                                         <div class="col-md-12">
                                             <div class="news-item">
                                                 <div class="img">
-                                                    <a href="#"><img src="images/home/lotusnews/img-1.jpg" alt=""></a>
+                                                    <a href="noticia.html"><img src="images/Cars/destaque-carros-2018ve.jpg" alt=""></a>
                                                 </div>
                                                 <div class="text">
-                                                    <span class="date">21 / March</span>
-                                                    <h2><a href="#">UPDATE MENU FOOD IN lotus HOTEL</a></h2>
+                                                    <span class="date">10/04</span>
+                                                    <h2><a href="#">Carros 2018: veja 80 lançamentos esperados</a></h2>
                                                     <a href="" class="read-more">[ Read More ]</a>
                                                 </div>
                                             </div>
@@ -949,19 +808,7 @@
                             </div>
                             <!-- END / WIDGET MAILCHIMP -->
 
-                            <!-- WIDGET SOCIAL -->
-                            <div class="col-lg-3">
-                                <div class="social">
-                                    <div class="social-content">
-                                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        <a href="#"><i class="fa fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END / WIDGET SOCIAL -->
+
 
                         </div>
                     </div>
@@ -977,12 +824,12 @@
                                 <div class="widget widget_logo">
                                     <div class="widget-logo">
                                         <div class="img">
-                                            <a href="#"><img src="images/logo-footer.png" alt=""></a>
+                                            <a href="#"><img src="images/logo-header.png" alt=""></a>
                                         </div>
                                         <div class="text">
-                                            <p><i class="lotus-icon-location"></i> 225 Beach Street, Australian</p>
-                                            <p><i class="lotus-icon-phone"></i> 1-548-854-8898</p>
-                                            <p><i class="fa fa-envelope-o"></i> <a href="mailto:hello@thelotushotel.com">hello@thelotushotel.com</a></p>
+                                            <p><i class="lotus-icon-location"></i>  Av. Eng. Eusébio Stevaux, 823</p>
+                                            <p><i class="lotus-icon-phone"></i>(11)5682-7300</p>
+                                            <p><i class="fa fa-envelope-o"></i> <a href="mailto:contato@Cantv.com">contato@Cantv.com</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1014,10 +861,12 @@
 
                             <div class="col-xs-4 col-lg-3">
                                 <div class="widget widget_tripadvisor">
-                                    <h4 class="widget-title">Tripadvisor</h4>
+                                    <h4 class="widget-title">Parceiros</h4>
                                     <div class="tripadvisor">
-                                        <p>Now with hotel reviews by</p>
-                                        <img src="images/tripadvisor.png" alt="">
+                                        <p>Confira nossos parceiros</p>
+                                        <img src="images/4228-32x32x32.png" alt="">
+                                        <img src="images/4226-32x32x32.png" alt="">
+                                        <img src="images/5878-32x32x32.png" alt="">
                                         <span class="tripadvisor-circle">
                                             <i></i>
                                             <i></i>
@@ -1038,7 +887,7 @@
                 <!-- FOOTER BOTTOM -->
                 <div class="footer_bottom">
                     <div class="container">
-                        <p>&copy; 2016 Lotus Hotel All rights reserved.</p>
+                        <p>&copy;2018 Canvt todos direitos reservados   .</p>
                     </div>
                 </div>
                 <!-- END / FOOTER BOTTOM -->
