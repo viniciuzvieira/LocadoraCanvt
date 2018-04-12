@@ -64,7 +64,8 @@
                             </span>
                             <span class="login-register">
                                 <a href="login.html">Logar</a>
-                                <a href="register.html">registrar</a>
+                                <a href="register.html">Registrar</a>
+                                <a href="#">Acompanhar Locações</a>
                             </span>
                         </div>
                         <!-- HEADER LOGO -->
@@ -221,9 +222,8 @@
                 <div id="slider-revolution">
                     <ul>
                         <li data-transition="fade">
-                            <img src="images/slider/slider33.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-
-                            <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300"
+                            <img src="images/slider/slider33.jpg"  style="width:100%"data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                            <div class="tp-caption sft fadeout " data-x="center" data-y="195" data-speed="700" data-start="1300"
                                  data-easing="easeOutBack">
 
                             </div>
@@ -249,7 +249,7 @@
                         </li>
 
                         <li data-transition="fade">
-                            <img src="images/slider/img-1.jpg" data-bgposition="left center" data-duration="14000"
+                            <img src="images/slider/img-1.jpg" style="width:100%" data-bgposition="left center" data-duration="14000"
                                  data-bgpositionend="right center" alt="">
 
                             <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="100"
@@ -270,7 +270,7 @@
                                data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">VIEW NOW</a>
                         </li>
                         <li data-transition="fade">
-                            <img src="images/slider/slider2.jpg" data-bgposition="left center" data-duration="14000"
+                            <img src="images/slider/slider2.jpg" style="width:100%"data-bgposition="left center" data-duration="14000"
                                  data-bgpositionend="right center" alt="">
 
 
