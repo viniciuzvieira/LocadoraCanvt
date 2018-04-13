@@ -58,13 +58,17 @@
                         <div class="header_left float-left">
                             <span><i class="lotus-icon-location"></i> Av. Eng. Eusébio Stevaux, 823</span>
                             <span><i class="lotus-icon-phone"></i> (11) 5682-7300</span>
+
+
                         </div>
                         <div class="header_right float-right">
 
                             <span class="login-register">
-                                <a href="login.html">Login</a>
-                                <a href="register.html">register</a>
+                                <a href="login">Entrar</a>
+                                <a href="registrar">registrar</a>
+                                <a><span><i class="glyphicon glyphicon-user"></i></span></a> 
                             </span>
+
                         </div>
                     </div>
                 </div>
@@ -471,7 +475,7 @@
             </section>
             <!-- END / OUR BEST -->
 
-            
+
             <!-- HOME NEW -->
             <section class="section-event-news bg-white">
                 <div class="container">

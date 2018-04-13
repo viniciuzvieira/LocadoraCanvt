@@ -28,7 +28,7 @@ public class BDConexao {
             //Configurando a conexao com o banco de dados
 //            String serveName = "localhost:1527"; // Caminho do servidor do BD
 //            String mydatabase = "teste"; // Nome do banco de dados
-            String url ="jdbc:derby://localhost:1527/TDM ";
+            String url ="jdbc:derby://localhost:1527/adm ";
             String username = "adm"; // Nome de usuario
             String password = "adm"; // Senha de acesso
             connection = DriverManager.getConnection(url, username, password);
