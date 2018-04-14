@@ -44,7 +44,7 @@ public class LoginDAO extends BDConexao {
     }
 
     public UserSistem procurar(String username, String senha) {
-        String query = "SELECT * FROM LOGIN WHERE (USERNAME=?) AND"
+        String query = "SELECT * FROM NOVOUSER WHERE (USERNAME=?) AND"
                 + "(SENHA=?)";
 
         UserSistem log = null;
@@ -58,8 +58,8 @@ public class LoginDAO extends BDConexao {
                 if (resultados.next()) {
                     log = new UserSistem();
                     log.setUsuario(resultados.getString("USERNAME"));
-                    log.setHashSenha(resultados.getString("SENHA"));
                     log.setEmail(resultados.getString("EMAIL"));
+                    log.setHashSenha(resultados.getString("SENHA"));
 
                 }
             }

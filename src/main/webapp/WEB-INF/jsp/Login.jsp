@@ -129,12 +129,12 @@
                     <div class="text text-center">
                         <h2>Login</h2>
                         <p></p>
-                        <form action="#" class="account_form">
+                        <form action="./login" method="post" class="account_form">
                             <div class="field-form">
-                                <input type="text" class="field-text" placeholder="User name">
+                                <input name="User"type="text" class="field-text" placeholder="User name">
                             </div>
                             <div class="field-form">
-                                <input type="password" class="field-text" placeholder="Password">
+                                <input type="password" name="Senha" class="field-text" placeholder="Password">
                                 <span class="view-pass"><i class="lotus-icon-view"></i></span>
                             </div>
                             <div class="field-form field-submit">

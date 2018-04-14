@@ -66,7 +66,7 @@
                             <span class="login-register">
                                 <a href="login">Entrar</a>
                                 <a href="registrar">registrar</a>
-                                <a><span><i class="glyphicon glyphicon-user"></i></span></a> 
+                                <a><span><i class="glyphicon glyphicon-user"></i><c:out value="${sessionScope.usuario.email}" /></span></a> 
                             </span>
 
                         </div>
