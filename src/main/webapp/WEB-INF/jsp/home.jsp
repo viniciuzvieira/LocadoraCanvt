@@ -50,86 +50,15 @@
         <div id="page-wrap">
 
             <!-- HEADER -->
-            <header id="header" class="header-v2">
-
-                <!-- HEADER TOP -->
-                <div class="header_top">
-                    <div class="container">
-                        <div class="header_left float-left">
-                            <span><i class="lotus-icon-location"></i> Av. Eng. Eusébio Stevaux, 823</span>
-                            <span><i class="lotus-icon-phone"></i> (11) 5682-7300</span>
-
-
-                        </div>
-                        <div class="header_right float-right">
-
-                            <span class="login-register">
-                                <a href="login">Entrar</a>
-                                <a href="registrar">registrar</a>
-                                <a><span><i class="glyphicon glyphicon-user"></i><c:out value="${sessionScope.usuario.email}" /></span></a> 
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="header_content" id="header_content">
-
-                    <div class="container">
-
-                        <div class="header_logo">
-                            <a href="#"><img src="images/logo-header.png" alt=""></a>
-                        </div>
-
-                        <nav class="header_menu">
-                            <ul class="menu">
-                                <li class="current-menu-item">
-                                    <a href="home">Home </a>
-
-                                </li>
-                                <li><a href="about.html">A Canvt</a></li>
-
-                                <li>
-                                    <a href="#">Room <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="room-1.html">Room 1</a></li>
-                                        <li><a href="room-2.html">Room 2</a></li>
-                                        <li><a href="room-3.html">Room 3</a></li>
-                                        <li><a href="room-4.html">Room 4</a></li>
-                                        <li><a href="room-5.html">Room 5</a></li>
-                                        <li><a href="room-6.html">Room 6</a></li>
-                                        <li><a href="room-detail.html">Room Detail</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="reserva">Reserva</a>
-
-                                </li>
-
-                                <li><a href="contact.html">Contato</a></li>
-                            </ul>
-                        </nav>
-
-                        <span class="menu-bars">
-                            <span></span>
-                        </span>
-
-                    </div>
-                </div>
-
-            </header>
+            <%@include file="../jspf/header.jspf"%>
 
             <section class="section-slider">
                 <h1 class="element-invisible">Slider</h1>
                 <div id="slider-revolution">
                     <ul>
-
-
                         <li data-transition="fade">
                             <img class="img-responsive" src="images/slider/img-1.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-                            <!--                            
-                            -->                            <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300" data-easing="easeOutBack">
+                                <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300" data-easing="easeOutBack">
                                 <img src="images/icon-slider-1.png" alt="">
                             </div>
 
@@ -198,7 +127,6 @@
                                 <div class="accomd-modations-header">
                                     <h2 class="heading">Carros & Destaques</h2>
                                     <img src="images/icon-accmod.png" alt="icon">
-                                    <p>Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.</p>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -215,7 +143,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Mercedes-Benz C250</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/days
+                                                        <span class="amout">R$320</span>/dias
                                                     </p>
                                                 </div>
                                             </div>
@@ -231,7 +159,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">RANGE ROVER EVOQUE HSE DYNAMIC CONVERSÍVEL</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/days
+                                                        <span class="amout">R$320</span>/dias
                                                     </p>
                                                 </div>
                                             </div>
@@ -248,7 +176,7 @@
                                                     <h2><a href="#">CHRYSLER 300C
                                                         </a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/days
+                                                        <span class="amout">R$320</span>/dias
                                                     </p>
                                                 </div>
                                             </div>
@@ -264,7 +192,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Agera RS</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/day
+                                                        <span class="amout">R$320</span>/dia
                                                     </p>
                                                 </div>
                                             </div>
@@ -280,7 +208,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Regera </a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/day
+                                                        <span class="amout">R$320</span>/dia
                                                     </p>
                                                 </div>
                                             </div>
@@ -297,7 +225,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">BMWI8</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/day
+                                                        <span class="amout">R$320</span>/dia
                                                     </p>
                                                 </div>
                                             </div>
@@ -318,7 +246,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Luxury Room</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/days
+                                                        <span class="amout">R$320</span>/dias
                                                     </p>
                                                 </div>
                                             </div>
@@ -334,7 +262,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Family Room</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/days
+                                                        <span class="amout">R$320</span>/dias
                                                     </p>
                                                 </div>
                                             </div>
@@ -350,7 +278,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Couple Room</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/days
+                                                        <span class="amout">R$320</span>/dias
                                                     </p>
                                                 </div>
                                             </div>
@@ -366,7 +294,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Standard</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/day
+                                                        <span class="amout">R$320</span>/dia
                                                     </p>
                                                 </div>
                                             </div>
@@ -382,7 +310,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Standard</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/day
+                                                        <span class="amout">R$320</span>/dia
                                                     </p>
                                                 </div>
                                             </div>
@@ -398,7 +326,7 @@
                                                 <div class="text">
                                                     <h2><a href="#">Standard</a></h2>
                                                     <p class="price">
-                                                        <span class="amout">$320</span>/day
+                                                        <span class="amout">R$320</span>/dia
                                                     </p>
                                                 </div>
                                             </div>
@@ -430,8 +358,9 @@
                                 <div class="text">
                                     <h2 class="heading">Sobre Nós</h2>
                                     <span class="box-border"></span>
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source</p>
-                                    <a href="#" class="awe-btn awe-btn-default">READ MORE</a>
+                                    <p> CANVT é a locadora de automóveis , rápidos e caros.
+                                        Temos como objetivo te proporcinar a melhor experiência possível.</p>
+                                    <a href="#" class="awe-btn awe-btn-default">Veja mais</a>
                                 </div>
                             </div>
                         </div>
@@ -486,7 +415,7 @@
                             <!-- EVENT -->
                             <div class="col-md-6">
                                 <div class="event">
-                                    <h2 class="heading">EVENT &amp; DEAL</h2>
+                                    <h2 class="heading">EVENTOS</h2>
                                     <span class="box-border w350"></span>
 
                                     <div class="row">
@@ -527,7 +456,7 @@
                                                     <div class="text-cn">
                                                         <h2>SAVE THE DATE</h2>
                                                         <span>BECCA &amp; ROBERT</span>
-                                                        <a href="#" class="awe-btn awe-btn-12">VIEW MORE</a>
+                                                        <a href="#" class="awe-btn awe-btn-12">Veja mais</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -545,7 +474,7 @@
                                                 <div class="text">
                                                     <div class="text-cn">
                                                         <h2>GO ON BEACH. lotus </h2>
-                                                        <a href="#" class="awe-btn awe-btn-12">VIEW MORE</a>
+                                                        <a href="#" class="awe-btn awe-btn-12">Veja mais</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -560,7 +489,7 @@
                             <!-- NEWS -->
                             <div class="col-md-6">
                                 <div class="news">
-                                    <h2 class="heading">NEWS</h2>
+                                    <h2 class="heading">Notícias</h2>
                                     <span class="box-border w350 space-5"></span>
 
                                     <div class="row">
@@ -612,7 +541,7 @@
 
                                     </div>
 
-                                    <a href="#" class="awe-btn awe-btn-default">VIEW MORE</a>
+                                    <a href="#" class="awe-btn awe-btn-default">Veja mais</a>
 
                                 </div>
 
@@ -635,17 +564,6 @@
                 <div class="gallery  no-padding">
                     <h2 class="heading text-center">GALLERY</h2>
 
-                    <!-- FILTER -->
-                    <div class="gallery-cat text-center">
-                        <ul class="list-inline">
-                            <li class="active"><a href="#" data-filter="*">All</a></li>
-                            <li><a href="#" data-filter=".ground">HOTEL &amp; GROUND</a></li>
-                            <li><a href="#" data-filter=".suite">ROOM/SUITE </a></li>
-                            <li><a href="#" data-filter=".bathroom">BATHROOM</a></li>
-                            <li><a href="#" data-filter=".dining">DINING</a></li>
-                        </ul>
-                    </div>
-                    <!-- END / FILTER -->
 
                     <!-- GALLERY CONTENT -->
                     <div class="gallery-content hover-img">
@@ -780,7 +698,7 @@
                         </div>
 
                         <div class="our-gallery text-center">
-                            <a href="#" class="awe-btn awe-btn-default">BROWSE OUR GALLERY</a>
+                            <a href="#" class="awe-btn awe-btn-default">Ver galeria</a>
                         </div>
 
                     </div>
@@ -791,112 +709,7 @@
             <!-- END / GALLERY -->
 
             <!-- FOOTER -->
-            <footer id="footer">
-
-                <!-- FOOTER TOP -->
-                <div class="footer_top">
-                    <div class="container">
-                        <div class="row">
-
-                            <!-- WIDGET MAILCHIMP -->
-                            <div class="col-lg-9">
-                                <div class="mailchimp">
-                                    <h4>News &amp; Offers</h4>
-                                    <div class="mailchimp-form">
-                                        <form action="#" method="POST">
-                                            <input type="text" name="email" placeholder="Your email address" class="input-text">
-                                            <button class="awe-btn">SIGN UP</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END / WIDGET MAILCHIMP -->
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- END / FOOTER TOP -->
-
-                <!-- FOOTER CENTER -->
-                <div class="footer_center">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-xs-12 col-lg-5">
-                                <div class="widget widget_logo">
-                                    <div class="widget-logo">
-                                        <div class="img">
-                                            <a href="#"><img src="images/logo-header.png" alt=""></a>
-                                        </div>
-                                        <div class="text">
-                                            <p><i class="lotus-icon-location"></i>  Av. Eng. Eusébio Stevaux, 823</p>
-                                            <p><i class="lotus-icon-phone"></i>(11)5682-7300</p>
-                                            <p><i class="fa fa-envelope-o"></i> <a href="mailto:contato@Cantv.com">contato@Cantv.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-4 col-lg-2">
-                                <div class="widget">
-                                    <h4 class="widget-title">Page site</h4>
-                                    <ul>
-                                        <li><a href="#">Guest Book</a></li>
-                                        <li><a href="#">Gallery</a></li>
-                                        <li><a href="#">Restaurant</a></li>
-                                        <li><a href="#">Event</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-4 col-lg-2">
-                                <div class="widget">
-                                    <h4 class="widget-title">ABOUT</h4>
-                                    <ul>
-                                        <li><a href="">About</a></li>
-                                        <li><a href="">Blog</a></li>
-                                        <li><a href="">Contact Us</a></li>
-                                        <li><a href="">Comming Soon</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-4 col-lg-3">
-                                <div class="widget widget_tripadvisor">
-                                    <h4 class="widget-title">Parceiros</h4>
-                                    <div class="tripadvisor">
-                                        <p>Confira nossos parceiros</p>
-                                        <img src="images/4228-32x32x32.png" alt="">
-                                        <img src="images/4226-32x32x32.png" alt="">
-                                        <img src="images/5878-32x32x32.png" alt="">
-                                        <span class="tripadvisor-circle">
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
-                                            <i></i>
-                                            <i class="part"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- END / FOOTER CENTER -->
-
-                <!-- FOOTER BOTTOM -->
-                <div class="footer_bottom">
-                    <div class="container">
-                        <p>&copy;2018 Canvt todos direitos reservados   .</p>
-                    </div>
-                </div>
-                <!-- END / FOOTER BOTTOM -->
-
-            </footer>
+            <%@include file="../jspf/footer.jspf" %>>
             <!-- END / FOOTER -->
 
         </div>
