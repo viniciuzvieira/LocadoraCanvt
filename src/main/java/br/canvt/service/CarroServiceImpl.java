@@ -9,6 +9,8 @@ package br.canvt.service;
  *
  * @author Vinicius
  */
+
+/*
 import br.canvt.model.Automovel;
 import br.canvt.model.CarroDAO;
 import java.util.List;
@@ -94,4 +96,4 @@ NamedParameterJdbcTemplate namedParameterJdbcTemplate;
   return namedParameterJdbcTemplate.queryForObject(sql, getSqlParameterByModel(automovel), new UserMapper());
  }
 
-}
+}*/
