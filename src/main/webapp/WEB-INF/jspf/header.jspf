@@ -1,5 +1,5 @@
 <%@ page pageEncoding="UTF-8" %>
-    <header id="header" class="header-v2">
+<header id="header" class="header-v2">
 
     <!-- HEADER TOP -->
     <div class="header_top">
@@ -12,9 +12,9 @@
             <div class="header_right float-right">
 
                 <span class="login-register">
-                                <a href="login">Entrar</a>
-                                <a href="registrar">registrar</a>
-                                <a><span><i class="glyphicon glyphicon-user"></i><c:out value="${sessionScope.usuario.email}" /></span></a>
+                    <a href="login">Entrar</a>
+                    <a href="registrar">registrar</a>
+                    <a><span><i class="glyphicon glyphicon-user"></i><c:out value="${sessionScope.usuario.email}" /></span></a>
                 </span>
 
             </div>
@@ -26,7 +26,7 @@
         <div class="container">
 
             <div class="header_logo">
-                <a href="#"><img src="images/logo-header.png" alt=""></a>
+                <a href="home"><img src="images/logo-header.png" alt=""></a>
             </div>
 
             <nav class="header_menu">
@@ -40,11 +40,11 @@
                     <li>
                         <a href="#">Categoria<span class="fa fa-caret-down"></span></a>
                         <ul class="sub-menu">
-                            <li><a href="room-1.html">Classicos</a></li>
-                            <li><a href="room-2.html">Esportivos</a></li>
-                            <li><a href="room-3.html">Luxuosos</a></li>
-                            <li><a href="room-4.html">Off Road</a></li>
-                            <li><a href="room-5.html">Super Esportivos</a></li>
+                            <li><a href="categoria">Classicos</a></li>
+                            <li><a href="categoria">Esportivos</a></li>
+                            <li><a href="categoria">Luxuosos</a></li>
+                            <li><a href="categoria">Off Road</a></li>
+                            <li><a href="categoria">Super Esportivos</a></li>
                         </ul>
                     </li>
 
@@ -58,7 +58,7 @@
             </nav>
 
             <span class="menu-bars">
-                            <span></span>
+                <span></span>
             </span>
 
         </div>

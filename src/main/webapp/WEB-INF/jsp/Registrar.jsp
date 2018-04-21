@@ -1,7 +1,7 @@
 <%-- 
-    Document   : Registrar
-    Created on : 13/04/2018, 20:06:11
-    Author     : adriano.rlourenco
+Document   : Registrar
+Created on : 13/04/2018, 20:06:11
+Author     : adriano.rlourenco
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -59,7 +59,7 @@
             <!-- END / HEADER -->
 
             <!-- ACCOUNT -->
-            <section class="section-account parallax bg-11">
+            <section class="section-account parallax" style="background-image: url(images/Cars/ferrari-carro.jpg );">
                 <div class="awe-overlay"></div>
                 <div class="container">
                     <div class="login-register">
@@ -68,15 +68,87 @@
                             <p></p>
                             <form action="./registrar" method="post"class="account_form">
                                 <div class="field-form">
-                                    <input name="User"type="text" class="field-text" placeholder="Usuario*">
+                                    <input name="name"type="text" class="field-text" placeholder="Name*">
+
+                                </div>
+                                <div class="field-form">
+                                    <input name="CPF"type="text" class="field-text" placeholder="CPF*">
+                                </div>
+                                <div class="field-form">
+                                    <input name="Data de nascimento"type="text" class="field-text" placeholder="Data de nascimento*">
+
+                                </div>
+                                <div class="field-form">
+
+
+                                    <select id="sexo" class="form-control " name="sexo">
+                                        <option selected value="nulo">Sexo...</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="nulo">Prefiro nao dizer</option>
+                                    </select>
+                                </div>
+                                <div class="field-form">
+                                    <input name="Endereço"type="text" class="field-text" placeholder="Endereço*">
+
+                                </div>
+                                <div class="field-form">
+                                    <input name="Numero"type="number" class="field-text" placeholder="Numero*">
+
+                                </div>
+
+                                <div class="field-form">
+                                    <select id="inputState" class="form-control" name="UF">
+                                        <option selected value="NI">UF</option>
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AM">AM</option>
+                                        <option value="AP">AP</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MG">MG</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="PR">PR</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SE">SE</option>
+                                        <option value="SP">SP</option>
+                                        <option value="TO">TO</option>
+                                    </select>
                                 </div>
                                 <div class="field-form">
                                     <input name="Email"type="text" class="field-text" placeholder="Email*">
                                 </div>
                                 <div class="field-form">
+                                    <input type="text " class="field-text" id="Bairro" placeholder="Bairro " name="bairro"  maxlength="100" >
+                                </div>
+                                <div class="field-form">
+                                    <input type="text " class="field-text" id="CEP" placeholder="Digite o CEP " name="cep"  maxlength="8"onkeypress='return SomenteNumero(event)' >
+                                </div>
+                                <div class="field-form">
+                                    <input type="text " class="field-text" id="Telefone" placeholder="(11)000000000" maxlength="20" name="tel">
+                                </div>
+                                <div class="field-form">
+                                    <input type="text" class="field-text" id="CNH" placeholder="CNH" maxlength="20" name="cnh">
+                                </div>
+                                <div class="field-form">
                                     <input name="Senha"type="password" class="field-text" placeholder="Senha*">
                                     <span class="view-pass"><i class="lotus-icon-view"></i></span>
                                 </div>
+
                                 <div class="field-form field-submit">
                                     <button class="awe-btn awe-btn-13" type="submit">REGISTRAR</button>
                                 </div>
