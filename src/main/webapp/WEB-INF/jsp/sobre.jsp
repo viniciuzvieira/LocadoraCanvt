@@ -182,9 +182,18 @@
 
                         <div class="team_content">
                             <div class="row">
-
+                                
                                 <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
+                                <div class="col-xs-1">
+                                    <div class="team_item text-center">
+
+                                    </div>
+                                </div>
+                                
+                                <!-- END / ITEM -->
+                                
+                                <!-- ITEM -->
+                                <div class="col-xs-2 col-md-2">
                                     <div class="team_item text-center">
 
                                         <div class="img">
@@ -192,7 +201,7 @@
                                         </div> 
 
                                         <div class="text">
-                                            
+
                                             <h2>ADRIANO LOURENÇO</h2>
                                             <span>Manager lotus Hotel</span>
                                             <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
@@ -208,7 +217,7 @@
                                 <!-- END / ITEM -->
 
                                 <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
+                                <div class="col-xs-2 col-md-2">
                                     <div class="team_item text-center">
 
                                         <div class="img">
@@ -231,7 +240,7 @@
                                 <!-- END / ITEM -->
 
                                 <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
+                                <div class="col-xs-2 col-md-2">
                                     <div class="team_item text-center">
 
                                         <div class="img">
@@ -254,7 +263,7 @@
                                 <!-- END / ITEM -->
 
                                 <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
+                                <div class="col-xs-2 col-md-2">
                                     <div class="team_item text-center">
 
                                         <div class="img">
@@ -264,6 +273,29 @@
                                         <div class="text">
                                             <h2>NATALIA BOAVENTURA</h2>
                                             <span>Lorem lipsum</span>
+                                            <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
+                                            <div class="team-share">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="col-xs-2 col-md-2">
+                                    <div class="team_item text-center">
+
+                                        <div class="img">
+                                            <a href=""><img src="https://pm1.narvii.com/6530/3979111f3726d98a6928d8d22072dc514cfe205a_128.jpg" alt=""></a>
+                                        </div> 
+
+                                        <div class="text">
+                                            <h2>VINICIUS VIEIRA</h2>
+                                            <span>Founder Hotel</span>
                                             <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
                                             <div class="team-share">
                                                 <a href="#"><i class="fa fa-facebook"></i></a>
