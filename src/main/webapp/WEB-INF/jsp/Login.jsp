@@ -62,10 +62,10 @@
                         <p></p>
                         <form action="./login" method="post" class="account_form">
                             <div class="field-form">
-                                <input name="User"type="text" class="field-text" placeholder="User name">
+                                <input name="User"type="text" class="field-text" placeholder="Usuário">
                             </div>
                             <div class="field-form">
-                                <input type="password" name="Senha" class="field-text" placeholder="Password">
+                                <input type="password" name="Senha" class="field-text" placeholder="Senha">
                                 <span class="view-pass"><i class="lotus-icon-view"></i></span>
                             </div>
                             <div class="field-form field-submit">

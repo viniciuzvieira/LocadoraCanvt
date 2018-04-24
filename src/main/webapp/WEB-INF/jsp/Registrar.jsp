@@ -59,7 +59,7 @@ Author     : adriano.rlourenco
             <!-- END / HEADER -->
 
             <!-- ACCOUNT -->
-            <section class="section-account parallax" style="background-image: url(images/Cars/ferrari-carro.jpg );">
+            <section class="section-account parallax">
                 <div class="awe-overlay"></div>
                 <div class="container">
                     <div class="login-register">
@@ -68,7 +68,7 @@ Author     : adriano.rlourenco
                             <p></p>
                             <form action="./registrar" method="post"class="account_form">
                                 <div class="field-form">
-                                    <input name="name"type="text" class="field-text" placeholder="Name*">
+                                    <input name="name"type="text" class="field-text" placeholder="Nome*">
 
                                 </div>
                                 <div class="field-form">
