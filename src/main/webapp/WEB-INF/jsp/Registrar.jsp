@@ -79,14 +79,9 @@ Author     : adriano.rlourenco
 
                                 </div>
                                 <div class="field-form">
-
-
-                                    <select id="sexo" class="form-control " name="sexo">
-                                        <option selected value="nulo">Sexo...</option>
-                                        <option value="Masculino">Masculino</option>
-                                        <option value="Feminino">Feminino</option>
-                                        <option value="nulo">Prefiro nao dizer</option>
-                                    </select>
+                                        <span style="font-weight:bold;" for="rad" >Sexo:<sup style="color:red;">*</sup></span>
+                                        <input type="radio" name="sexo" id="radioMas" value="Masculino">Masculino
+                                        <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino
                                 </div>
                                 <div class="field-form">
                                     <input name="Endereço"type="text" class="field-text" placeholder="Endereço*">

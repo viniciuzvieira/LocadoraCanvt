@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Reservation Step 5</title>
+        <title>Cadastro do Carro</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -118,6 +118,7 @@
                                                     <option>Etanol</option>
                                                     <option>Diesel</option>
                                                     <option>Gás</option>
+                                                    <option>Flex</option>
                                                 </select>
                                             </div>
                                         </div>

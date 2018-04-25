@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Relatório</title>
+        <title>Boleto Gerado</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -60,7 +60,7 @@
                 <div class="sub-banner">
                     <div class="container">
                         <div class="text text-center">
-                            <h2>Relatório</h2>
+                            <h2>BOLETO GERADO</h2>
                         </div>
                     </div>
                 </div>
@@ -70,57 +70,10 @@
 
         <section class="section-room bg-white">
             <div class="container">
-
-                <div class="room-wrap-1">
-                    <div class="row">            
-                        <form action= "./relatorio" method="post">
-                            <br/>
-                            <input type="text" name="arrive" class="awe-calendar from" style="font-size:9pt; padding:9px; width:auto; height:auto;" placeholder="De">
-                            <input type="text" name="departure" class="awe-calendar to" style="font-size:9pt; padding:9px; width:auto; height:auto;" placeholder="Até">
-                            <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">Buscar</button>
-                            <button id="btnExport" class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">Exportar <input type=image src="https://i.imgur.com/4XMeKdE.png" width="16" height="13"></button>
-                        </form>
-                        <br/>
-                        <!-- RELATORIO -->
-                        <div class="shortcode-tab-price">
-                            <div class="tab-price">
-                                <div id="dvData">
-                                    <table>
-                                        <tr>
-                                            <td class="date-select">CPF</td>
-                                            <td class="date-select">Carro</td>
-                                            <td class="date-select">Placa</td>
-                                            <td class="date-select">Data da Retirada</td>
-                                            <td class="date-select">Data de Entrega</td>
-                                            <td class="date-select">Valor Total R$</td>
-                                        </tr>
-                                        <tr>
-                                            <td>000.000.000-00</td>
-                                            <td>Ferrari</td>
-                                            <td>ABC-1234</td>
-                                            <td>25/04/2018</td>
-                                            <td>30/04/2018</td>
-                                            <td>R$ 1.000</td>
-                                        </tr>
-
-                                        <tr>
-                                            <c:forEach var="relatorio" items="${itens}">
-                                            <tr>
-                                                <!--<td>${relatorio.cpf}</td>
-                                                <td>${relatorio.carro}</td>
-                                                <td>${relatorio.placa}</td>
-                                                <td>${relatorio.dataDeRetirada}</td>
-                                                <td>${relatorio.dataDeDevolucao}</td>
-                                                <td>${relatorio.total}</td> /-->
-                                            </tr>
-                                        </c:forEach>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h3>SEU BOLETO FOI GERADO COM SUCESSO!</h3>
+                <p>O NÚMERO DO SEU PEDIDO É XXXXXX</p>
+                <p>O carro poderá ser retirado somente após o pagamento.</p>
+                <button class="awe-btn awe-btn-13" style="position: absolute; left: 40%;">ACOMPANHAR PEDIDO</button>
             </div>
         </section>
         <!-- RELATORIO -->

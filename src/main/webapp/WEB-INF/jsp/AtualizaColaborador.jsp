@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Novo Colaborador</title>
+        <title>Atualizar Colaborador</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -62,7 +62,7 @@
                 <div class="sub-banner">
                     <div class="container">
                         <div class="text text-center">
-                            <h2>CADASTRO DO COLABORADOR</h2>
+                            <h2>ATUALIZAR COLABORADOR</h2>
                         </div>
                     </div>
 
@@ -101,7 +101,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label for="inputPassword4">CPF:<sup>*</sup></label>
+                                                <label for="inputPassword4">CPF:<sup>NÃO ALTERÁVEL</sup></label>
                                                 <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
                                             </div>
                                             <div class="col-sm-6">
@@ -120,10 +120,10 @@
                                         <label for="email">E-mail:<sup>*</sup></label>
                                         <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
 
-                                        <label for="senha">Senha:<sup>*</sup></label>
+                                        <label for="senha">Nova Senha:<sup>*</sup></label>
                                         <input type="password" class="input-text" id="senha" placeholder="Senha" name="password">
                                         <br/>
-                                        <button type="submit" class="awe-btn awe-btn-13">CADASTRAR</button>
+                                        <button type="submit" class="awe-btn awe-btn-13">ATUALIZAR</button>
                                     </form>
                                 </div> 
                             </div>                                        

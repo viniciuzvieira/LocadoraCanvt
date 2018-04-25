@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Cadastrar Cliente</title>
+        <title>Atualizar Cliente</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -55,14 +55,14 @@
             <!-- END / HEADER -->
 
             <!-- SUB BANNER -->
-            <section class="section-sub-banner bg-9" style="background-image: url(images/Cars/default.png)">
+            <section class="section-sub-banner bg-9">
 
                 <div class="awe-overlay"></div>
 
                 <div class="sub-banner">
                     <div class="container">
                         <div class="text text-center">
-                            <h2>FAÇA JÁ O SEU CADASTRO</h2>
+                            <h2>ATUALIZE SEU CADASTRO</h2>
                         </div>
                     </div>
 
@@ -99,16 +99,16 @@
                                 <div class="reservation-billing-detail">
                                     <form action="./CadastroCliente" method="post">
 
-                                        <label for="Name">Username:<sup>*</sup></label>
-                                        <input type="text" class="input-text" placeholder="Ex: Gabriela627">
+                                        <label for="Name">Username:<sup>NÃO ALTERÁVEL</sup></label>
+                                        <input type="text" class="input-text" placeholder="" disabled="disabled">
 
                                         <label for="Name">Nome Completo:<sup>*</sup></label>
                                         <input type="text" class="input-text">
 
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label for="inputPassword4">CPF:<sup>*</sup></label>
-                                                <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
+                                                <label for="inputPassword4">CPF:<sup>NÃO ALTERÁVEL</sup></label>
+                                                <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11" disabled="disabled">
                                             </div>
                                             <div class="col-sm-6">
                                                 <label for="datanasc">Data de nascimento:<sup>*</sup></label>
@@ -143,8 +143,8 @@
                                         <input type="radio" name="sexo" id="radioMas" value="Masculino">Masculino
                                         <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino
 
-                                        <label for="numeroCNH">Número da CNH:<sup>*</sup></label>
-                                        <input type="text" class="input-text" id="NumeroCNH" placeholder="Número da CNH">
+                                        <label for="numeroCNH">Número da CNH:<sup>NÃO ALTERÁVEL</sup></label>
+                                        <input type="text" class="input-text" id="NumeroCNH" placeholder="" disabled="disabled">
 
                                         <div class="row">
                                             <div class="col-sm-4">
@@ -156,19 +156,22 @@
                                                 <input type="text" class="input-text" placeholder="Ex:(11)951231234">
                                             </div>
                                         </div>
-
+                                        
+                                        <label for="email">E-mail:<sup>*</sup></label>
+                                        <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
+                                        
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label for="email">E-mail:<sup>*</sup></label>
-                                                <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
+                                                <label for="email">Antiga senha:<sup>*</sup></label>
+                                                <input type="email" class="input-text" id="email" placeholder="Antiga senha" maxlength="100" name="email">
                                             </div>
                                             <div class="col-sm-6">
-                                                <label for="senha">Senha:<sup>*</sup></label>
-                                                <input type="password" class="input-text" id="senha" placeholder="Senha" name="password">
+                                                <label for="senha">Nova senha:<sup>*</sup></label>
+                                                <input type="password" class="input-text" id="senha" placeholder="Nova senha" name="password">
                                             </div>
                                         </div>
 
-                                        <button class="awe-btn awe-btn-13">CADASTRAR</button>
+                                        <button class="awe-btn awe-btn-13">ATUALIZAR</button>
                                     </form>      
                                 </div>
 

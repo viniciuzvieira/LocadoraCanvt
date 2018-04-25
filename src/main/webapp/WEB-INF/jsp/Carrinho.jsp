@@ -55,7 +55,7 @@
             <!-- END / HEADER -->
 
             <!-- SUB BANNER -->
-            <section class="section-sub-banner " style="background-image: url(images/Cars/BMWI8.jpg )"">
+            <section class="section-sub-banner " style="background-image: url(images/Cars/default.png)">
                 <div class="awe-overlay"></div>
                 <div class="sub-banner">
                     <div class="container">
@@ -79,21 +79,29 @@
                                 <div id="dvData">
                                     <table>
                                         <tr>
-                                            <td class="date-select">Carro</td>
+                                            <td class="date-select">Carrinho</td>
                                             <td class="date-select">Placa</td>
                                             <td class="date-select">Data da Retirada</td>
                                             <td class="date-select">Data de Entrega</td>
+                                            <td class="date-select">Forma de pagamento</td>
                                             <td class="date-select">Valor Total R$</td>
                                             <td class="date-select">Ações</td>
                                         </tr>
                                         <tr>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td><button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">MUDAR</button></td>
+                                            <td class="date-select">xxxxxxxxx</td>
+                                            <td class="date-select">xxxxxxxxx</td>
+                                            <td class="date-select">dd/mm/aaaa</td>
+                                            <td class="date-select">dd/mm/aaaa</td>
+                                            <td class="date-select">
+                                            <select class="awe-select">
+                                                <option>Boleto</option>
+                                                <option>Cartão de Crédito</option>
+                                            </select>
                                             </td>
+                                            <td class="date-select">xxxxxxxxx</td>
+                                            <td class="date-select"><button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; background-color: white; color: black;">MUDAR</button></td>
+                                            </td>
+                                            
                                         </tr>
                                     </table>
                                     <br/>
