@@ -79,34 +79,36 @@
                                 <div id="dvData">
                                     <table>
                                         <tr>
-                                            <td class="date-select">Carrinho</td>
+                                            <td class="date-select">Carro</td>
                                             <td class="date-select">Placa</td>
                                             <td class="date-select">Data da Retirada</td>
                                             <td class="date-select">Data de Entrega</td>
-                                            <td class="date-select">Forma de pagamento</td>
                                             <td class="date-select">Valor Total R$</td>
-                                            <td class="date-select">Ações</td>
                                         </tr>
                                         <tr>
-                                            <td class="date-select">xxxxxxxxx</td>
-                                            <td class="date-select">xxxxxxxxx</td>
-                                            <td class="date-select">dd/mm/aaaa</td>
-                                            <td class="date-select">dd/mm/aaaa</td>
-                                            <td class="date-select">
+                                            <td>xxxxxxxxx</td>
+                                            <td>xxxxxxxxx</td>
+                                            <td>dd/mm/aaaa</td>
+                                            <td>dd/mm/aaaa</td>
+                                            <td>xxxxxxxxx</td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                                    <table>
+                                        <tr>
+                                        <td class="date-select">Forma de Pagamento</td>     
+                                        <td class="date-select">
                                             <select class="awe-select">
                                                 <option>Boleto</option>
                                                 <option>Cartão de Crédito</option>
                                             </select>
-                                            </td>
-                                            <td class="date-select">xxxxxxxxx</td>
-                                            <td class="date-select"><button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; background-color: white; color: black;">MUDAR</button></td>
-                                            </td>
-                                            
+                                        </td>
                                         </tr>
                                     </table>
                                     <br/>
+                                    <!--<button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; background-color: white; color: black;">MUDAR</button>-->
+                                    <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">VOLTAR</button>
                                     <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; float: right">CONFIRMAR</button>
-
                                 </div>
                             </div>
                         </div>

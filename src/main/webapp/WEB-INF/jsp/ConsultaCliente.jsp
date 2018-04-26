@@ -86,7 +86,6 @@
                                     <table>
                                         <tr>
                                             <td class="date-select">CPF</td>
-                                            <td class="date-select">Nome</td>
                                             <td class="date-select">Número da CNH</td>
                                             <td class="date-select">E-mail</td>
                                             <td class="date-select">Ações</td>
@@ -95,10 +94,9 @@
                                             <td>xxxxxxxxx</td>
                                             <td>xxxxxxxxx</td>
                                             <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
                                             <td>
-                                                <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">Editar</button>
-                                                <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">Excluir</button>
+                                                <button class="awe-btn awe-btn-13">Editar</button>
+                                                <button class="awe-btn awe-btn-13">Excluir</button>
                                             </td>
                                         </tr>
                                     </table>
