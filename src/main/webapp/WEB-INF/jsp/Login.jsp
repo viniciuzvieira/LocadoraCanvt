@@ -53,7 +53,7 @@
         <!-- END / HEADER -->
 
         <!-- ACCOUNT -->
-        <section class="section-account parallax bg-11">
+        <section class="section-account parallax bg-11" style="background-image: url(images/Cars/login.png)">
             <div class="awe-overlay"></div>
             <div class="container">
                 <div class="login-register">

@@ -1,12 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Cadastro do Carro</title>
+        <title>Boleto Gerado</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -17,6 +16,7 @@
         <link href='http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700' rel='stylesheet' type='text/css'>
 
         <!-- CSS LIBRARY -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/lib/font-lotusicon.css">
         <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
@@ -55,100 +55,31 @@
             <!-- END / HEADER -->
 
             <!-- SUB BANNER -->
-            <section class="section-sub-banner bg-9" style="background-image: url(images/Cars/default.png)">
-
+            <section class="section-sub-banner " style="background-image: url(images/Cars/default.png)">
                 <div class="awe-overlay"></div>
-
                 <div class="sub-banner">
                     <div class="container">
                         <div class="text text-center">
-                            <h2>CADASTRO DO CARRO</h2>
+                            <h2>BOLETO GERADO</h2>
                         </div>
                     </div>
-
                 </div>
-
             </section>
             <!-- END / SUB BANNER -->
-
-            <!-- RESERVATION -->
-            <section class="section-reservation-page bg-white">
-
-                <div class="container">
-                    <div class="reservation-page">
-
-                        <div class="row">
-
-
-                            <div class="col-md-10 col-lg-3">
-
-
-                                    <div class="reservation-date bg-gray">
-
-                                    </div>
-
-                            </div>
-
-
-                            <!-- CONTENT -->
-                            <div class="col-md col-lg-6">
-
-                         
-
-                                    <div class="reservation-billing-detail">
-
-                                        <label>Categoria<sup>*</sup></label>
-                                        <select class="awe-select">
-                                            <option>Clássicos</option>
-                                            <option>Esportivos</option>
-                                            <option>Luxuosos</option>
-                                            <option>Off Road</option>
-                                            <option>Super Esportivos</option>
-                                        </select>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Nome do Carro<sup>*</sup></label>
-                                                <input type="text" class="input-text">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label>Combustível<sup>*</sup></label>
-                                                <select class="awe-select">
-                                                    <option>Gasolina</option>
-                                                    <option>Etanol</option>
-                                                    <option>Diesel</option>
-                                                    <option>Gás</option>
-                                                    <option>Flex</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Placa<sup>*</sup></label>
-                                                <input type="text" class="input-text">
-                                            </div>
-                                        </div>
-                                        <button class="awe-btn awe-btn-13">CADASTRAR</button>
-                                    </div>
-
-                              
-
-                            </div>
-                            <!-- END / CONTENT -->
-
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-            <!-- END / RESERVATION -->
-
-            <!-- FOOTER -->
-            <%@include file="../jspf/footer.jspf" %>
-            <!-- END / FOOTER -->
-
         </div>
+
+        <section class="section-room bg-white">
+            <div class="container">
+                <h3>SEU BOLETO FOI GERADO COM SUCESSO!</h3>
+                <p>O NÚMERO DO SEU PEDIDO É XXXXXX</p>
+                <p>O carro poderá ser retirado somente após o pagamento.</p>
+                <button class="awe-btn awe-btn-13" style="position: absolute; left: 40%;">ACOMPANHAR PEDIDO</button>
+            </div>
+        </section>
+        <!-- RELATORIO -->
+        <%@include file="../jspf/footer.jspf" %>
+        <!-- FOOTER -->
+
         <!-- END / PAGE WRAP -->
 
 
@@ -169,5 +100,6 @@
         <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
         <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/exportExcel.js"></script>
     </body>
 </html>

@@ -55,7 +55,7 @@
             <!-- END / HEADER -->
 
             <!-- SUB BANNER -->
-            <section class="section-sub-banner bg-9">
+            <section class="section-sub-banner bg-9" style="background-image: url(images/Cars/default.png)">
 
                 <div class="awe-overlay"></div>
 
