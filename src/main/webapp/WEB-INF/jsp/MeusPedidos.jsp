@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Confirmar locação</title>
+        <title>Meus Pedidos</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -81,9 +81,9 @@
                                         <div id="dvData">
                                             <table>
                                                 <td class="date-select">Carro</td>
-                                                <td class="date-select">Placa</td>
                                                 <td class="date-select">Data da Retirada</td>
                                                 <td class="date-select">Data de Entrega</td>
+                                                <td class="date-select">Preço diária R$</td>
                                                 <td class="date-select">Valor Total R$</td>
                                                 <tr>
                                                     <td>xxxxxxxxx</td>

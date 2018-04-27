@@ -108,11 +108,11 @@
 
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label>Nome do Carro<sup>*</sup></label>
+                                                <label>Nome do Carro:<sup>*</sup></label>
                                                 <input type="text" class="input-text">
                                             </div>
                                             <div class="col-sm-6">
-                                                <label>Combustível<sup>*</sup></label>
+                                                <label>Combustível:<sup>*</sup></label>
                                                 <select class="awe-select">
                                                     <option>Gasolina</option>
                                                     <option>Etanol</option>
@@ -125,7 +125,11 @@
 
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label>Placa<sup>*</sup></label>
+                                                <label>Placa:<sup>*</sup></label>
+                                                <input type="text" class="input-text">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Preço diária R$:<sup>*</sup></label>
                                                 <input type="text" class="input-text">
                                             </div>
                                         </div>

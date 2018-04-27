@@ -1,12 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Atualizar Carro</title>
+        <title>Consulta Carro</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -17,6 +16,7 @@
         <link href='http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700' rel='stylesheet' type='text/css'>
 
         <!-- CSS LIBRARY -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/lib/font-lotusicon.css">
         <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
@@ -55,104 +55,64 @@
             <!-- END / HEADER -->
 
             <!-- SUB BANNER -->
-            <section class="section-sub-banner bg-9" style="background-image: url(images/Cars/default.png)">
-
+            <section class="section-sub-banner " style="background-image: url(images/Cars/default.png)">
                 <div class="awe-overlay"></div>
-
                 <div class="sub-banner">
                     <div class="container">
                         <div class="text text-center">
-                            <h2>ATUALIZAR CARRO</h2>
+                            <h2>Consulta Carro</h2>
                         </div>
                     </div>
-
                 </div>
-
             </section>
             <!-- END / SUB BANNER -->
+        </div>
 
-            <!-- RESERVATION -->
-            <section class="section-reservation-page bg-white">
+        <section class="section-room bg-white">
+            <div class="container">
 
-                <div class="container">
-                    <div class="reservation-page">
-
-                        <div class="row">
-
-
-                            <div class="col-md-10 col-lg-3">
-
-
-                                    <div class="reservation-date bg-gray">
-
-                                    </div>
-
+                <div class="room-wrap-1">
+                    <div class="row">            
+                        <form action= "./ConsultaCliete" method="post">
+                            <br/>
+                            <input type="text" class="input-text" placeholder="Buscar">
+                            <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">Buscar</button>
+                        </form>
+                        <br/>   
+                        <!-- RELATORIO -->
+                        <div class="shortcode-tab-price">
+                            <div class="tab-price">
+                                <div id="dvData">
+                                    <table>
+                                        <tr>
+                                            <td class="date-select">Nome do Carro</td>
+                                            <td class="date-select">Placa</td>
+                                            <td class="date-select">Categoria</td>
+                                            <td class="date-select">Preço diária R$</td>
+                                            <td class="date-select">Ações</td>
+                                        </tr>
+                                        <tr>
+                                            <td>xxxxxxxxx</td>
+                                            <td>xxxxxxxxx</td>
+                                            <td>xxxxxxxxx</td>
+                                            <td>xxxxxxxxx</td>
+                                            <td>
+                                                <button class="awe-btn awe-btn-13">Editar</button>
+                                                <button class="awe-btn awe-btn-13">Excluir</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
-
-
-                            <!-- CONTENT -->
-                            <div class="col-md col-lg-6">
-
-                         
-
-                                    <div class="reservation-billing-detail">
-
-                                        <label>Categoria<sup>*</sup></label>
-                                        <select class="awe-select">
-                                            <option>Clássicos</option>
-                                            <option>Esportivos</option>
-                                            <option>Luxuosos</option>
-                                            <option>Off Road</option>
-                                            <option>Super Esportivos</option>
-                                        </select>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Nome do Carro:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label>Combustível:<sup>*</sup></label>
-                                                <select class="awe-select">
-                                                    <option>Gasolina</option>
-                                                    <option>Etanol</option>
-                                                    <option>Diesel</option>
-                                                    <option>Gás</option>
-                                                    <option>Flex</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Placa:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label>Preço diária R$:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
-                                            </div>
-                                        </div>
-                                        <button class="awe-btn awe-btn-13">ATUALIZAR</button>
-                                    </div>
-
-                              
-
-                            </div>
-                            <!-- END / CONTENT -->
-
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!-- RELATORIO -->
+        <%@include file="../jspf/footer.jspf" %>
+        <!-- FOOTER -->
 
-            </section>
-            <!-- END / RESERVATION -->
-
-            <!-- FOOTER -->
-            <%@include file="../jspf/footer.jspf" %>
-            <!-- END / FOOTER -->
-
-        </div>
         <!-- END / PAGE WRAP -->
 
 
@@ -173,5 +133,6 @@
         <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
         <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/exportExcel.js"></script>
     </body>
 </html>
