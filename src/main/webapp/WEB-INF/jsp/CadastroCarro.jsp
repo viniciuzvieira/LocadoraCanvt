@@ -83,9 +83,9 @@
                             <div class="col-md-10 col-lg-3">
 
 
-                                    <div class="reservation-date bg-gray">
+                                <div class="reservation-date bg-gray">
 
-                                    </div>
+                                </div>
 
                             </div>
 
@@ -93,50 +93,85 @@
                             <!-- CONTENT -->
                             <div class="col-md col-lg-6">
 
-                         
+                                <form action="./CadastroCarro" method="post">
 
                                     <div class="reservation-billing-detail">
-
                                         <label>Categoria<sup>*</sup></label>
-                                        <select class="awe-select">
-                                            <option>Clássicos</option>
-                                            <option>Esportivos</option>
-                                            <option>Luxuosos</option>
-                                            <option>Off Road</option>
-                                            <option>Super Esportivos</option>
+                                        <select class="awe-select"name="categoria">
+                                            <option  value="Clássicos">Clássicos</option>
+                                            <option  value="Esportivos">Esportivos</option>
+                                            <option  value="Luxuosos">Luxuosos</option>
+                                            <option  value="Off Road">Off Road</option>
+                                            <option  value="Super Esportivos">Super Esportivos</option>
                                         </select>
 
                                         <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Nome do Carro:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                            <div class="col-sm-4 ">
+                                                <label for="modelo">Modelo</label>
+                                                <input type="text" class="form-control" id="modeloAuto" placeholder="Digite o modelo do carro" name="model">
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-4">
+                                                <label for="marcaAuto" >Marca</label>
+                                                <input type="text "class="form-control" id="marcaAuto" placeholder="Digite a marca do automóvel" name="marca">
+                                            </div>
+                                            <div class="col-sm-4">
                                                 <label>Combustível:<sup>*</sup></label>
-                                                <select class="awe-select">
-                                                    <option>Gasolina</option>
-                                                    <option>Etanol</option>
-                                                    <option>Diesel</option>
-                                                    <option>Gás</option>
-                                                    <option>Flex</option>
+                                                 <select id="comb" class="form-control " name="combustivel">
+                                                    <option value="Flex">Flex</option>
+                                                    <option value="Gasolina">Gasolina</option>
+                                                    <option value="Etanol">Etanol</option>
+                                                    <option value="Diesel">Diesel</option>
+                                                    <option value="Gás">Gás</option>
                                                 </select>
                                             </div>
                                         </div>
-
                                         <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Placa:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                            <div class="form-group col-md-6">
+                                                <label for="Portas" class=" control-label ">Portas</label>
+                                                <input type="text " class="form-control" id="Portas" placeholder="numero de portas " name="portas">
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="form-group col-md-6">
+                                                <label for="Kilometragem" class=" control-label ">Kilometragem</label>
+                                                <input type="text " class="form-control" id="Portas" placeholder="KM " name="KMs">
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="ano" >Ano</label>
+                                                <input type="text " class="form-control" id="anoAuto" placeholder="Digite o ano do automóvel" name="anoAuto">
+                                            </div>   
+
+                                            <div class="form-group col-md-4">
+                                                <label for="renavam" class=" control-label ">Renavam</label>
+                                                <input type="text " class="form-control" id="renavam" placeholder="Digite o renavam do automóvel" name="renavam">
+
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="cor" class=" control-label ">Cor</label>
+                                                <input type="text " class="form-control" id="cor" placeholder="Digite a cor " name="cor">
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <label for="numeroChassi" class=" control-label ">Numero do Chassi</label>
+                                                <input type="text" class="form-control" id="numeroChassi" placeholder="Digite o número do chassi" name="nchassi">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="placa" class="control-label">Placa</label>
+                                                <input type="text" class="form-control" id="placaAuto" placeholder="Digite a placa do automóvel" name="placa">
+                                            </div>
+                                            <div class="form-group col-sm-4">
                                                 <label>Preço diária R$:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                                <input type="text" class="form-control" id="val" placeholder=" " name="val">
                                             </div>
                                         </div>
-                                        <button class="awe-btn awe-btn-13">CADASTRAR</button>
+                                        <button class="awe-btn awe-btn-13" type="submit">CADASTRAR</button>
                                     </div>
+                                </form>
 
-                              
 
                             </div>
                             <!-- END / CONTENT -->
@@ -149,7 +184,7 @@
             <!-- END / RESERVATION -->
 
             <!-- FOOTER -->
-            <%@include file="../jspf/footer.jspf" %>
+            <%@include file="../jspf/footer.jspf"%>
             <!-- END / FOOTER -->
 
         </div>

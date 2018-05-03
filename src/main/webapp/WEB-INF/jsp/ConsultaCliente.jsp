@@ -73,9 +73,9 @@
 
                 <div class="room-wrap-1">
                     <div class="row">            
-                        <form action= "./ConsultaCliete" method="post">
+                        <form action= "./consultarCliente" method="post">
                             <br/>
-                            <input type="text" class="input-text" placeholder="Buscar">
+                            <input type="text" name="procurar"class="input-text" placeholder="Buscar">
                             <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">Buscar</button>
                         </form>
                         <br/>   
@@ -84,21 +84,37 @@
                             <div class="tab-price">
                                 <div id="dvData">
                                     <table>
-                                        <tr>
-                                            <td class="date-select">CPF</td>
-                                            <td class="date-select">Número da CNH</td>
-                                            <td class="date-select">E-mail</td>
-                                            <td class="date-select">Ações</td>
-                                        </tr>
-                                        <tr>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>
-                                                <button class="awe-btn awe-btn-13">Editar</button>
-                                                <button class="awe-btn awe-btn-13">Excluir</button>
-                                            </td>
-                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <td >Nome Completo</td>
+                                                <td >CPF</td>
+                                                <td >E-mail</td>
+                                                <td>CNH</td>
+                                                <td class="date-select actions">Ações</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach items="${model}" var="item">
+                                                <tr>
+                                                    <td>${item.nomeCompleto}</td>
+                                                    <td>${item.CPF}</td>
+                                                    <td>${item.email}</td>
+                                                    <td>${item.numeroCNH}</td>
+                                                    <td class="actions">
+                                                        <form action="./consultarCliente" method="post">
+                                                            
+                                                             <input name="repeat" type="hidden"  value="${item.CPF}">
+                                                            <button class="awe-btn awe-btn-13"  name="tipodeuser" value="editar">Editar</button>
+                                                            <button class="awe-btn awe-btn-13" name="tipodeuser" value="excluir">Excluir</button>
+                                                        
+                                                        
+                                                        
+                                                        </form>
+
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>

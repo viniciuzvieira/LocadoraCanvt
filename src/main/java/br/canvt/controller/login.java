@@ -8,6 +8,7 @@ package br.canvt.controller;
 import br.canvt.model.LoginDAO;
 import br.canvt.model.UserSistem;
 import java.io.IOException;
+import java.io.Serializable;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

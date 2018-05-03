@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
+
         <link rel="shortcut icon" href="images/favicon.png"/>
 
         <!-- GOOGLE FONT -->
@@ -99,42 +100,85 @@
                                 <div class="reservation-billing-detail">
                                     <form action="./CadastroCliente" method="post">
 
-                                        <label for="Name">Username:<sup>NÃO ALTERÁVEL</sup></label>
-                                        <input type="text" class="input-text" placeholder="" disabled="disabled">
-
-                                        <label for="Name">Nome Completo:<sup>*</sup></label>
-                                        <input type="text" class="input-text">
+                                        <label for="Name">Username:<sup>*</sup></label>
+                                        <input style="background-color: #cccccc" type="text" name="Username"class="input-text desabilitados"disabled="disabled" placeholder="Ex: Gabriela627">
+                                        ${sessionScope.usuario.nomeCompleto}
+                                        <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
+                                        <input type="text" placeholder="${sessionScope.usuario.nomeCompleto}"value="${sessionScope.usuario.nomeCompleto}"name="nomecompleto"class="input-text">
 
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label for="inputPassword4">CPF:<sup>NÃO ALTERÁVEL</sup></label>
-                                                <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11" disabled="disabled">
+                                                <label for="cpf">CPF:<sup>*</sup></label>
+                                                <input type="text" style="background-color: #cccccc" class="input-text" id="cpf" placeholder="CPF" name="cpf" disabled="disabled" maxlength="11">
                                             </div>
                                             <div class="col-sm-6">
                                                 <label for="datanasc">Data de nascimento:<sup>*</sup></label>
                                                 <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
                                             </div>
+
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-3">
                                                 <label for="cep">CEP:<sup>*</sup></label>
-                                                <input type="text" class="input-text" id="cpf" placeholder="CEP" name="cep">
+                                                <input type="text" class="input-text" id="cep" placeholder="CEP" name="cep">
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-3">
+                                                <label for="cidade">Cidade:<sup>*</sup></label>
+                                                <input type="text" class="input-text" id="cidade" placeholder="CEP" name="cidade">
+                                            </div>
+                                            <div class="col-sm-3">
                                                 <label for="bairro">Bairro:<sup>*</sup></label>
-                                                <input  type="text" class="input-text">
+                                                <input  type="text" class="input-text" name="bairro">
+                                            </div>
+                                            <div class="col-sm-3 ">
+                                                <label for="UF">UF<sup>*</sup></label>
+                                                <select id="UF" class="awe-select"  name="UF">
+                                                    <option selected value="NI">UF</option>
+                                                    <option value="AC">AC</option>
+                                                    <option value="AL">AL</option>
+                                                    <option value="AM">AM</option>
+                                                    <option value="AP">AP</option>
+                                                    <option value="BA">BA</option>
+                                                    <option value="CE">CE</option>
+                                                    <option value="DF">DF</option>
+                                                    <option value="ES">ES</option>
+                                                    <option value="GO">GO</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MG">MG</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="PA">PA</option>
+                                                    <option value="PB">PB</option>
+                                                    <option value="PE">PE</option>
+                                                    <option value="PI">PI</option>
+                                                    <option value="PR">PR</option>
+                                                    <option value="RJ">RJ</option>
+                                                    <option value="RN">RN</option>
+                                                    <option value="RS">RS</option>
+                                                    <option value="RO">RO</option>
+                                                    <option value="RR">RR</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SE">SE</option>
+                                                    <option value="SP">SP</option>
+                                                    <option value="TO">TO</option>
+                                                </select>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6">
-                                                <label for="Name">Rua:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                            <div class="col-sm-4">
+                                                <label for="Complemento">Complemento<sup>*</sup></label>
+                                                <input type="text" id="Complemento" name="complemento"class="input-text">
                                             </div>
                                             <div class="col-sm-4">
-                                                <label for="Name">N°:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                                <label for="Endereco:">Endereco:<sup>*</sup></label>
+                                                <input type="text" id="endereco" name="endereco"class="input-text">
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <label for="numerocasa">N°:<sup>*</sup></label>
+                                                <input type="text" name="numerocasa"id="numerocasa"class="input-text">
                                             </div>
                                         </div>
 
@@ -143,31 +187,28 @@
                                         <input type="radio" name="sexo" id="radioMas" value="Masculino">Masculino
                                         <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino
 
-                                        <label for="numeroCNH">Número da CNH:<sup>NÃO ALTERÁVEL</sup></label>
-                                        <input type="text" class="input-text" id="NumeroCNH" placeholder="" disabled="disabled">
+                                        <label for="numeroCNH">Número da CNH:<sup>*</sup></label>
+                                        <input type="text" class="input-text" style="background-color: #cccccc" id="NumeroCNH" name="cnh" disabled="disabled" placeholder="Número da CNH">
 
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <label for="telefone">Telefone:</label>
-                                                <input type="text" class="input-text" placeholder="Ex:(11)51231234">
+                                                <input type="text" name="tel"class="input-text" placeholder="Ex:(11)51231234">
                                             </div>
                                             <div class="col-sm-4">
                                                 <label for="celular">Celular:<sup>*</sup></label>
                                                 <input type="text" class="input-text" placeholder="Ex:(11)951231234">
                                             </div>
                                         </div>
-                                        
-                                        <label for="email">E-mail:<sup>*</sup></label>
-                                        <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
-                                        
+
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label for="email">Antiga senha:<sup>*</sup></label>
-                                                <input type="email" class="input-text" id="email" placeholder="Antiga senha" maxlength="100" name="email">
+                                                <label for="email">E-mail:<sup>*</sup></label>
+                                                <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
                                             </div>
                                             <div class="col-sm-6">
-                                                <label for="senha">Nova senha:<sup>*</sup></label>
-                                                <input type="password" class="input-text" id="senha" placeholder="Nova senha" name="password">
+                                                <label for="senha">Senha:<sup>*</sup></label>
+                                                <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha">
                                             </div>
                                         </div>
 
@@ -212,5 +253,6 @@
         <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
         <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+        <script src="js/criaCampo.js" type="text/javascript"></script>
     </body>
 </html>

@@ -73,9 +73,9 @@
 
                 <div class="room-wrap-1">
                     <div class="row">            
-                        <form action= "./ConsultaCliete" method="post">
+                        <form action= "./ConsultaCarro" method="post">
                             <br/>
-                            <input type="text" class="input-text" placeholder="Buscar">
+                            <input type="text" name="procurar"class="input-text" placeholder="Buscar">
                             <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">Buscar</button>
                         </form>
                         <br/>   
@@ -84,23 +84,43 @@
                             <div class="tab-price">
                                 <div id="dvData">
                                     <table>
-                                        <tr>
-                                            <td class="date-select">Nome do Carro</td>
-                                            <td class="date-select">Placa</td>
-                                            <td class="date-select">Categoria</td>
-                                            <td class="date-select">Preço diária R$</td>
-                                            <td class="date-select">Ações</td>
-                                        </tr>
-                                        <tr>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>
-                                                <button class="awe-btn awe-btn-13">Editar</button>
-                                                <button class="awe-btn awe-btn-13">Excluir</button>
-                                            </td>
-                                        </tr>
+                                        <thead>
+
+                                            <tr>
+                                                <th>Renavam </th>
+                                                <th>Marca</th>
+                                                <th>Modelo</th>
+                                                <th>Placa</th>
+                                                <th class="actions date-select">Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                            <c:forEach items="${autos}" var="item">
+                                                <tr>
+                                                    <td>${item.renavam}</td>
+                                                    <td>${item.marca}</td>
+                                                    <td>${item.modelo}</td>
+                                                    <td>${item.placa}</td>
+                                                    <td class="actions">
+                                                        <form action="./ConsultaCarro" method="post">    
+
+                                                            <button type="submit" name="tipodeuser" value="editar" class="awe-btn awe-btn-13" >Editar</button>
+                                                            <button type="submit" name="tipodeuser" value="excluir" class="awe-btn awe-btn-13" >Excluir</button>
+
+                                                            <input name="auto" type="hidden"  value="${item.renavam}">
+
+
+
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
+
+
+
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>

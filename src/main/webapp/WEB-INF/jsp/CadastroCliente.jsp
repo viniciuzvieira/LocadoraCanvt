@@ -100,41 +100,84 @@
                                     <form action="./CadastroCliente" method="post">
 
                                         <label for="Name">Username:<sup>*</sup></label>
-                                        <input type="text" class="input-text" placeholder="Ex: Gabriela627">
+                                        <input type="text" name="Username"class="input-text" placeholder="Ex: Gabriela627">
 
-                                        <label for="Name">Nome Completo:<sup>*</sup></label>
-                                        <input type="text" class="input-text">
+                                        <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
+                                        <input type="text" name="nomecompleto"class="input-text">
 
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label for="inputPassword4">CPF:<sup>*</sup></label>
+                                                <label for="cpf">CPF:<sup>*</sup></label>
                                                 <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
                                             </div>
                                             <div class="col-sm-6">
                                                 <label for="datanasc">Data de nascimento:<sup>*</sup></label>
                                                 <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
                                             </div>
+
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-3">
                                                 <label for="cep">CEP:<sup>*</sup></label>
-                                                <input type="text" class="input-text" id="cpf" placeholder="CEP" name="cep">
+                                                <input type="text" class="input-text" id="cep" placeholder="CEP" name="cep">
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-3">
+                                                <label for="cidade">Cidade:<sup>*</sup></label>
+                                                <input type="text" class="input-text" id="cidade" placeholder="CEP" name="cidade">
+                                            </div>
+                                            <div class="col-sm-3">
                                                 <label for="bairro">Bairro:<sup>*</sup></label>
-                                                <input  type="text" class="input-text">
+                                                <input  type="text" class="input-text" name="bairro">
+                                            </div>
+                                            <div class="col-sm-3 ">
+                                                <label for="UF">UF<sup>*</sup></label>
+                                                <select id="UF" class="awe-select"  name="UF">
+                                                    <option selected value="NI">UF</option>
+                                                    <option value="AC">AC</option>
+                                                    <option value="AL">AL</option>
+                                                    <option value="AM">AM</option>
+                                                    <option value="AP">AP</option>
+                                                    <option value="BA">BA</option>
+                                                    <option value="CE">CE</option>
+                                                    <option value="DF">DF</option>
+                                                    <option value="ES">ES</option>
+                                                    <option value="GO">GO</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MG">MG</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="PA">PA</option>
+                                                    <option value="PB">PB</option>
+                                                    <option value="PE">PE</option>
+                                                    <option value="PI">PI</option>
+                                                    <option value="PR">PR</option>
+                                                    <option value="RJ">RJ</option>
+                                                    <option value="RN">RN</option>
+                                                    <option value="RS">RS</option>
+                                                    <option value="RO">RO</option>
+                                                    <option value="RR">RR</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SE">SE</option>
+                                                    <option value="SP">SP</option>
+                                                    <option value="TO">TO</option>
+                                                </select>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6">
-                                                <label for="Name">Rua:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                            <div class="col-sm-4">
+                                                <label for="Complemento">Complemento<sup>*</sup></label>
+                                                <input type="text" id="Complemento" name="complemento"class="input-text">
                                             </div>
                                             <div class="col-sm-4">
-                                                <label for="Name">N°:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                                <label for="Endereco:">Endereco:<sup>*</sup></label>
+                                                <input type="text" id="endereco" name="endereco"class="input-text">
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <label for="numerocasa">N°:<sup>*</sup></label>
+                                                <input type="text" name="numerocasa"id="numerocasa"class="input-text">
                                             </div>
                                         </div>
 
@@ -144,12 +187,12 @@
                                         <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino
 
                                         <label for="numeroCNH">Número da CNH:<sup>*</sup></label>
-                                        <input type="text" class="input-text" id="NumeroCNH" placeholder="Número da CNH">
+                                        <input type="text" class="input-text" id="NumeroCNH" name="cnh" placeholder="Número da CNH">
 
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <label for="telefone">Telefone:</label>
-                                                <input type="text" class="input-text" placeholder="Ex:(11)51231234">
+                                                <input type="text" name="tel"class="input-text" placeholder="Ex:(11)51231234">
                                             </div>
                                             <div class="col-sm-4">
                                                 <label for="celular">Celular:<sup>*</sup></label>
@@ -164,7 +207,7 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <label for="senha">Senha:<sup>*</sup></label>
-                                                <input type="password" class="input-text" id="senha" placeholder="Senha" name="password">
+                                                <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha">
                                             </div>
                                         </div>
 
