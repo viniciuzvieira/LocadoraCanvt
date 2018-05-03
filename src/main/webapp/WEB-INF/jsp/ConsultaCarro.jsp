@@ -73,7 +73,7 @@
 
                 <div class="room-wrap-1">
                     <div class="row">            
-                        <form action= "./ConsultaCarro" method="post">
+                        <form action= "./ConsultarAuto" method="post">
                             <br/>
                             <input type="text" name="procurar"class="input-text" placeholder="Buscar">
                             <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">Buscar</button>
@@ -104,7 +104,7 @@
                                                     <td>${item.modelo}</td>
                                                     <td>${item.placa}</td>
                                                     <td class="actions">
-                                                        <form action="./ConsultaCarro" method="post">    
+                                                        <form action="./ConsultarAuto" method="post">    
 
                                                             <button type="submit" name="tipodeuser" value="editar" class="awe-btn awe-btn-13" >Editar</button>
                                                             <button type="submit" name="tipodeuser" value="excluir" class="awe-btn awe-btn-13" >Excluir</button>

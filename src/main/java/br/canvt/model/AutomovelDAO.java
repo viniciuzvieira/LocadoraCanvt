@@ -42,7 +42,7 @@ public class AutomovelDAO {
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
                 auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-                auto.setDescricao(resultados.getString("DESCRICAO"));
+           
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
 
                 lista.add(auto);
@@ -80,7 +80,7 @@ public class AutomovelDAO {
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
                 auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-                auto.setDescricao(resultados.getString("DESCRICAO"));
+         
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
 
                 lista.add(auto);
@@ -157,7 +157,6 @@ public class AutomovelDAO {
                     auto.setCor(resultados.getString("COR"));
                     auto.setPortas(resultados.getString("PORTAS"));
                     auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-                    auto.setDescricao(resultados.getString("DESCRICAO"));
                     auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
                     auto.setDisponivel(resultados.getBoolean("DISPONIVEL"));
                 }
