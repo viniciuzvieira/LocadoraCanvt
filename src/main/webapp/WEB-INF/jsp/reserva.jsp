@@ -1,12 +1,12 @@
 
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-BR" ng-app="carros" ng-controller="principal">
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Reservation Step 1</title>
+        <title>Reserva</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -110,205 +110,28 @@
                                 <div class="accomd-modations-content owl-single">
 
                                     <div class="row">
+                                        <c:forEach items="${autos}" var="item">
+                                            <div class="col-xs-4">
+                                                <div class="accomd-modations-room">
+                                                    <div class="img">
+                                                        <a href="#"><img src="images/Cars/MC250_1.jpg" class="cars" alt="Mercedes-Bens azul"></a>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h2><a href="#">${item.marca}</a></h2>
+                                                        <p class="price">
+                                                            <span class="amout">${item.valorDeLocacao}</span>/dias
+                                                        </p>
+                                                        <form action="./reserva" method="post"> 
+                                                            <button class="btn btn-primary" type="submit">detalhes</button>
+                                                            <input type="hidden" name="renavam"value="${item.renavam}"/>
+                                                        </form>
 
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/Cars/MC250_1.jpg" class="cars" alt="Mercedes-Bens azul"></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Mercedes-Benz C250</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dias
-                                                    </p>
+
+                                                    </div>
+
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/Cars/LDEvoqueC.jpg"   class="cars"alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">RANGE ROVER EVOQUE HSE DYNAMIC CONVERSÍVEL</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dias
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/Cars/300C.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">CHRYSLER 300C
-                                                        </a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dias
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/Cars/AgeraRS_1.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Agera RS</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dia
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/Cars/KRegera.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Regera </a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dia
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/Cars/BMWI8.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">BMWI8</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dia
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-
-                                    </div>
-
-                                    <div class="row">
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Luxury Room</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dias
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Family Room</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dias
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Couple Room</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dias
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Standard</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dia
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Standard</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dia
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
-
-                                        <!-- ITEM -->
-                                        <div class="col-xs-4">
-                                            <div class="accomd-modations-room">
-                                                <div class="img">
-                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                                </div>
-                                                <div class="text">
-                                                    <h2><a href="#">Standard</a></h2>
-                                                    <p class="price">
-                                                        <span class="amout">R$320</span>/dia
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END / ITEM -->
+                                        </c:forEach>
 
                                     </div>
 

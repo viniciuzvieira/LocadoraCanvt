@@ -5,8 +5,6 @@
  */
 package br.canvt.model;
 
-
-
 import static br.canvt.model.BDConexao.getConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -42,7 +40,7 @@ public class AutomovelDAO {
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
                 auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-           
+
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
 
                 lista.add(auto);
@@ -80,7 +78,7 @@ public class AutomovelDAO {
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
                 auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-         
+
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
 
                 lista.add(auto);
@@ -95,10 +93,12 @@ public class AutomovelDAO {
     public void incluirComTransacao(Automovel auto) throws SQLException {
         String query = "INSERT INTO AUTO "
                 + "(RENAVAM,PLACA,MARCA,MODELO,ANO,CATEGORIA,KILOMETRAGEM,"
-                + "NUMEROCHASSI,COR,PORTAS,COMBUSTIVEL,VALORDELOCACAO, DISPONIVEL) "
-                + "VALUES (?, ?, ?, ?, ?, ? ,? ,? ,? , ? ,? , ?, ?)";
+                + "NUMEROCHASSI,COR,PORTAS,COMBUSTIVEL,VALORDELOCACAO,IMAGEM, DISPONIVEL) "
+                + "VALUES (?, ?, ?, ?, ?, ? ,? ,? ,? , ? ,? , ?, ?, ?)";
         Connection con = null;
         PreparedStatement stmt = null;
+        System.out.println(auto.getRenavam() + auto.getPlaca() + auto.getMarca() + auto.getModelo() + auto.getAno() + auto.getCategoria() + auto.getKilometragem()
+                + auto.getNumeroChassi() +"img"+ auto.getCor() + auto.getPortas() + auto.getCombustivel() + auto.getValorDeLocacao());
         try {
             con = BDConexao.getConnection();
 
@@ -115,9 +115,9 @@ public class AutomovelDAO {
             stmt.setString(9, auto.getCor());
             stmt.setString(10, auto.getPortas());
             stmt.setString(11, auto.getCombustivel());
-          
             stmt.setDouble(12, auto.getValorDeLocacao());
-            stmt.setBoolean(13, true);
+            stmt.setString(13, auto.getImagem());
+            stmt.setBoolean(14, true);
 
             stmt.execute();
         } catch (SQLException e) {
@@ -232,7 +232,7 @@ public class AutomovelDAO {
         }
 
     }
-    
+
     public void retirarAuto(String renavam) {
         String query = "UPDATE AUTO SET DISPONIVEL = ? WHERE RENAVAM = ?";
         Connection con = null;

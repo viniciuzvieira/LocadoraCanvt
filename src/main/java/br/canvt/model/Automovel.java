@@ -16,13 +16,14 @@ public class Automovel {
     private String combustivel;
     private String descricao;
     private Boolean disponivel;
+    private String imagem;
             
     public Automovel() {
         this.disponivel = true;
     }
 
     public Automovel( String marca, String modelo, String ano, String categoria, String placa,
-            String renavam, String kilometragem,  Double valorDeLocacao,String numeroChassi, String cor, String portas, String combustivel, String descricao) {
+            String renavam, String imagem,String kilometragem,  Double valorDeLocacao,String numeroChassi, String cor, String portas, String combustivel, String descricao) {
        
         this.marca = marca;
         this.modelo = modelo;
@@ -38,6 +39,7 @@ public class Automovel {
         this.descricao = descricao;
         this.valorDeLocacao  =  valorDeLocacao;
         this.disponivel = true;
+        this.imagem=imagem;
     }
 
     public String getMarca() {
@@ -150,6 +152,14 @@ public class Automovel {
 
     public void setDisponivel(Boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
    

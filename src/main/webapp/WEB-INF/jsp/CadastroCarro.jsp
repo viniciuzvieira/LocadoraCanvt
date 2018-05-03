@@ -116,7 +116,7 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <label>Combustível:<sup>*</sup></label>
-                                                 <select id="comb" class="form-control " name="combustivel">
+                                                <select id="comb" class="form-control " name="combustivel">
                                                     <option value="Flex">Flex</option>
                                                     <option value="Gasolina">Gasolina</option>
                                                     <option value="Etanol">Etanol</option>
@@ -167,6 +167,13 @@
                                                 <label>Preço diária R$:<sup>*</sup></label>
                                                 <input type="text" class="form-control" id="val" placeholder=" " name="val">
                                             </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col md-12 col-lg-6 col-sm-4">
+                                                <label for="file">Escolha a imagem do Veiculo</label>
+                                                <input type="file" id="file" name="file" multiple>
+                                            </div>
+
                                         </div>
                                         <button class="awe-btn awe-btn-13" type="submit">CADASTRAR</button>
                                     </div>
