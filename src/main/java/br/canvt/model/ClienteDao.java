@@ -5,7 +5,6 @@
  */
 package br.canvt.model;
 
-
 import static br.canvt.model.BDConexao.getConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -90,7 +89,6 @@ public class ClienteDao {
 //        }
 //        return lista;
 //    }
-
     public List<ClienteFisico> listar() {
 
         String query = "SELECT * FROM CLIENTEF WHERE DISABLED = ?";
@@ -138,8 +136,8 @@ public class ClienteDao {
                 + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection con = null;
         PreparedStatement stmt = null;
-        System.out.println(cli.getNomeCompleto()+cli.getCPF()+cli.getSexo()+cli.getEmail()+cli.getNumeroCNH()+cli.getEnd()+
-                cli.getComplemento()+cli.getNumero()+cli.getBairro()+cli.getCEP()+cli.getCidade()+cli.getDataNasc()+cli.getUF() );
+        System.out.println(cli.getNomeCompleto() + cli.getCPF() + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
+                + cli.getComplemento() + cli.getNumero() + cli.getBairro() + cli.getCEP() + cli.getCidade() + cli.getDataNasc() + cli.getUF());
         try {
             con = BDConexao.getConnection();
 
@@ -160,9 +158,11 @@ public class ClienteDao {
             stmt.setString(13, cli.getDataNasc());
             stmt.setString(14, cli.getUF());
             stmt.setBoolean(15, false);
-            stmt.execute();
-        } catch (SQLException e) {
 
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         } finally {
             if (stmt != null && !stmt.isClosed()) {
                 stmt.close();
@@ -183,7 +183,7 @@ public class ClienteDao {
 
             stmt.setString(1, CPF);
             stmt.setBoolean(2, false);
-            
+
             try (ResultSet resultados = stmt.executeQuery()) {
 
                 if (resultados.next()) {
@@ -208,11 +208,11 @@ public class ClienteDao {
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         }
-   
+
         return c;
     }
-    
-     public List<ClienteFisico> procurarEspecial(String CPF) {
+
+    public List<ClienteFisico> procurarEspecial(String CPF) {
         String query = "SELECT * FROM CLIENTEF "
                 + "WHERE (CPF LIKE ?) AND DISABLED = ?";
         List<ClienteFisico> lista = new ArrayList<>();
@@ -220,7 +220,7 @@ public class ClienteDao {
         try (Connection conn = getConnection();
                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
-            stmt.setString(1, "%"+CPF+"%");
+            stmt.setString(1, "%" + CPF + "%");
             stmt.setBoolean(2, false);
 
             try (ResultSet resultados = stmt.executeQuery()) {
@@ -250,7 +250,7 @@ public class ClienteDao {
         }
         return lista;
     }
-    
+
     public void excluir(String cpf) {
         String sql = "UPDATE CLIENTEF SET DISABLED = ? WHERE (CPF=?)";
         Connection connection = null;
@@ -264,7 +264,7 @@ public class ClienteDao {
             System.err.println(ex.getMessage());
         }
     }
-    
+
     public void Atualizar(ClienteFisico cli, String CPF) throws SQLException {
         String query = "UPDATE CLIENTEF SET NOME=?,SEXO=?,TELEFONE=?,EMAIL=?, "
                 + "NUMEROCNH=?,ENDERECO=?,COMPLEMENTO=?,NUMERO=?,BAIRRO=?,CEP=?,CIDADE=?, "
