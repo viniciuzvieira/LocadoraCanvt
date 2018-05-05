@@ -57,7 +57,7 @@ public class consultarCliente extends HttpServlet  {
             HttpSession nova = request.getSession(true);
             search = request.getParameter("repeat");//repeat= cpf do cliente para busca
             Cliente cliente = cli.procurar(search);//retorna cliente
-            nova.setAttribute("1", cliente);//passa a sessão    
+            nova.setAttribute("usuario", cliente);//passa a sessão    
             response.sendRedirect(request.getContextPath() + "/AtualizaCliente");
 
         } else if (btn.equals("excluir")) {

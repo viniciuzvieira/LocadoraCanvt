@@ -1,8 +1,9 @@
 package br.canvt.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ClienteFisico extends Cliente {
+public class ClienteFisico extends Cliente implements Serializable{
 
 
     public String getNumeroCNH() {

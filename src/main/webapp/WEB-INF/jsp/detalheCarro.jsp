@@ -1,9 +1,11 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <!-- TITLE -->
-    <title>Room Detail</title>
+    <title>Carro Detalhe</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
@@ -48,13 +50,13 @@
  
            <%@include file="../jspf/header.jspf"%> 
    
-        <section class="section-sub-banner bg-9">
+        <section class="section-sub-banner"  style="background-image: url(images/Cars/default.png)"/>
             <div class="awe-overlay"></div>
             <div class="sub-banner">
                 <div class="container">
                     <div class="text text-center">
-                        <h2>LUXURY ROOM</h2>
-                        <p>Lorem Ipsum is simply dummy text</p>
+                        <h2></h2>
+                        <p></p>
                     </div>
                 </div>
 
@@ -128,33 +130,20 @@
                                 <div class="room-detail_total">
                                     <img src="images/icon-logo.png" alt="" class="icon-logo">
                                     
-                                    <h6>STARTING ROOM FROM</h6>
-                                    
+                                    <h6>${sessionScope.auto.modelo}}</h6>
+                                     <h6>${sessionScope.auto.renavam}}</h6>
                                     <p class="price">
-                                        <span class="amout">$260</span>  /days
+                                        <span class="amout"></span>  /days
                                     </p>
                                 </div>
                                 
                                 <div class="room-detail_form">
-                                    <label>Arrive</label>
-                                    <input type="text" class="awe-calendar from" placeholder="Arrive Date">
-                                    <label>Depature</label>
-                                    <input type="text" class="awe-calendar to" placeholder="Departure Date">
-                                    <label>Adult</label>
-                                    <select class="awe-select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option selected>3</option>
-                                        <option>4</option>
-                                    </select>
-                                    <label>Chirld</label>
-                                    <select class="awe-select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option selected>3</option>
-                                        <option>4</option>
-                                    </select>
-                                    <button class="awe-btn awe-btn-13">Book Now</button>
+                                    <label></label>
+                                    <input type="text" class="awe-calendar from" placeholder="Retirada  ">
+                                    <label></label>
+                                    <input type="text" class="awe-calendar to" placeholder="Entrega ">
+                                   
+                                    <button class="awe-btn awe-btn-13">comprar</button>
                                 </div>
 
                             </div>
@@ -625,7 +614,7 @@
 
                 <!-- COMPARE ACCOMMODATION -->
                 <div class="room-detail_compare">
-                    <h2 class="room-compare_title">COMPARE ACCOMMODATION</h2>
+                    <h2 class="room-compare_title">COMPARE COM OUTROS</h2>
 
                     <div class="room-compare_content">
                         
@@ -638,7 +627,7 @@
                                     </div>  
                                 
                                     <div class="text">
-                                        <h2><a href="">LUxury room</a></h2>
+                                        <h2><a href=""> </a></h2>
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
@@ -646,7 +635,7 @@
                                             <li><i class="lotus-icon-view"></i> View: Ocen</li>
                                         </ul>
                                 
-                                        <a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
+                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
                                 
                                     </div>
                                 
@@ -662,7 +651,7 @@
                                     </div>  
                                 
                                     <div class="text">
-                                        <h2><a href="">Family Room</a></h2>
+                                        <h2><a href=""> </a></h2>
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
@@ -670,7 +659,7 @@
                                             <li><i class="lotus-icon-view"></i> View: Ocen</li>
                                         </ul>
                                 
-                                        <a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
+                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
                                 
                                     </div>
                                 
@@ -686,7 +675,7 @@
                                     </div>  
                                 
                                     <div class="text">
-                                        <h2><a href="">standard Room</a></h2>
+                                        <h2><a href=""> </a></h2>
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
@@ -694,7 +683,7 @@
                                             <li><i class="lotus-icon-view"></i> View: Ocen</li>
                                         </ul>
                                 
-                                        <a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
+                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
                                 
                                     </div>
                                 
@@ -710,7 +699,7 @@
                                     </div>  
                                 
                                     <div class="text">
-                                        <h2><a href="">couple Room</a></h2>
+                                        <h2><a href=""> </a></h2>
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
@@ -718,7 +707,7 @@
                                             <li><i class="lotus-icon-view"></i> View: Ocen</li>
                                         </ul>
                                 
-                                        <a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
+                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
                                 
                                     </div>
                                 

@@ -102,18 +102,18 @@
 
                                         <label for="Name">Username:<sup>*</sup></label>
                                         <input style="background-color: #cccccc" type="text" name="Username"class="input-text desabilitados"disabled="disabled" placeholder="Ex: Gabriela627">
-                                        ${sessionScope.usuario.nomeCompleto}
+                                       
                                         <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
-                                        <input type="text" placeholder="${sessionScope.usuario.nomeCompleto}"value="${sessionScope.usuario.nomeCompleto}"name="nomecompleto"class="input-text">
+                                        <input type="text" value="${sessionScope.usuario.nomeCompleto}"name="nomecompleto"class="input-text">
 
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <label for="cpf">CPF:<sup>*</sup></label>
-                                                <input type="text" style="background-color: #cccccc" class="input-text" id="cpf" placeholder="CPF" name="cpf" disabled="disabled" maxlength="11">
+                                                <input type="text" value="${sessionScope.usuario.CPF}" style="background-color: #cccccc" class="input-text" id="cpf" placeholder="CPF" name="cpf" disabled="disabled" maxlength="11">
                                             </div>
                                             <div class="col-sm-6">
                                                 <label for="datanasc">Data de nascimento:<sup>*</sup></label>
-                                                <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
+                                                <input  type="text" value="${sessionScope.usuario.dataNasc}"class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
                                             </div>
 
                                         </div>

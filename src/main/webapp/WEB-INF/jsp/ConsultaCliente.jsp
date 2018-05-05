@@ -93,6 +93,7 @@
                                                 <td class="date-select actions">Ações</td>
                                             </tr>
                                         </thead>
+                                        <a href="AtualizaCliente.jsp"></a>
                                         <tbody>
                                             <c:forEach items="${model}" var="item">
                                                 <tr>

@@ -43,7 +43,7 @@ public class reserva extends HttpServlet implements Serializable {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession(true);
+        HttpSession session = request.getSession();
         AutomovelDAO dao = new AutomovelDAO();
         String renavam = request.getParameter("renavam");
         Automovel auto = new Automovel();
