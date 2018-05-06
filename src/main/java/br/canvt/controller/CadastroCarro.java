@@ -7,23 +7,29 @@ package br.canvt.controller;
  */
 import br.canvt.model.Automovel;
 import br.canvt.model.AutomovelDAO;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author viniciuzvieira
  */
 @WebServlet(urlPatterns = {"/CadastroCarro"})
+@MultipartConfig(maxFileSize = 16177215) 
+
 public class CadastroCarro extends HttpServlet {
 
     @Override
@@ -39,6 +45,10 @@ public class CadastroCarro extends HttpServlet {
             throws ServletException, IOException {
         Automovel auto = new Automovel();
         AutomovelDAO dao = new AutomovelDAO();
+        
+        Part filePart = request.getPart("file");
+        InputStream input = filePart.getInputStream();
+        
         String r = request.getParameter("renavam");
         String val = request.getParameter("val");
         auto.setMarca(request.getParameter("marca"));
@@ -53,7 +63,9 @@ public class CadastroCarro extends HttpServlet {
         auto.setPortas(request.getParameter("portas"));
         auto.setCombustivel(request.getParameter("combustivel"));
         auto.setKilometragem(request.getParameter("KMs"));
-        auto.setImagem(request.getParameter("file"));
+        auto.setImagem(input);
+        
+        
         try {
             dao.incluirComTransacao(auto);
         } catch (SQLException ex) {

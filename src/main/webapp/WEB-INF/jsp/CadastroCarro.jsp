@@ -93,7 +93,7 @@
                             <!-- CONTENT -->
                             <div class="col-md col-lg-6">
 
-                                <form action="./CadastroCarro" method="post">
+                                <form action="./CadastroCarro" method="post" enctype="multipart/form-data">
 
                                     <div class="reservation-billing-detail">
                                         <label>Categoria<sup>*</sup></label>
@@ -170,7 +170,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="form-group col md-12 col-lg-6 col-sm-4">
-                                                <label for="file">Escolha a imagem do Veiculo</label>
+                                                <label for="file">Escolha a imagem do veiculo</label>
                                                 <input type="file" id="file" name="file" multiple>
                                             </div>
 

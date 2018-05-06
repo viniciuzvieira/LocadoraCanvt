@@ -98,7 +98,7 @@ public class AutomovelDAO {
         Connection con = null;
         PreparedStatement stmt = null;
         System.out.println(auto.getRenavam() + auto.getPlaca() + auto.getMarca() + auto.getModelo() + auto.getAno() + auto.getCategoria() + auto.getKilometragem()
-                + auto.getNumeroChassi() +"img"+ auto.getCor() + auto.getPortas() + auto.getCombustivel() + auto.getValorDeLocacao());
+                + auto.getNumeroChassi() +auto.getImagem()+ auto.getCor() + auto.getPortas() + auto.getCombustivel() + auto.getValorDeLocacao());
         try {
             con = BDConexao.getConnection();
 
@@ -116,7 +116,7 @@ public class AutomovelDAO {
             stmt.setString(10, auto.getPortas());
             stmt.setString(11, auto.getCombustivel());
             stmt.setDouble(12, auto.getValorDeLocacao());
-            stmt.setString(13, auto.getImagem());
+            stmt.setBlob(13, auto.getImagem());
             stmt.setBoolean(14, true);
 
             stmt.execute();
