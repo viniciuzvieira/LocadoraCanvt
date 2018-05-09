@@ -1,8 +1,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
@@ -112,7 +112,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="datanasc">Data de nascimento:<sup>*</sup></label>
-                                            <input  type="text" required="required" class="input-text" id="datanasc" required="required" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
+                                            <input  type="text" required="required" class="input-text" id="datanasc" required="required" placeholder="DD/MM/AAAA" name="datanasc" onkeypress="mascara(this, '##/##/####')">
                                         </div>
 
                                         <div class="col-sm-3">
@@ -127,51 +127,39 @@
                                             <label for="cidade">Cidade:<sup>*</sup></label>
                                             <input name="cidade" required="required" class="input-text" type="text" id="cidade"/>
                                         </div>
-
                                         <div class="col-sm-4">
                                             <label for="bairro">Bairro:<sup>*</sup></label>
                                             <input name="bairro" required="required" class="input-text" type="text" id="bairro"/>
                                         </div> 
-
                                         <div class="col-sm-6">
                                             <label for="Endereco:">Rua:<sup>*</sup></label>
                                             <input name="endereco" required="required" class="input-text" type="text" id="endereco"/>
                                         </div>
-
                                         <div class="col-sm-2">
                                             <label for="numerocasa">N°:<sup>*</sup></label>
                                             <input type="text" required="required" name="numerocasa" id="numerocasa" class="input-text">
                                         </div>
-
                                         <div class="col-sm-12">
                                             <label for="Complemento">Complemento:</label>
                                             <input type="text" id="Complemento" name="complemento"class="input-text">           
                                         </div>
-
                                         <div class="col-sm-12">
                                             <label><span style="font-weight:bold;" for="rad" >Sexo:<sup style="color:red;">*</sup></span>
                                                 <input type="radio" name="sexo" id="radioMas" value="Masculino" required>Masculino
                                                 <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino</label>
 
                                         </div>
-
                                         <div class="col-sm-12">
                                             <label for="numeroCNH">Número da CNH:<sup>*</sup></label>
                                             <input type="text" class="input-text" id="NumeroCNH" name="cnh" placeholder="Número da CNH">
                                         </div>
-
-                                        <div class="col-sm-6">
-                                            <label for="telefone">Telefone:</label>
-                                            <input type="text"name="tel" class="input-text" placeholder="Ex:(11)51231234">
+                                        <div class="col-sm-12">
+                                            <label for="email">E-mail:<sup>*</sup></label>
+                                            <input type="email" required="required" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="celular">Celular:<sup>*</sup></label>
-                                            <input type="text" required="required" class="input-text" placeholder="Ex:(11)951231234">
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <label for="email">E-mail:<sup>*</sup></label>
-                                            <input type="email" required="required" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
+                                            <input type="text" name="tel" required="required" class="input-text" placeholder="Ex:(11)951231234">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="senha">Senha:<sup>*</sup></label>
