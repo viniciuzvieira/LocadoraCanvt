@@ -119,7 +119,8 @@ public class ClienteDao {
                 c.setDataNasc(resultados.getString("DATANASCIMENTO"));
                 c.setUF(resultados.getString("ESTADO"));
                 c.setDisabled(resultados.getBoolean("DISABLED"));
-
+                c.setUsername(resultados.getString("USERNAME"));
+                c.setHashSenha(resultados.getString("SENHA"));
                 lista.add(c);
             }
         } catch (SQLException ex) {
@@ -132,8 +133,8 @@ public class ClienteDao {
     public void incluirComTransacao(ClienteFisico cli) throws SQLException {
         String query = "INSERT INTO CLIENTEF "
                 + "(NOME,CPF,SEXO,TELEFONE,EMAIL,NUMEROCNH,ENDERECO,COMPLEMENTO,NUMERO,BAIRRO,CEP,"
-                + "CIDADE,DATANASCIMENTO,ESTADO,DISABLED) "
-                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "CIDADE,DATANASCIMENTO,ESTADO,DISABLED,USERNAME,SENHA) "
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection con = null;
         PreparedStatement stmt = null;
         System.out.println(cli.getNomeCompleto() + cli.getCPF() + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
@@ -158,7 +159,8 @@ public class ClienteDao {
             stmt.setString(13, cli.getDataNasc());
             stmt.setString(14, cli.getUF());
             stmt.setBoolean(15, false);
-
+            stmt.setString(16, cli.getUsername());
+            stmt.setString(17, cli.getHashSenha());
             stmt.executeUpdate();
 
         } catch (SQLException e) {
