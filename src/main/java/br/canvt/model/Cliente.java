@@ -1,7 +1,6 @@
 package br.canvt.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Cliente implements Serializable {
 

@@ -8,7 +8,6 @@ package br.canvt.controller;
 import br.canvt.model.Automovel;
 import br.canvt.model.AutomovelDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;

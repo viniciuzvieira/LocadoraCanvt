@@ -129,6 +129,7 @@
                                     <img src="images/icon-accmod.png" alt="icon">
                                 </div>
                             </div>
+                            
                             <div class="col-md-12">
                                 <div class="accomd-modations-content owl-single">
 
