@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" ng-app="carros" ng-controller="principal">
 <head>
     <meta charset="utf-8">
     <!-- TITLE -->
@@ -278,17 +278,12 @@
                                         <input type="text" class="awe-calendar awe-input to" placeholder="Depature">
                                     </div>
                                     
-                                    <h6 class="check_availability_title">ROOMS &amp; GUest</h6>
+                                    <h6 class="check_availability_title">Selecione o carro:</h6>
                                     
                                     <div class="check_availability-field">
-                                        <label>ROOMS</label>
-                                        <select class="awe-select">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
+                                        <label>Carros</label>
+                                        <select class="form-control custom-select" id="carros" ng-model="carroSelecionado">
+                                            <option ng-repeat="p in carros| orderBy: 'nome'">{{p.nome}}</option>
                                         </select>
                                     </div>
                                     
@@ -668,7 +663,10 @@
     <script type="text/javascript" src="js/lib/jquery.countdown.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
     <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/scriptTPDS.js"></script>
 </body>
 </html>

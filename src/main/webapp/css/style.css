@@ -1461,7 +1461,7 @@ blockquote p:after{
     -o-transform:rotate(-45deg)
 }
 .header_mobile{
-    background-color:rgba(0,0,0);
+    background:rgba(0,0,0,0.6);
     left:0;
     right:0;
     z-index:999;

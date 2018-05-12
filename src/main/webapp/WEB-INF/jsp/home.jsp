@@ -1,20 +1,19 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Locadora CANVT</title>
+        <title>Aluguel de Carros</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" href="images/favicon.png"/>
-
+        <link rel="shortcut icon" href="images/logo-header.png"/>
+        <link href="../../images/css/lib/images.css" rel="stylesheet" type="text/css"/>
         <!-- GOOGLE FONT -->
-        <link href='http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700' rel='stylesheet'
-              type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700' rel='stylesheet' type='text/css'>
 
         <!-- CSS LIBRARY -->
         <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.min.css">
@@ -26,15 +25,20 @@
         <link rel="stylesheet" type="text/css" href="css/lib/settings.css">
         <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-select.min.css">
         <link rel="stylesheet" type="text/css" href="css/helper.css">
-        <link rel="stylesheet" type="text/css" href="css/custom.css">
-        <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
         <!-- MAIN STYLE -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
     </head>
-    <body> <!--<![endif]-->
 
+    <!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+    <!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
+    <!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
         <!-- PRELOADER -->
         <div id="preloader">
@@ -42,638 +46,321 @@
         </div>
         <!-- END / PRELOADER -->
 
-        <div id="page-wrap" class="bg-white-2">
+        <!-- PAGE WRAP -->
+        <div id="page-wrap">
+
             <!-- HEADER -->
-            <header id="header" class="header-v3 clearfix">
+            <%@include file="../jspf/header.jspf"%>
 
-                <!-- HEADER TOP -->
-                <div class="header_top">
-                    <div class="container">
-                        <div class="header_left float-left">
-                            <span><i class="lotus-icon-cloud"></i> 18 °C</span>
-                            <span><i class="lotus-icon-location"></i> 225 Beach Street, Australian</span>
-                            <span><i class="lotus-icon-phone"></i> 1-548-854-8898</span>
-                        </div>
-
-                        <div class="header_right float-right">
-                            <span class="socials">
-                                <a href="http://www.facebook.com/locadoracanvt"><i class="fa fa-facebook"></i></a>
-                                <a href="!#"><i class="fa fa-twitter"></i></a>
-                                <a href="!#"><i class="fa fa-instagram"></i></a>
-                                <a href="!#"><i class="fa fa-tumblr"></i></a>                                
-                            </span>
-                            <span class="login-register">
-                                <a href="login.html">Logar</a>
-                                <a href="register.html">Registrar</a>
-                                <a href="#">Acompanhar Locações</a>
-                            </span>
-                        </div>
-                        <!-- HEADER LOGO -->
-                        <a class="logo-top img-responsive" href="#"><img src="images/logo-header.png" alt=""></a>
-                        <!-- END / HEADER LOGO -->
-
-                    </div>
-                </div>
-                <!-- END / HEADER TOP -->
-
-                <!-- HEADER LOGO & MENU -->
-                <div class="header_content" id="header_content">
-
-                    <div class="container">
-
-                        <!-- HEADER LOGO -->
-                        <div class="header_logo">
-                            <a href="#"><img src="images/logo-header.png" alt=""></a>
-                        </div>
-                        <!-- END / HEADER LOGO -->
-                        <!-- HEADER MENU -->
-                        <nav class="header_menu">
-                            <ul class="menu">
-                                <li class="current-menu-item">
-                                    <a href="index.html">Home<span class="fa fa"></span></a>                                     
-                                </li>
-                                <li><a href="about.html">Sobre</a></li>
-
-                                <li>
-                                    <a href="#">Categorias<span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="room-1.html">Esportivos</a></li>
-                                        <li><a href="room-3.html">Luxo</a></li>
-                                        <li><a href="room-4.html">Muscle</a></li>
-                                        <li><a href="room-4.html">Off Road</a></li>
-                                        <li><a href="room-4.html">Supercarro</a></li>
-                                        <li><a href="room-2.html">SUVS</a></li>     
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Marcas<span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="restaurants-4.html">Audi</a></li>
-                                        <li><a href="restaurants-4.html">Bentley</a></li>
-                                        <li><a href="restaurants-4.html">BMW</a></li>
-                                        <li><a href="restaurants-4.html">Chevrolet</a></li>
-                                        <li><a href="restaurants-4.html">Chrysler</a></li>
-                                        <li><a href="restaurants-4.html">Dodge</a></li>
-                                        <li><a href="restaurants-2.html">Ferrari</a></li>
-                                        <li><a href="restaurants-2.html">Fiat</a></li>
-                                        <li><a href="restaurants-2.html">Ford</a></li>
-                                        <li><a href="restaurants-1.html">Honda</a></li>
-                                        <li><a href="restaurants-1.html">Jaguar</a></li>
-                                        <li><a href="restaurants-1.html">Jeep</a></li>
-                                        <li><a href="restaurants-3.html">koenigsegg</a></li>     
-                                        <li><a href="restaurants-1.html">Land Rover</a></li>
-                                        <li><a href="restaurants-1.html">Lexus</a></li>
-                                        <li><a href="restaurants-1.html">Lamborghini</a></li>
-                                        <li><a href="restaurants-1.html">Masserati</a></li>
-                                        <li><a href="restaurants-1.html">Mercedes-Benz</a></li>
-                                        <li><a href="restaurants-1.html">Porsche</a></li>
-                                        <li><a href="restaurants-1.html">Rolls-Royce</a></li>
-                                        <li><a href="restaurants-1.html">Subaru</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Reservation <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="reservation-step-1.html">Reservation Step 1</a></li>
-                                        <li><a href="reservation-step-2.html">Reservation Step 2</a></li>
-                                        <li><a href="reservation-step-3.html">Reservation Step 3</a></li>
-                                        <li><a href="reservation-step-4.html">Reservation Step 4</a></li>
-                                        <li><a href="reservation-step-5.html">Reservation Step 5</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Page <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Guest Book <span class="fa fa-caret-right"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="guest-book.html">Guest Book 1</a></li>
-                                                <li><a href="guest-book-2.html">Guest Book 2</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li>
-                                            <a href="#">Event <span class="fa fa-caret-right"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="events.html">Events</a></li>
-                                                <li><a href="events-fullwidth.html">Events Fullwidth</a></li>
-                                                <li><a href="events-detail.html">Events Detail</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="attractions.html">Attractions</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Term Condition <span class="fa fa-caret-right"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="term-condition.html">Term Condition 1</a></li>
-                                                <li><a href="term-condition-2.html">Term Condition 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="">Activiti <span class="fa fa-caret-down"></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="activiti.html">Activiti</a></li>
-                                                <li><a href="activiti-detail.html">Activiti Detail</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="check-out.html">Check Out</a></li>
-                                        <li><a href="shortcode.html">ShortCode</a></li>
-                                        <li><a href="page-404.html">404 Page</a></li>
-                                        <li><a href="comingsoon.html">Comming Soon</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Gallery <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="gallery.html">Gallery Style 1</a></li>
-                                        <li><a href="gallery-2.html">Gallery Style 2</a></li>
-                                        <li><a href="gallery-3.html">Gallery Style 3</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Blog <span class="fa fa-caret-down"></span></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                                        <li><a href="blog-detail-fullwidth.html">Blog Detail Fullwidth</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <!-- END / HEADER MENU -->
-
-                        <!-- MENU BAR -->
-                        <span class="menu-bars">
-                            <span></span>
-                        </span>
-                        <!-- END / MENU BAR -->
-
-                    </div>
-                </div>
-                <!-- END / HEADER LOGO & MENU -->
-
-            </header>
-            <!-- END / HEADER -->
-            <!-- BANNER SLIDER -->
-            <section class="section-slider slider-style-2 clearfix">
+            <section class="section-slider">
                 <h1 class="element-invisible">Slider</h1>
                 <div id="slider-revolution">
                     <ul>
                         <li data-transition="fade">
-                            <img src="images/slider/slider33.jpg"  style="width:100%"data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-                            <div class="tp-caption sft fadeout " data-x="center" data-y="195" data-speed="700" data-start="1300"
-                                 data-easing="easeOutBack">
-
+                            <img class="img-responsive" src="images/slider/img-1.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                                <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300" data-easing="easeOutBack">
+                                <img src="images/icon-slider-1.png" alt="">
                             </div>
 
-                            <div class="tp-caption sft fadeout slider-caption-sub slider-caption-sub-3" data-x="center"
-                                 data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                                EACH HOTEL IS
+                            <div class="tp-caption sft fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                                Esportivo
                             </div>
 
-                            <div class="tp-caption sfb fadeout slider-caption slider-caption-3" data-x="center" data-y="260"
-                                 data-speed="700" data-easing="easeOutBack" data-start="2000">
-                                UNIQUE 60%
+                            <div class="tp-caption sfb fadeout slider-caption slider-caption-3" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack"  data-start="2000">
+                                15% Desconto
                             </div>
 
-                            <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center"
-                                 data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2200">JUST LIKE YOU
-                            </div>
+                            <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2200">APENAS PARA VOCÊ</div>
 
-                            <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center"
-                                 data-y="395" data-easing="easeOutBack" data-speed="700" data-start="2400"><img
-                                    src="images/icon-slider-2.png" alt=""></div>
+                            <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="395" data-easing="easeOutBack" data-speed="700" data-start="2400"><img src="images/icon-slider-2.png" alt=""></div>
 
-                        </li>
+                        </li> 
 
                         <li data-transition="fade">
-                            <img src="images/slider/img-1.jpg" style="width:100%" data-bgposition="left center" data-duration="14000"
-                                 data-bgpositionend="right center" alt="">
+                            <img src="images/slider/slider2.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
-                            <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="100"
-                                 data-speed="700" data-start="1500" data-easing="easeOutBack">
-                                <img src="images/slider/hom1-slide1.png" alt="icons">
-                            </div>
-
-                            <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="240"
-                                 data-speed="700" data-start="1500" data-easing="easeOutBack">
-                                WELCOME TO
-                            </div>
-
-                            <div class="tp-caption sfb fadeout slider-caption slider-caption-sub-1" data-x="center" data-y="280"
-                                 data-speed="700" data-easing="easeOutBack" data-start="2000">THE LOTUS HOTEL
-                            </div>
-
-                            <a href="#" class="tp-caption sfb fadeout awe-btn awe-btn-12 awe-btn-slider" data-x="center"
-                               data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">VIEW NOW</a>
-                        </li>
-                        <li data-transition="fade">
-                            <img src="images/slider/slider2.jpg" style="width:100%"data-bgposition="left center" data-duration="14000"
-                                 data-bgpositionend="right center" alt="">
-
-
-
-                            <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="240"
-                                 data-speed="700" data-start="1500" data-easing="easeOutBack">
-                             RANGE ROVER EVOQUE
-                            </div>
-
-                            <div class="tp-caption sfb fadeout slider-caption slider-caption-sub-1" data-x="center" data-y="280"
-                                 data-speed="700" data-easing="easeOutBack" data-start="2000">LOCADORA CANVT
-                            </div>
-
-                            <a href="#" class="tp-caption sfb fadeout awe-btn awe-btn-12 awe-btn-slider" data-x="center"
-                               data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">VEJA AGORA</a>
-                        </li>
-
+                        </li> -->
                     </ul>
                 </div>
 
             </section>
             <!-- END / BANNER SLIDER -->
+
             <!-- CHECK AVAILABILITY -->
-            <section class="section-check-availability availability-style-2 clearfix">
+            <section class="section-check-availability">
                 <div class="container">
                     <div class="check-availability">
-                        <div class="ot-heading">
-                            <h2 class="mb40">CHECK availability</h2>
-                        </div>
-                        <form id="ajax-form-search-room" class="mt40 mb50" action="search_step_2.php" method="post">
-                            <div class="availability-form mb40">
-                                <input type="text" name="arrive" class="awe-calendar from" placeholder="Arrival Date">
-                                <input type="text" name="departure" class="awe-calendar to" placeholder="Departure Date">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h2>ALUGUE O SEU AGORA MESMO</h2>
+                            </div>
+                            <div class="col-lg-9">
+                                <form id="ajax-form-search-room" action="search_step_2.php" method="post">
+                                    <div class="availability-form">
+                                        <input type="text" name="arrive" class="awe-calendar from" placeholder="Data de retirada">
+                                        <input type="text" name="departure" class="awe-calendar to" placeholder="Data de entrega">
 
-                                <select class="awe-select" name="adults">
-                                    <option>Adults</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                                <select class="awe-select" name="children">
-                                    <option>Children</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
+                                        <select class="awe-select" name="adults">
+                                            <option>Local de retirada</option>
+                                            <option>Unidade Jabaquara</option>
+                                            <option>Unidade Santo Amaro</option>
+                                            <option>Unidade Congonhas</option>
+                                        </select>
+                                        <div class="vailability-submit">
+                                            <button class="awe-btn awe-btn-13">ALUGAR</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="vailability-submit">
-                                <button class="awe-btn awe-btn-13 pr30 pl30 f16 bold font-hind">Check Availability</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- END / CHECK AVAILABILITY -->
 
-            <!-- ACCOMMODATIONS -->
-
-            <section class="ot-accomd-modations">
+            <!-- ACCOMD ODATIONS -->
+            <section class="section-accomd awe-parallax">
                 <div class="container">
-                    <div class="content">
+                    <div class="accomd-modations">
                         <div class="row">
-                            <div class="col-xs-12 col-lg-6 col-lg-offset-3">
-                                <div class="ot-heading pt80 pb30 text-center row-20">
-                                    <h2 class="mb15">ACCOMMODATIONS</h2>
-                                    <p class="sub">
-                                        It is a long established fact that a reader will be distracted by the readable
-                                        content of a page
-                                        when looking at its layout
-                                    </p>
+                            <div class="col-md-12">
+                                <div class="accomd-modations-header">
+                                    <h2 class="heading">Carros & Destaques</h2>
+                                    <img src="images/icon-accmod.png" alt="icon">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="accomd-modations-content owl-single">
+
+                                    <div class="row">
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/Cars/MC250_1.jpg" class="cars" alt="Mercedes-Bens azul"></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Mercedes-Benz C250</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dias
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/Cars/LDEvoqueC.jpg"   class="cars"alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">RANGE ROVER EVOQUE HSE DYNAMIC CONVERSÍVEL</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dias
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/Cars/300C.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">CHRYSLER 300C
+                                                        </a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dias
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/Cars/AgeraRS_1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Agera RS</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dia
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/Cars/KRegera.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Regera </a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dia
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/Cars/BMWI8.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">BMWI8</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dia
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Luxury Room</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dias
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Family Room</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dias
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Couple Room</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dias
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Standard</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dia
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Standard</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dia
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-4">
+                                            <div class="accomd-modations-room">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <h2><a href="#">Standard</a></h2>
+                                                    <p class="price">
+                                                        <span class="amout">R$320</span>/dia
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="ot-accomd-modations-content owl-single"
-                                     data-single_item="false"
-                                     data-desktop="1"
-                                     data-small_desktop="1"
-                                     data-tablet="2"
-                                     data-mobile="1"
-                                     data-nav="false"
-                                     data-pagination="false">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Luxury Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Double Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Family Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Deluxe Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Single Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Presidential Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Deluxe Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Single Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Presidential Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Luxury Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Double Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                            <div class="item room-item-style-2 mb30 text-center">
-                                                <div class="outer">
-                                                    <a href="#"><img class="img-responsive img-full"
-                                                                     src="images/home-3/room/room-2-1.png" alt=""></a>
-                                                    <div class="bgr pt20 pb20">
-                                                        <div class="details">
-                                                            <h2 class="title upper"><a href="!#">Family Room</a></h2>
-                                                            <p class="price upper font-monserat f16 bold mb0 c-main">
-                                                                Start from $120 per day
-                                                            </p>
-                                                            <div class="info">
-                                                                <p class="mt20 mb40">Lorem Ipsum is simply dummy text of the
-                                                                    printing and typesetting industry. Lorem Ipsum has been the
-                                                                    industry's</p>
-                                                                <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12"
-                                                                   href="!#">Click here</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-            </section>
-            <!-- END / ACCOMMODATIONS -->
 
+            </section>
+            <!-- END / ACCOMD ODATIONS -->
 
             <!-- ABOUT -->
-            <section class="section-home-about style-2 bg-white">
+            <section class="section-home-about bg-white">
                 <div class="container">
                     <div class="home-about">
-                        <div class="row v-align">
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="img-hover-box">
-                                    <div class="img">
-                                        <a href="#"><img class="img-responsive img-full" src="images/home-3/about.png"
-                                                         alt=""></a>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="img">
+                                    <a href="#"><img src="images/home/about/img-1.jpg" alt=""></a>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="ot-heading row-20 text-center">
-                                    <h2 class="mb30">ABOUT LOTUS HOTEL</h2>
-                                    <p class="mb30 font-hind f20 f600 pl30 pr30 lh27">Brent Conrad talks with everyone from, frequent
-                                        travelers to the busy
-                                        family that can only get away for vacation every couple of years.</p>
-                                </div>
-                                <div class="text-center">
-                                    <p class="f14">
-                                        The cards are being handed out by quarantine officials at Chicago, O’Hare International
-                                        Air-port;
-                                        Los Angeles; old York City, JFK International Airport; Newark; & San Francisco.
-                                        These airports are the only U.S. airports receiving direct flights from Hong Kong.
-                                        No U.S. airports receive direct flights Hanoi or the Guangdong Province...
-                                    </p>
-                                    <a href="#" class="awe-btn awe-btn-default btn-medium font-hind bold f12 mt30">READ MORE</a>
+                            <div class="col-md-6">
+                                <div class="text">
+                                    <h2 class="heading">Sobre Nós</h2>
+                                    <span class="box-border"></span>
+                                    <p> CANVT é a locadora de automóveis , rápidos e caros.
+                                        Temos como objetivo te proporcinar a melhor experiência possível.</p>
+                                    <a href="#" class="awe-btn awe-btn-default">Veja mais</a>
                                 </div>
                             </div>
                         </div>
@@ -683,115 +370,33 @@
             <!-- END / ABOUT -->
 
             <!-- OUR BEST -->
-            <section class="section-our-best our-best-style-2 mt100 pt0 pb0 bg-white">
+            <section class="section-our-best bg-white">
                 <div class="container">
+
                     <div class="our-best">
-                        <div class="row v-align">
-                            <div class="col-xs-12 col-sm-6 col-sm-push-6">
-                                <div class="img-hover-box">
-                                    <div class="img mt0">
-                                        <img class="img-responsive img-full" src="images/home-3/about.png" alt="">
-                                    </div>
+                        <div class="row">
+
+                            <div class="col-md-6 col-md-push-6">
+                                <div class="img">
+                                    <img src="images/Cars/BMWI8.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-sm-pull-6 ">
-                                <div class="ot-heading row-20 text-center">
-                                    <h2>Out best</h2>
-                                    <p class="sub f16 mb40">One of Catalina Island's best-loved hotels, Hotel Vista Del Mar is
-                                        recognized as one of Avalon's leading hotels with gracious island hospitality,
-                                        thoughtful amenities and distinctive .</p>
-                                </div>
-                                <div class="owl-single">
-                                    <div class="row">
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Free Wifi</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Car Parking</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Service Room</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Air Conditioner</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Airtel Digital TV</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Luggage</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Free Wifi</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Car Parking</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Service Room</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Air Conditioner</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Airtel Digital TV</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-4 col-md-4">
-                                            <div class="item">
-                                                <img class="img-responsive block mb10" src="images/home-3/icon/icon-11.png"
-                                                     alt="icon">
-                                                <span>Luggage</span>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                            <div class="col-md-6 col-md-pull-6 ">
+                                <div class="text">
+                                    <h2 class="heading">Um dos Melhores</h2>
+                                    <p>O BMW i8 Roadster revela-se como futurista nos mais ínfimos detalhes. As linhas modernas transmitem um conceito que dificilmente poderia ser mais dinâmico. O componente mais apelativo: as imponentes portas de baixo peso em fibra de carbono com abertura ascendente que podem ser facilmente abertas.</p>
+                                    <ul>
+                                        <li><img src="images/icons/snow-icon.png" alt="icon">Ar-condicionado digital bi-zone</li>
+                                        <li><img src="images/icons/price-icon.png" alt="icon">2.000R$/diaria</li>
+                                        <li><img src="images/icons/engine-icon.png" alt="icon">Motor elétrico 1.5 (362 cv)</li>
+                                        <li><img src="images/icons/bag-icon.png" alt="icon">Abertura da bagageira pelo interior     </li>
+                                        <li><img src="images/icons/controlP-icon.png" alt="icon">Computador de bordo</li>
+                                        <li><img src="images/icons/five-icon.png" alt="icon">5 Airbags inclusos</li>
+                                    </ul>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -799,219 +404,325 @@
             </section>
             <!-- END / OUR BEST -->
 
-            <!-- VIDEO -->
-            <section class="section-video bg-23 mt100">
-                <a class="btn-play" href="#modal-video-1"></a>
-                <div id="modal-video-1" class="modal-video" data-video="https://www.youtube.com/embed/KW0kaKiyBT0" data-query-string="ecver=1&autoplay=1&showinfo=0&controls=0&modestbranding=1">
-                    <iframe width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
-            <!-- END / VIDEO -->
 
-            <!-- DEALS PACKAGE -->
-            <section class="section-deals mt100">
+            <!-- HOME NEW -->
+            <section class="section-event-news bg-white">
                 <div class="container">
-                    <div class="content">
+
+                    <div class="event-news">
                         <div class="row">
-                            <div class="col col-xs-12 col-lg-6 col-lg-offset-3">
-                                <div class="ot-heading row-20 mb30 text-center">
-                                    <h2>Deals & PACKAGE</h2>
+
+                            <!-- EVENT -->
+                            <div class="col-md-6">
+                                <div class="event">
+                                    <h2 class="heading">EVENTOS</h2>
+                                    <span class="box-border w350"></span>
+
+                                    <div class="row">
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-12 col-sm-12">
+                                            <div class="event-slide owl-single">
+
+                                                <div class="event-item">
+                                                    <div class="img hover-zoom">
+                                                        <a href="#">
+                                                            <img src="images/home/eventdeal/img-1.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="event-item">
+                                                    <div class="img hover-zoom">
+                                                        <a href="#">
+                                                            <img src="images/home/eventdeal/img-1.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-6">
+                                            <div class="event-item">
+                                                <div class="img hover-zoom">
+                                                    <a href="#">
+                                                        <img src="images/home/eventdeal/img-2.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-cn">
+                                                        <h2>SAVE THE DATE</h2>
+                                                        <span>BECCA &amp; ROBERT</span>
+                                                        <a href="#" class="awe-btn awe-btn-12">Veja mais</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-xs-6">
+                                            <div class="event-item">
+                                                <div class="img hover-zoom">
+                                                    <a href="#">
+                                                        <img src="images/home/eventdeal/img-2.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-cn">
+                                                        <h2>GO ON BEACH. lotus </h2>
+                                                        <a href="#" class="awe-btn awe-btn-12">Veja mais</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                    </div>
                                 </div>
                             </div>
+                            <!-- END / EVENT -->
+
+                            <!-- NEWS -->
+                            <div class="col-md-6">
+                                <div class="news">
+                                    <h2 class="heading">Notícias</h2>
+                                    <span class="box-border w350 space-5"></span>
+
+                                    <div class="row">
+
+                                        <!-- ITEM -->
+                                        <div class="col-md-12">
+                                            <div class="news-item">
+                                                <div class="img">
+                                                    <a href="noticia.html"><img src="images/Cars/destaque-carros-2018ve.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="date">10/04</span>
+                                                    <h2><a href="#">Carros 2018: veja 80 lançamentos esperados</a></h2>
+                                                    <a href="" class="read-more">[ Read More ]</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-md-12">
+                                            <div class="news-item">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/home/lotusnews/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="date">8 / March</span>
+                                                    <h2><a href="#">WEDDING DAY JONATHA &amp; JESSICA</a></h2>
+                                                    <a href="" class="read-more">[ Read More ]</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                        <!-- ITEM -->
+                                        <div class="col-md-12">
+                                            <div class="news-item">
+                                                <div class="img">
+                                                    <a href="#"><img src="images/home/lotusnews/img-1.jpg" alt=""></a>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="date">16 / February</span>
+                                                    <h2><a href="#">THE BEST WEDDING GUIDE 2015</a></h2>
+                                                    <a href="" class="read-more">[ Read More ]</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END / ITEM -->
+
+                                    </div>
+
+                                    <a href="#" class="awe-btn awe-btn-default">Veja mais</a>
+
+                                </div>
+
+                            </div>
+                            <!-- END / NEWS -->
+
                         </div>
-                        <div class="row v-align">
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="img-deals img-hover-box">
-                                    <div class="img">
-                                        <img src="images/home-3/deals/deals-5.png" alt="" class="img-responsive img-full">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="item item-deal">
-                                    <div class="img">
-                                        <img class="img-full" src="images/home-3/deals/deals-1.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <a class="title bold f26 font-monserat upper" href="!#">Spa salon</a>
-                                        <p class="sub font-monserat f12 f-600 upper mt10 mb20">package</p>
-                                        <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12" href="!#">Click hear</a>
-                                    </div>
-                                </div>
-                                <div class="item item-deal">
-                                    <div class="img">
-                                        <img class="img-full" src="images/home-3/deals/deals-1.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <a class="title bold f26 font-monserat upper" href="!#">weeding</a>
-                                        <p class="sub font-monserat f12 f-600 upper mt10 mb20">event</p>
-                                        <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12" href="!#">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        <div class="hr"></div>
+
                     </div>
+
                 </div>
             </section>
-            <!-- END / DEALS PACKAGE -->
+            <!-- END / HOME NEW -->
 
-            <!-- NEWS -->
-            <section class="section-news mt70">
-                <div class="container">
-                    <div class="content">
+            <!-- GALLERY -->
+            <section class="section-gallery bg-white">
+
+                <div class="gallery  no-padding">
+                    <h2 class="heading text-center">GALLERY</h2>
+
+
+                    <!-- GALLERY CONTENT -->
+                    <div class="gallery-content hover-img">
                         <div class="row">
-                            <div class="col-xs-12 col-lg-6 col-lg-offset-3">
-                                <div class="ot-heading row-20 mb40 text-center">
-                                    <h2>News</h2>
+                            <div class="gallery-isotope col-6 pd-0">
+
+                                <!-- ITEM SIZE -->
+                                <div class="item-size"></div>
+                                <!-- END / ITEM SIZE -->
+                                <!-- ITEM -->
+
+                                <div class="item-isotope suite dining ">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
                                 </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope  ground bathroom suite">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope ground bathroom dining">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope suite dining">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope  ground suite dining">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope ground bathroom dining">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope ground suite dining">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope bathroom suite dining">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope bathroom suite dining">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope ground bathroom">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope ground bathroom suite ">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
+                                <!-- ITEM -->
+                                <div class="item-isotope ground bathroom">
+                                    <div class="gallery_item">
+                                        <a  href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image" title="Luxury Room view all">
+                                            <img src="images/gallery/img-1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- END / ITEM -->
+
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="item">
-                                    <div class="img">
-                                        <img class="img-responsive img-full" src="images/home-3/blog/blog-1.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <p class="date f20">
-                                            21 December, 2017
-                                        </p>
-                                        <a class="title font-monserat f20 mb20 block bold upper" href="!#">UPDATE MENU FOOD IN LOTUS
-                                            HOTEL</a>
-                                        <a class="more block f13" href="!#">[Read more]</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="item">
-                                    <div class="img">
-                                        <img class="img-responsive img-full" src="images/home-3/blog/blog-1.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <p class="date f20">
-                                            06 Octorber, 2017
-                                        </p>
-                                        <a class="title font-monserat f20 mb20 block bold upper" href="!#">WEDDING DAY
-                                            JONATHA & JESSICA</a>
-                                        <a class="more block f13" href="!#">[Read more]</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="item">
-                                    <div class="img">
-                                        <img class="img-responsive img-full" src="images/home-3/blog/blog-1.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <p class="date f20">
-                                            18 March, 2017
-                                        </p>
-                                        <a class="title font-monserat f20 mb20 block bold upper" href="!#">Bryce Canyon A Stunning Us
-                                            Travel Destination</a>
-                                        <a class="more block f13" href="!#">[Read more]</a>
-                                    </div>
-                                </div>
-                            </div>
+
+                        <div class="our-gallery text-center">
+                            <a href="#" class="awe-btn awe-btn-default">Ver galeria</a>
                         </div>
-                        <div class="text-center">
-                            <a href="!#"
-                               class="awe-btn btn-medium font-hind bold f12 awe-btn-default mt15 awe-btn-default mt15 f13">View
-                                more</a>
-                        </div>
+
                     </div>
+                    <!-- GALLERY CONTENT -->
+
                 </div>
             </section>
-            <!-- END / NEWS -->
-
-            <!-- MAP -->
-            <section class="section-map style-2 clearfix mt100">
-                <div class="contact-map">
-                    <div id="map" class="awe-parallax" data-styles="silver" data-locations="39.0926986,-94.5747324--39.0912284,-94.5743515"
-                         data-center="39.0926986,-94.5747324">
-                    </div>
-
-                    <div class="container contact text-center">
-                        <div class="contact-main pt40 pb60 bg-white-2">
-                            <div class="ot-heading row-20 mb40 text-center">
-                                <h2>Contact with us</h2>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item">
-                                        <p class="f20"><i class="lotus-icon-location c-main block f30 mb20"></i> 225 Beach
-                                            Street,
-                                            Australian</p>
-                                        <p class="description font-monserat f12 bold upper">Address</p>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item">
-                                        <p class="f20"><i class="lotus-icon-phone c-main block f30 mb20"></i> 1-548-854-8898</p>
-                                        <p class="description font-monserat f12 bold upper">Phone</p>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item">
-                                        <p class="f20"><i class="fa fa-envelope-o c-main block f30 mb20"></i> <a
-                                                href="mailto:hello@thelotushotel.com">hello@thelotushotel.com</a>
-                                        <p class="description font-monserat f12 bold upper">Email</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END / MAP -->
+            <!-- END / GALLERY -->
 
             <!-- FOOTER -->
-            <footer id="footer" class="footer-style-3 text-center">
-                <div class="bgr-footer pt60">
-                    <div class="container">
-                        <div class="footer_top">
-                            <div class="ot-heading row-20 mb40 text-center">
-                                <img class="img-responsive img-center mb20" src="images/home-3/footer/mail-footer-1.png" alt="">
-                                <h2>News & Offers</h2>
-                                <p class="sub">Enjoy many benefits and receive our promotions and special offers directly</p>
-                            </div>
-                            <div class="mailchimp mb30">
-                                <div class="mailchimp-form">
-                                    <form action="#" method="POST">
-                                        <input type="text" name="email" placeholder="Enter your email address"
-                                               class="input-text">
-                                        <button class="awe-btn">SIGN UP</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copyright">
-                        <div class="container">
-                            <p class="pull-left inline-block f14">&copy; 2017 Lotus Hotel All rights reserved.</p>
-                            <div class="social inline-block">
-                                <a class="mr10" href="!#"><i class="fa fa-facebook f16"></i></a>
-                                <a class="mr10" href="!#"><i class="fa fa-twitter f16"></i></a>
-                                <a class="mr10" href="!#"><i class="fa fa-instagram f16"></i></a>
-                                <a class="mr10" href="!#"><i class="fa fa-pinterest f16"></i></a>
-                                <a class="mr10" href="!#"><i class="fa fa-tumblr f16"></i></a>
-                            </div>
-                            <div class="payment pull-right inline-block">
-                                <img class="img-responsive" src="images/home-3/footer/card.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <%@include file="../jspf/footer.jspf" %>>
             <!-- END / FOOTER -->
+
         </div>
+        <!-- END / PAGE WRAP -->
+
 
         <!-- LOAD JQUERY -->
         <script type="text/javascript" src="js/lib/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/lib/bootstrap-select.js"></script>
-        <script src="//maps.google.com/maps/api/js?key=AIzaSyAb2lfsiytHD7rMhBaAvJz2CKhk05uiIuE"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
+        <script type="text/javascript" src="js/lib/isotope.pkgd.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery.themepunch.revolution.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery.themepunch.tools.min.js"></script>
         <script type="text/javascript" src="js/lib/owl.carousel.js"></script>
