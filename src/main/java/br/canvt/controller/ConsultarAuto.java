@@ -8,6 +8,7 @@ package br.canvt.controller;
 import br.canvt.model.Automovel;
 import br.canvt.model.AutomovelDAO;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -43,7 +44,7 @@ public class ConsultarAuto extends HttpServlet {
         if (!"editar".equals(btn) && !"excluir".equals(btn)) {
             List<Automovel> automoveis = new ArrayList();
             if (search.isEmpty()) {
-                automoveis = dao.listarAll();
+                automoveis = dao.listar();
 
                 request.setAttribute("autos", automoveis);
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/ConsultaCarro.jsp");

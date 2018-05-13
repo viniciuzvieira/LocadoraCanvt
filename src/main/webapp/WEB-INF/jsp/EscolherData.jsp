@@ -35,8 +35,8 @@
         <![endif]-->
     </head>
 
-    
-  <body> 
+
+    <body> 
 
 
         <!-- PRELOADER -->
@@ -75,27 +75,31 @@
                         <div class="shortcode-tab-price">
                             <div class="tab-price">
                                 <div id="dvData">
-                                    <table>
-                                        <tr>
-                                            <td class="date-select">Data da Retirada</td>
-                                            <td class="date-select">Data de Entrega</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="text" name="arrive" class="awe-calendar from" style="font-size:9pt; padding:9px; width:auto; height:auto;" placeholder="De"></td>
-                                            <td> <input type="text" name="departure" class="awe-calendar to" style="font-size:9pt; padding:9px; width:auto; height:auto;" placeholder="Até"></td>
-                                        </tr>
-                                    </table>
-                                    <br/>
-                                    <table>
-                                        <tr>
-                                        <td class="date-select">Valor Total R$</td>     
-                                        <td class="date-select">XXXX</td>
-                                        </tr>
-                                    </table>
-                                    <br/>
-                                    <!--<button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; background-color: white; color: black;">MUDAR</button>-->
-                                    <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">VOLTAR</button>
-                                    <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; float: right">CONFIRMAR</button>
+                                    <form action="./Carrinho" method="post">
+                                        <table>
+                                            <tr>
+                                                <td class="date-select">Data da Retirada</td>
+                                                <td class="date-select">Data de Entrega</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" name="dataRetirada" class="awe-calendar from" style="font-size:9pt; padding:9px; width:auto; height:auto;" placeholder="De"></td>
+                                                <td> <input type="text" name="dataEntrega" class="awe-calendar to" style="font-size:9pt; padding:9px; width:auto; height:auto;" placeholder="Até"></td>
+                                            </tr>
+                                        </table>
+                                        <br/>
+                                        <table>
+                                            <tr>
+                                                <td class="date-select">${sessionScope.auto.renavam}</td>     
+                                                <td class="date-select">${sessionScope.auto.modelo}</td>
+                                            <input name="auto" type="hidden"  value="${sessionScope.auto.renavam}">
+                                            <input name="pagamento" type="hidden"  value="null">
+                                            </tr>
+                                        </table>
+                                        <br/>
+                                        <!--<button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; background-color: white; color: black;">MUDAR</button>-->
+                                        <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">VOLTAR</button>
+                                        <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; float: right">CONFIRMAR</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

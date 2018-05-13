@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.canvt.model;
 
 import static br.canvt.model.BDConexao.getConnection;
@@ -5,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -113,7 +119,7 @@ public class ClienteDao {
                 c.setDataNasc(resultados.getString("DATANASCIMENTO"));
                 c.setUF(resultados.getString("ESTADO"));
                 c.setDisabled(resultados.getBoolean("DISABLED"));
-                c.setUsername(resultados.getString("USERNAME"));
+                c.setUsuario(resultados.getString("USERNAME"));
                 c.setHashSenha(resultados.getString("SENHA"));
                 lista.add(c);
             }
@@ -131,8 +137,7 @@ public class ClienteDao {
                 + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection con = null;
         PreparedStatement stmt = null;
-        System.out.println(cli.getNomeCompleto() + cli.getCPF() + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
-                + cli.getComplemento() + cli.getNumero() + cli.getBairro() + cli.getCEP() + cli.getCidade() + cli.getDataNasc() + cli.getUF());
+
         try {
             con = BDConexao.getConnection();
 
@@ -153,8 +158,9 @@ public class ClienteDao {
             stmt.setString(13, cli.getDataNasc());
             stmt.setString(14, cli.getUF());
             stmt.setBoolean(15, false);
-            stmt.setString(16, cli.getUsername());
+            stmt.setString(16, cli.getUsuario());
             stmt.setString(17, cli.getHashSenha());
+
             stmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -199,6 +205,8 @@ public class ClienteDao {
                     c.setDataNasc(resultados.getString("DATANASCIMENTO"));
                     c.setUF(resultados.getString("ESTADO"));
                     c.setDisabled(resultados.getBoolean("DISABLED"));
+                    c.setUsuario(resultados.getString("USERNAME"));
+                    c.setHashSenha(resultados.getString("SENHA"));
                 }
             }
         } catch (SQLException ex) {
@@ -266,6 +274,8 @@ public class ClienteDao {
                 + "NUMEROCNH=?,ENDERECO=?,COMPLEMENTO=?,NUMERO=?,BAIRRO=?,CEP=?,CIDADE=?, "
                 + "DATANASCIMENTO=?,ESTADO=?, DISABLED=? "
                 + "WHERE (CPF=?)";
+        System.out.println(cli.getNomeCompleto() + cli.getCPF() + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
+                + cli.getComplemento() + cli.getNumero() + cli.getBairro() + cli.getCEP() + cli.getCidade() + cli.getDataNasc() + cli.getUF());
         Connection con = null;
         PreparedStatement stmt = null;
         try {

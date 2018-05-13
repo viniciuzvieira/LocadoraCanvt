@@ -97,47 +97,47 @@
 
 
                                 <div class="reservation-billing-detail">
-                                    <form id="form1" name="validaCampos" action="./CadastroCliente" method="post">
+                                    <form action="./CadastroCliente" method="post">
                                         <div class="col-sm-12">
                                             <label><sup>* Campos obrigatórios</sup></label>
                                             <label for="Name">Username:<sup>*</sup></label>
-                                            <input type="text" name="Username"class="input-text" placeholder="Ex: Gabriela627">
+                                            <input type="text" required="required" name="Username"class="input-text" placeholder="Ex: Gabriela627">
 
                                             <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
-                                            <input type="text" name="nomecompleto"class="input-text">
+                                            <input type="text" required="required" name="nomecompleto"class="input-text">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="cpf">CPF:<sup>*</sup></label>
-                                            <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
+                                            <input type="text" class="input-text" required="required" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="datanasc">Data de nascimento:<sup>*</sup></label>
-                                            <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" onkeypress="mascara(this, '##/##/####')">
+                                            <input  type="text" required="required" class="input-text" id="datanasc" required="required" placeholder="DD/MM/AAAA" name="datanasc" onkeypress="mascara(this, '##/##/####')">
                                         </div>
 
                                         <div class="col-sm-3">
                                             <label for="cep">CEP:<sup>*</sup></label>
-                                            <input name="cep" class="input-text" type="text" id="cep" value="" onblur="pesquisacep(this.value);"/>
+                                            <input name="cep" required="required" class="input-text" type="text" id="cep" value="" onblur="pesquisacep(this.value);"/>
                                         </div>
                                         <div class="col-sm-3">
                                             <label for="UF">UF:<sup>*</sup></label>
-                                            <input name="UF" class="input-text" type="text" id="UF"/>
+                                            <input name="UF" required="required" class="input-text" type="text" id="UF"/>
                                         </div>  
                                         <div class="col-sm-6">
                                             <label for="cidade">Cidade:<sup>*</sup></label>
-                                            <input name="cidade" class="input-text" type="text" id="cidade"/>
+                                            <input name="cidade" required="required" class="input-text" type="text" id="cidade"/>
                                         </div>
                                         <div class="col-sm-4">
                                             <label for="bairro">Bairro:<sup>*</sup></label>
-                                            <input name="bairro" class="input-text" type="text" id="bairro"/>
+                                            <input name="bairro" required="required" class="input-text" type="text" id="bairro"/>
                                         </div> 
                                         <div class="col-sm-6">
                                             <label for="Endereco:">Rua:<sup>*</sup></label>
-                                            <input name="endereco" class="input-text" type="text" id="endereco"/>
+                                            <input name="endereco" required="required" class="input-text" type="text" id="endereco"/>
                                         </div>
                                         <div class="col-sm-2">
                                             <label for="numerocasa">N°:<sup>*</sup></label>
-                                            <input type="text" name="numerocasa" id="numerocasa" class="input-text">
+                                            <input type="text" required="required" name="numerocasa" id="numerocasa" class="input-text">
                                         </div>
                                         <div class="col-sm-12">
                                             <label for="Complemento">Complemento:</label>
@@ -145,7 +145,7 @@
                                         </div>
                                         <div class="col-sm-12">
                                             <label><span style="font-weight:bold;" for="rad" >Sexo:<sup style="color:red;">*</sup></span>
-                                                <input type="radio" name="sexo" id="radioMas" value="Masculino">Masculino
+                                                <input type="radio" name="sexo" id="radioMas" value="Masculino" required>Masculino
                                                 <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino</label>
 
                                         </div>
@@ -155,18 +155,18 @@
                                         </div>
                                         <div class="col-sm-12">
                                             <label for="email">E-mail:<sup>*</sup></label>
-                                            <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
+                                            <input type="email" required="required" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="celular">Celular:<sup>*</sup></label>
-                                            <input type="text" name="tel" class="input-text" placeholder="Ex:(11)951231234">
+                                            <input type="text" name="tel" required="required" class="input-text" placeholder="Ex:(11)951231234">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="senha">Senha:<sup>*</sup></label>
-                                            <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha">
+                                            <input type="password" required="required" class="input-text" id="senha" placeholder="Senha" name="senha">
                                         </div>
                                         <div class="col-sm-6">
-                                            <button type="button" id="cadastro" class="awe-btn awe-btn-13">CADASTRAR</button>
+                                            <button class="awe-btn awe-btn-13" type="submit">CADASTRAR</button>
                                         </div>
                                         
                                     </form>      
@@ -208,6 +208,5 @@
         <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript" src="js/procuraCEP.js"></script>
-        <script type="text/javascript" src="js/validaCadastroCliente.js"></script>
     </body>
 </html>

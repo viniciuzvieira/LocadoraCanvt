@@ -99,126 +99,91 @@
 
                                 <div class="reservation-billing-detail">
                                     <form action="./CadastroCliente" method="post">
+                                        <div class="col-sm-12">
+                                            <label for="Name">Username:<sup>*</sup></label>
+                                            <input type="text" name="Username"class="input-text" placeholder="Ex: Gabriela627">
 
-                                        <label for="Name">Username:<sup>*</sup></label>
-                                        <input style="background-color: #cccccc" type="text" name="Username"class="input-text desabilitados"disabled="disabled" placeholder="Ex: Gabriela627">
-                                       
-                                        <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
-                                        <input type="text" value="${sessionScope.usuario.nomeCompleto}"name="nomecompleto"class="input-text">
+                                            <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
+                                            <input type="text" value="${sessionScope.usuario.nomeCompleto}" name="nomecompleto"class="input-text">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="cpf">CPF:<sup>*</sup></label>
+                                            <input type="text" value="${sessionScope.usuario.CPF}" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="datanasc">Data de nascimento:<sup>*</sup></label>
+                                            <input  type="text" value="${sessionScope.usuario.dataNasc}" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
+                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label for="cpf">CPF:<sup>*</sup></label>
-                                                <input type="text" value="${sessionScope.usuario.CPF}" style="background-color: #cccccc" class="input-text" id="cpf" placeholder="CPF" name="cpf" disabled="disabled" maxlength="11">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="datanasc">Data de nascimento:<sup>*</sup></label>
-                                                <input  type="text" value="${sessionScope.usuario.dataNasc}"class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
-                                            </div>
+                                        <div class="col-sm-3">
+                                            <label for="cep">CEP:<sup>*</sup></label>
+                                            <input name="cep" value="${sessionScope.usuario.CEP}"class="input-text" type="text" id="cep" value="" onblur="pesquisacep(this.value);"/>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="UF">UF<sup>*</sup></label>
+                                            <input name="UF" value="${sessionScope.usuario.UF} "class="input-text" type="text" id="UF"/>
+                                        </div>  
+                                        <div class="col-sm-6">
+                                            <label for="cidade">Cidade:<sup>*</sup></label>
+                                            <input name="cidade"  value="${sessionScope.usuario.cidade}" class="input-text" type="text" id="cidade"/>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="bairro">Bairro:<sup>*</sup></label>
+                                            <input name="bairro" value="${sessionScope.usuario.bairro}" class="input-text" type="text" id="bairro"/>
+                                        </div> 
+
+                                        <div class="col-sm-6">
+                                            <label for="Endereco:">Rua:<sup>*</sup></label>
+                                            <input name="endereco" value="${sessionScope.usuario.end}"class="input-text" type="text" id="endereco"/>
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <label for="numerocasa">N°:<sup>*</sup></label>
+                                            <input type="text" name="numerocasa" value="${sessionScope.usuario.numero}" id="numerocasa" class="input-text">
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <label for="Complemento">Complemento:<sup>*</sup></label>
+                                            <input type="text" value="${sessionScope.usuario.complemento}" id="Complemento" name="complemento"class="input-text">           
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <label><span style="font-weight:bold;" for="rad" >Sexo:<sup style="color:red;">*</sup></span>
+                                                <input type="radio" name="sexo" id="radioMas" value="Masculino">Masculino
+                                                <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino</label>
 
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <label for="cep">CEP:<sup>*</sup></label>
-                                                <input type="text" class="input-text" id="cep" placeholder="CEP" name="cep">
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <label for="cidade">Cidade:<sup>*</sup></label>
-                                                <input type="text" class="input-text" id="cidade" placeholder="CEP" name="cidade">
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <label for="bairro">Bairro:<sup>*</sup></label>
-                                                <input  type="text" class="input-text" name="bairro">
-                                            </div>
-                                            <div class="col-sm-3 ">
-                                                <label for="UF">UF<sup>*</sup></label>
-                                                <select id="UF" class="awe-select"  name="UF">
-                                                    <option selected value="NI">UF</option>
-                                                    <option value="AC">AC</option>
-                                                    <option value="AL">AL</option>
-                                                    <option value="AM">AM</option>
-                                                    <option value="AP">AP</option>
-                                                    <option value="BA">BA</option>
-                                                    <option value="CE">CE</option>
-                                                    <option value="DF">DF</option>
-                                                    <option value="ES">ES</option>
-                                                    <option value="GO">GO</option>
-                                                    <option value="MA">MA</option>
-                                                    <option value="MG">MG</option>
-                                                    <option value="MS">MS</option>
-                                                    <option value="MT">MT</option>
-                                                    <option value="PA">PA</option>
-                                                    <option value="PB">PB</option>
-                                                    <option value="PE">PE</option>
-                                                    <option value="PI">PI</option>
-                                                    <option value="PR">PR</option>
-                                                    <option value="RJ">RJ</option>
-                                                    <option value="RN">RN</option>
-                                                    <option value="RS">RS</option>
-                                                    <option value="RO">RO</option>
-                                                    <option value="RR">RR</option>
-                                                    <option value="SC">SC</option>
-                                                    <option value="SE">SE</option>
-                                                    <option value="SP">SP</option>
-                                                    <option value="TO">TO</option>
-                                                </select>
-                                            </div>
+                                        <div class="col-sm-12">
+                                            <label for="numeroCNH">Número da CNH:<sup>*</sup></label>
+                                            <input type="text" value="${sessionScope.usuario.numeroCNH}" class="input-text" id="NumeroCNH" name="cnh" placeholder="Número da CNH">
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <label for="Complemento">Complemento<sup>*</sup></label>
-                                                <input type="text" id="Complemento" name="complemento"class="input-text">
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <label for="Endereco:">Endereco:<sup>*</sup></label>
-                                                <input type="text" id="endereco" name="endereco"class="input-text">
-                                            </div>
-
-                                            <div class="col-sm-4">
-                                                <label for="numerocasa">N°:<sup>*</sup></label>
-                                                <input type="text" name="numerocasa"id="numerocasa"class="input-text">
-                                            </div>
+                                        <div class="col-sm-6">
+                                            <label for="telefone">Telefone:</label>
+                                            <input type="text" value="${sessionScope.usuario.telefone}" name="tel"class="input-text" placeholder="Ex:(11)51231234">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="celular">Celular:<sup>*</sup></label>
+                                            <input type="text" class="input-text" placeholder="Ex:(11)951231234">
                                         </div>
 
-                                        <br/>
-                                        <span style="font-weight:bold;" for="rad" >Sexo:<sup style="color:red;">*</sup></span>
-                                        <input type="radio" name="sexo" id="radioMas" value="Masculino">Masculino
-                                        <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino
-
-                                        <label for="numeroCNH">Número da CNH:<sup>*</sup></label>
-                                        <input type="text" class="input-text" style="background-color: #cccccc" id="NumeroCNH" name="cnh" disabled="disabled" placeholder="Número da CNH">
-
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <label for="telefone">Telefone:</label>
-                                                <input type="text" name="tel"class="input-text" placeholder="Ex:(11)51231234">
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <label for="celular">Celular:<sup>*</sup></label>
-                                                <input type="text" class="input-text" placeholder="Ex:(11)951231234">
-                                            </div>
+                                        <div class="col-sm-6">
+                                            <label for="email">E-mail:<sup>*</sup></label>
+                                            <input type="email" value="${sessionScope.usuario.email}" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
                                         </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label for="email">E-mail:<sup>*</sup></label>
-                                                <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="senha">Senha:<sup>*</sup></label>
-                                                <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha">
-                                            </div>
+                                        <div class="col-sm-6">
+                                            <label for="senha">Senha:<sup>*</sup></label>
+                                            <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha">
                                         </div>
-
-                                        <button class="awe-btn awe-btn-13">ATUALIZAR</button>
+                                        <div class="col-sm-6">
+                                            <button class="awe-btn awe-btn-13" type="submit">ATUALIZAR</button>
+                                        </div>
                                     </form>      
                                 </div>
-
-
-
                             </div>
+
                             <!-- END / CONTENT -->
 
                         </div>

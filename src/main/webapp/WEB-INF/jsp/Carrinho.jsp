@@ -78,37 +78,61 @@
                             <div class="tab-price">
                                 <div id="dvData">
                                     <table>
-                                        <tr>
-                                            <td class="date-select">Carro</td>
-                                            <td class="date-select">Placa</td>
-                                            <td class="date-select">Data da Retirada</td>
-                                            <td class="date-select">Data de Entrega</td>
-                                            <td class="date-select">Valor Total R$</td>
-                                        </tr>
-                                        <tr>
-                                            <td>xxxxxxxxx</td>
-                                            <td>xxxxxxxxx</td>
-                                            <td>dd/mm/aaaa</td>
-                                            <td>dd/mm/aaaa</td>
-                                            <td>xxxxxxxxx</td>
-                                        </tr>
+                                        <thead>
+
+                                            <tr>
+                                                <th>Modelo</th>
+                                                <th>Placa</th>
+                                                <th>Data da Retirada</th>
+                                                <th>Data de Entrega</th>
+                                                <th>Valor Parcial R$</th>
+
+                                            </tr>
+                                            
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach items="${carrinho}" var="item">
+
+                                                <tr>
+                                                    <td>${item.auto.modelo}</td>
+                                                    <td>${item.auto.placa}</td>
+                                                    <td>${item.dataRetirada}</td>
+                                                    <td>${item.dataDeDevolucao}</td>
+                                                    <td>${item.valorParcial} </td>
+
+                                                </tr>
+                                            </c:forEach>
+                                        <td>Total:</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>                               
+                                        <td>${total}</td>
+                                        </tbody>
                                     </table>
                                     <br/>
-                                    <table>
-                                        <tr>
-                                        <td class="date-select">Forma de Pagamento</td>     
-                                        <td class="date-select">
-                                            <select class="awe-select">
-                                                <option>Boleto</option>
-                                                <option>Cartão de Crédito</option>
-                                            </select>
-                                        </td>
-                                        </tr>
-                                    </table>
-                                    <br/>
-                                    <!--<button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; background-color: white; color: black;">MUDAR</button>-->
-                                    <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto;">VOLTAR</button>
-                                    <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; float: right">CONFIRMAR</button>
+                                    <form action="./Carrinho" method="post">
+                                        <table>
+
+                                            <tr>
+
+                                                <td class="date-select">Forma de Pagamento</td>     
+                                                <td class="date-select">
+
+                                                    <select class="awe-select" name="pagamento" required="required">
+                                                        <option value="boleto">Boleto</option>
+                                                        <option value="CC">Cartão de Crédito</option>
+                                                    </select>
+
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                        <br/>
+
+
+                                        <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">VOLTAR</button>
+                                        <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; float: right">CONFIRMAR</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

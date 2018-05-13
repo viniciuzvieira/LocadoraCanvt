@@ -2,55 +2,55 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!-- TITLE -->
-    <title>Carro Detalhe</title>
+    <head>
+        <meta charset="utf-8">
+        <!-- TITLE -->
+        <title>Carro Detalhe</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" href="images/favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" href="images/favicon.png"/>
 
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700' rel='stylesheet' type='text/css'>
+        <!-- GOOGLE FONT -->
+        <link href='http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700' rel='stylesheet' type='text/css'>
 
-    <!-- CSS LIBRARY -->
-    <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/lib/font-lotusicon.css">
-    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/lib/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/lib/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="css/lib/settings.css">
-    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-select.min.css">
+        <!-- CSS LIBRARY -->
+        <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/lib/font-lotusicon.css">
+        <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/lib/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="css/lib/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="css/lib/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="css/lib/settings.css">
+        <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-select.min.css">
 
-    <!-- MAIN STYLE -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-</head>
+        <!-- MAIN STYLE -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-<!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
-<!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
-<!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+    </head>
+
+    <!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+    <!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
+    <!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
 
-    <!-- PRELOADER -->
-    <div id="preloader">
-        <span class="preloader-dot"></span>
-    </div>
-  
-    <div id="page-wrap">
+        <!-- PRELOADER -->
+        <div id="preloader">
+            <span class="preloader-dot"></span>
+        </div>
 
- 
-           <%@include file="../jspf/header.jspf"%> 
-   
-        <section class="section-sub-banner"  style="background-image: url(images/Cars/default.png)"/>
+        <div id="page-wrap">
+
+
+            <%@include file="../jspf/header.jspf"%> 
+
+            <section class="section-sub-banner"  style="background-image: url(images/Cars/default.png)"/>
             <div class="awe-overlay"></div>
             <div class="sub-banner">
                 <div class="container">
@@ -64,20 +64,20 @@
 
         </section>
         <!-- END / SUB BANNER -->
-        
+
         <!-- ROOM DETAIL -->
         <section class="section-room-detail bg-white">
             <div class="container">
-                
+
                 <!-- DETAIL -->
                 <div class="room-detail">
                     <div class="row">
                         <div class="col-lg-9">
-                            
+
                             <!-- LAGER IMGAE -->
                             <div class="room-detail_img">
                                 <div class="room_img-item">
-                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
+                                    <img src="images/Cars/ferrari-carro.jpg" alt="">    
                                     <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
                                 </div>
                                 <div class="room_img-item">
@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                             <!-- END / LAGER IMGAE -->
-                            
+
                             <!-- THUMBNAIL IMAGE -->
                             <div class="room-detail_thumbs">
                                 <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
@@ -129,23 +129,23 @@
 
                                 <div class="room-detail_total">
                                     <img src="images/icon-logo.png" alt="" class="icon-logo">
-                                    
-                                    <h6>${sessionScope.auto.modelo}}</h6>
-                                     <h6>${sessionScope.auto.renavam}}</h6>
+
+                                    <h6>${sessionScope.auto.modelo}</h6>
+                                    <h6>${sessionScope.auto.renavam}</h6>
                                     <p class="price">
-                                        <span class="amout"></span>  /days
+                                        <span class="amout">${sessionScope.auto.valorDeLocacao}</span>  /dia
                                     </p>
                                 </div>
-                                
-                                <div class="room-detail_form">
-                                    <label></label>
-                                    <input type="text" class="awe-calendar from" placeholder="Retirada  ">
-                                    <label></label>
-                                    <input type="text" class="awe-calendar to" placeholder="Entrega ">
-                                   
-                                    <button class="awe-btn awe-btn-13">comprar</button>
-                                </div>
-
+                                <form action="./Carrinho" method="post">
+                                    <div class="room-detail_form">
+                                        <label></label>
+                                        <input type="text" class="awe-calendar from" name="dataRetirada" placeholder="Retirada  ">
+                                        <label></label>
+                                        <input type="text" class="awe-calendar to"name="dataEntrega" placeholder="Entrega ">
+                                        <input name="auto" type="hidden"  value="${sessionScope.auto.renavam}">
+                                        <button class="awe-btn awe-btn-13 " name="botao" value="aluguel"type="submit">Alugar</button>
+                                    </div>
+                                </form>
                             </div>
                             <!-- END / FORM BOOK -->
 
@@ -153,30 +153,30 @@
                     </div>
                 </div>
                 <!-- END / DETAIL -->
-                
+
                 <!-- TAB -->
                 <div class="room-detail_tab">
-                    
+
                     <div class="row">
                         <div class="col-md-3">
                             <ul class="room-detail_tab-header">
-                                <li><a href="#overview" data-toggle="tab">OVERVIEW</a></li>
-                                <li class="active"><a href="#amenities" data-toggle="tab">amenities</a></li>
-                                <li><a href="#package" data-toggle="tab">PACKAGE</a></li>
-                                <li><a href="#rates" data-toggle="tab">RATES</a></li>
-                                <li><a href="#calendar" data-toggle="tab">Calendar</a></li>
+                                <li><a href="#overview" data-toggle="tab">Descrição</a></li>
+
+                                <li><a href="#package" data-toggle="tab">Pacotes</a></li>
+
+                                <li><a href="#calendar" data-toggle="tab">Calendario</a></li>
                             </ul>
                         </div>
-                                        
+
                         <div class="col-md-9">
                             <div class="room-detail_tab-content tab-content">
-                                
+
                                 <!-- OVERVIEW -->
                                 <div class="tab-pane fade" id="overview">
 
                                     <div class="room-detail_overview">
                                         <h5 class='text-uppercase
-                                        '>de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
+                                            '>de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
                                         <p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
 
                                         <div class="row">
@@ -205,83 +205,21 @@
                                 <!-- END / OVERVIEW -->
 
                                 <!-- AMENITIES -->
-                                <div class="tab-pane fade active in" id="amenities">
-                                    
-                                    <div class="room-detail_amenities">
-                                        <p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
-                                        
-                                        <div class="row">
-                                            <div class="col-xs-6 col-lg-4">
-                                                <h6>LIVING ROOM</h6>
-                                                <ul>
-                                                    <li>Oversized work desk</li>
-                                                    <li>Hairdryer</li>
-                                                    <li>Iron/ironing board upon request</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-xs-6 col-lg-4">
-                                                <h6>KITCHEN ROOM</h6>
-                                                <ul>
-                                                    <li>AM/FM clock radio</li>
-                                                    <li>Voicemail</li>
-                                                    <li>High-speed Internet access</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-xs-6 col-lg-4">
-                                                <h6>balcony</h6>
-                                                <ul>
-                                                    <li>AM/FM clock radio</li>
-                                                    <li>Voicemail</li>
-                                                    <li>High-speed Internet access</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-xs-6 col-lg-4">
-                                                <h6>bedroom</h6>
-                                                <ul>
-                                                    <li>Coffee maker</li>
-                                                    <li>25 inch or larger TV</li>
-                                                    <li>Cable/satellite TV channels</li>
-                                                    <li>AM/FM clock radio</li>
-                                                    <li>Voicemail</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-xs-6 col-lg-4">
-                                                <h6>bathroom</h6>
-                                                <ul>
-                                                    <li>Dataport</li>
-                                                    <li>Phone access fees waived</li>
-                                                    <li>24-hour Concierge service</li>
-                                                    <li>Private concierge</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-xs-6 col-lg-4">
-                                                <h6>Oversized work desk</h6>
-                                                <ul>
-                                                    <li>Dataport</li>
-                                                    <li>Phone access fees waived</li>
-                                                    <li>24-hour Concierge service</li>
-                                                    <li>Private concierge</li>
-                                                </ul>
-                                            </div>
-                                        </div>
 
-                                    </div>
-
-                                </div>
                                 <!-- END / AMENITIES -->
 
                                 <!-- PACKAGE -->
                                 <div class="tab-pane fade" id="package">
-                            
+
                                     <div class="room-detail_package">
 
                                         <!-- ITEM package -->
                                         <div class="room-package_item">
-                                        
+
                                             <div class="text">
                                                 <h4><a href="#">package standar</a></h4>
                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-                                                                    
+
                                                 <div class="room-package_price">
                                                     <p class="price">
                                                         <span class="amout">$260</span> / Package
@@ -291,14 +229,14 @@
                                             </div>
                                         </div>
                                         <!-- END / ITEM package -->
-                                                                    
+
                                         <!-- ITEM package -->
                                         <div class="room-package_item">
-                                        
+
                                             <div class="text">
                                                 <h4><a href="#">package standar</a></h4>
                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-                                                                    
+
                                                 <div class="room-package_price">
                                                     <p class="price">
                                                         <span class="amout">$260</span> / Package
@@ -308,14 +246,14 @@
                                             </div>
                                         </div>
                                         <!-- END / ITEM package -->
-                                        
+
                                         <!-- ITEM package -->
                                         <div class="room-package_item">
-                                        
+
                                             <div class="text">
                                                 <h4><a href="#">package standar</a></h4>
                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-                                                                    
+
                                                 <div class="room-package_price">
                                                     <p class="price">
                                                         <span class="amout">$260</span> / Package
@@ -326,101 +264,12 @@
                                         </div>
                                         <!-- END / ITEM package -->
                                     </div>
-                            
+
                                 </div>
                                 <!-- END / PACKAGE -->
 
                                 <!-- RATES -->
-                                <div class="tab-pane fade" id="rates">
 
-                                    <div class="room-detail_rates">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Rate Period</th>
-                                                    <th>Nightly</th>
-                                                    <th>Weekend Night</th>
-                                                    <th>Weekly</th>
-                                                    <th>Monthly</th>
-                                                    <th>Event</th>
-                                                </tr>
-                                            </thead>
-                                            <tr>
-                                                <td>
-                                                    <h6>Spring/Summer Season</h6>
-                                                    <ul>
-                                                        <li>Jun 1 - Aug 31</li>
-                                                        <li>3 night minimum stay</li>
-                                                    </ul>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$320</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$23</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$120</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$100</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$89</span></p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h6>Summer/Fall Season</h6>
-                                                    <ul>
-                                                        <li>Jun 1 - Aug 31</li>
-                                                        <li>3 night minimum stay</li>
-                                                    </ul>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$320</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$23</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$120</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$100</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$89</span></p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h6>Christmas Season</h6>
-                                                    <ul>
-                                                        <li>Jun 1 - Aug 31</li>
-                                                        <li>3 night minimum stay</li>
-                                                    </ul>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$320</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$23</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$120</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$100</span></p>
-                                                </td>
-                                                <td>
-                                                    <p class="price"><span class="amout">$89</span></p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-
-                                </div>
                                 <!-- END / RATES -->
 
                                 <!-- CALENDAR -->
@@ -431,14 +280,14 @@
                                         <div class="col-sm-6">
                                             <!-- CALENDAR ITEM -->
                                             <div class="calendar_custom">
-                                        
+
                                                 <div class="calendar_title">
                                                     <span class="calendar_month">JUNE</span>
                                                     <span class="calendar_year">2015</span>
-                                            
+
                                                     <a href="#" class="calendar_prev calendar_corner"><i class="lotus-icon-left-arrow"></i></a>
                                                 </div>
-                                            
+
                                                 <table class="calendar_tabel">
 
                                                     <thead>
@@ -506,7 +355,7 @@
                                                     </tr>
 
                                                 </table>
-                                            
+
                                             </div>
                                             <!-- END CALENDAR ITEM -->
                                         </div>
@@ -515,14 +364,14 @@
 
                                             <!-- CALENDAR ITEM -->
                                             <div class="calendar_custom">
-                                        
+
                                                 <div class="calendar_title">
                                                     <span class="calendar_month">JUNE</span>
                                                     <span class="calendar_year">2015</span>
-                                            
+
                                                     <a href="#" class="calendar_next calendar_corner"><i class="lotus-icon-right-arrow"></i></a>
                                                 </div>
-                                            
+
                                                 <table class="calendar_tabel">
 
                                                     <thead>
@@ -590,11 +439,11 @@
                                                     </tr>
 
                                                 </table>
-                                            
+
                                             </div>
                                             <!-- END CALENDAR ITEM -->
                                         </div>
-                                        
+
                                         <div class="calendar_status text-center col-sm-12">
                                             <span>Available</span>
                                             <span class="not-available">Not Available</span>
@@ -617,103 +466,35 @@
                     <h2 class="room-compare_title">COMPARE COM OUTROS</h2>
 
                     <div class="room-compare_content">
-                        
+
                         <div class="row">
                             <!-- ITEM -->
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="room-compare_item">
-                                    <div class="img">
-                                        <a href="#"><img src="images/room/detail/compare/img-1.jpg" alt=""></a>
-                                    </div>  
-                                
-                                    <div class="text">
-                                        <h2><a href=""> </a></h2>
-                                
-                                        <ul>
-                                            <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-                                            <li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
-                                        </ul>
-                                
-                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
-                                
+                            <c:forEach items="${ultimos}" var="itens">
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="room-compare_item">
+                                        <div class="img">
+                                            <a href="#"><img src="images/Cars/BMWI8.jpg" alt=""></a>
+                                        </div>  
+
+                                        <div class="text">
+                                            <h2><a href=""> </a></h2>
+
+                                            <ul>
+                                                <li><a >MODELO:</a> ${itens.modelo}</li>
+                                                <li><a >MARCA:</a> ${itens.valorDeLocacao}</li>
+                                                <li ><a >VALOR:</a> ${itens.valorDeLocacao}<span >/DIAS</span> </li>
+                                            </ul>
+
+                                            <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
+
+                                        </div>
+
                                     </div>
-                                
                                 </div>
-                            </div>
+                            </c:forEach>
                             <!-- END / ITEM -->
-                            
-                            <!-- ITEM -->
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="room-compare_item">
-                                    <div class="img">
-                                        <a href="#"><img src="images/room/detail/compare/img-1.jpg" alt=""></a>
-                                    </div>  
-                                
-                                    <div class="text">
-                                        <h2><a href=""> </a></h2>
-                                
-                                        <ul>
-                                            <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-                                            <li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
-                                        </ul>
-                                
-                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
-                                
-                                    </div>
-                                
-                                </div>
-                            </div>
-                            <!-- END / ITEM -->
-                            
-                            <!-- ITEM -->
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="room-compare_item">
-                                    <div class="img">
-                                        <a href="#"><img src="images/room/detail/compare/img-1.jpg" alt=""></a>
-                                    </div>  
-                                
-                                    <div class="text">
-                                        <h2><a href=""> </a></h2>
-                                
-                                        <ul>
-                                            <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-                                            <li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
-                                        </ul>
-                                
-                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
-                                
-                                    </div>
-                                
-                                </div>
-                            </div>
-                            <!-- END / ITEM -->
-                            
-                            <!-- ITEM -->
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="room-compare_item">
-                                    <div class="img">
-                                        <a href="#"><img src="images/room/detail/compare/img-1.jpg" alt=""></a>
-                                    </div>  
-                                
-                                    <div class="text">
-                                        <h2><a href=""> </a></h2>
-                                
-                                        <ul>
-                                            <li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-                                            <li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
-                                        </ul>
-                                
-                                        <a href="#" class="awe-btn awe-btn-default">DETALHES</a>
-                                
-                                    </div>
-                                
-                                </div>
-                            </div>
-                            <!-- END / ITEM -->
+
+
                         </div>
 
                     </div>
@@ -725,7 +506,7 @@
         <!-- END / SHOP DETAIL -->
 
         <%@include file="../jspf/footer.jspf"%>
-     
+
     </div>
     <!-- END / PAGE WRAP -->
 

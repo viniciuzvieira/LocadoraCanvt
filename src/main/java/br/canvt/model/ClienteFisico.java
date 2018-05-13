@@ -1,8 +1,9 @@
 package br.canvt.model;
+
 import java.io.Serializable;
+import java.util.Date;
 
-public class ClienteFisico extends Cliente implements Serializable{
-
+public class ClienteFisico extends Cliente implements Serializable {
 
     public String getNumeroCNH() {
         return numeroCNH;
@@ -19,13 +20,14 @@ public class ClienteFisico extends Cliente implements Serializable{
     public void setValCNH(String valCNH) {
         this.valCNH = valCNH;
     }
-
+   
     private String nomeCompleto;
     private String CPF;
     private String dataNasc;
     private String sexo;
     private String numeroCNH;
     private String valCNH;
+
     public String getSexo() {
         return sexo;
     }
@@ -58,19 +60,19 @@ public class ClienteFisico extends Cliente implements Serializable{
         this.dataNasc = dataNasc;
     }
 
-    public ClienteFisico(){
-    super();
+    public ClienteFisico() {
+        super();
     }
-    public ClienteFisico(String hashSenha,String username,Boolean disabled, String end, String UF, String complemento, String bairro, String telefone,
-            String email, String nomeCompleto, String CPF, String dataNasc,String valCNH,String sexo,String numeroCNH,String cidade,String numero,String CEP) {
-        super(hashSenha,username,disabled, end, UF, complemento, bairro, telefone, email,cidade,numero,CEP);
+
+    public ClienteFisico(String usuario, String hashSenha,Boolean disabled, String end, String UF, String complemento, String bairro, String telefone,
+            String email, String nomeCompleto, String CPF, String dataNasc, String valCNH, String sexo, String numeroCNH, String cidade, String numero, String CEP) {
+        super(usuario,hashSenha,disabled, end, UF, complemento, bairro, telefone, email, cidade, numero, CEP);
         this.nomeCompleto = nomeCompleto;
         this.CPF = CPF;
-        this.dataNasc=dataNasc;
-        this.sexo=sexo;
-        this.valCNH=valCNH;
-        this.numeroCNH=numeroCNH;
-                
+        this.dataNasc = dataNasc;
+        this.sexo = sexo;
+        this.valCNH = valCNH;
+        this.numeroCNH = numeroCNH;
 
     }
 }

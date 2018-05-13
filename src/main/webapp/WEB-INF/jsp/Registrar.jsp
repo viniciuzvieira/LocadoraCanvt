@@ -1,16 +1,12 @@
-<%-- 
-Document   : Registrar
-Created on : 13/04/2018, 20:06:11
-Author     : adriano.rlourenco
---%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <!-- TITLE -->
-        <title>Registrar</title>
+        <title>Cadastrar Cliente</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -39,10 +35,7 @@ Author     : adriano.rlourenco
         <![endif]-->
     </head>
 
-    <!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
-    <!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
-    <!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+    <body>
 
 
         <!-- PRELOADER -->
@@ -55,107 +48,92 @@ Author     : adriano.rlourenco
         <div id="page-wrap">
 
             <!-- HEADER -->
-            <%@include file="../jspf/header.jspf"%>
+            <%@include file="../jspf/header.jspf"%> 
             <!-- END / HEADER -->
 
-            <!-- ACCOUNT -->
-            <section class="section-account parallax">
+            <!-- SUB BANNER -->
+            <section class="section-sub-banner bg-9" style="background-image: url(images/Cars/default.png)">
+
                 <div class="awe-overlay"></div>
-                <div class="container">
-                    <div class="login-register">
+
+                <div class="sub-banner">
+                    <div class="container">
                         <div class="text text-center">
-                            <h2>Cadastre-se agora!</h2>
-                            <p></p>
-                            <form action="./registrar" method="post"class="account_form">
-                                <div class="field-form">
-                                    <input name="name"type="text" class="field-text" placeholder="Nome*">
+                            <h2>FAÇA JÁ O SEU CADASTRO</h2>
+                        </div>
+                    </div>
 
-                                </div>
-                                <div class="field-form">
-                                    <input name="CPF"type="text" class="field-text" placeholder="CPF*">
-                                </div>
-                                <div class="field-form">
-                                    <input name="Data de nascimento"type="text" class="field-text" placeholder="Data de nascimento*">
+                </div>
 
-                                </div>
-                                <div class="field-form">
-                                        <span style="font-weight:bold;" for="rad" >Sexo:<sup style="color:red;">*</sup></span>
-                                        <input type="radio" name="sexo" id="radioMas" value="Masculino">Masculino
-                                        <input type="radio" name="sexo" id="radioFem" value="Feminino">Feminino
-                                </div>
-                                <div class="field-form">
-                                    <input name="Endereço"type="text" class="field-text" placeholder="Endereço*">
+            </section>
+            <!-- END / SUB BANNER -->
 
-                                </div>
-                                <div class="field-form">
-                                    <input name="Numero"type="number" class="field-text" placeholder="Numero*">
+            <section class="section-reservation-page bg-white">
+
+                <div class="container">
+                    <div class="reservation-page">
+
+                        <div class="row">
+
+
+                            <div class="col-md-10 col-lg-3">
+
+
+                                <div class="reservation-date bg-gray">
+
 
                                 </div>
 
-                                <div class="field-form">
-                                    <select id="inputState" class="form-control" name="UF">
-                                        <option selected value="NI">UF</option>
-                                        <option value="AC">AC</option>
-                                        <option value="AL">AL</option>
-                                        <option value="AM">AM</option>
-                                        <option value="AP">AP</option>
-                                        <option value="BA">BA</option>
-                                        <option value="CE">CE</option>
-                                        <option value="DF">DF</option>
-                                        <option value="ES">ES</option>
-                                        <option value="GO">GO</option>
-                                        <option value="MA">MA</option>
-                                        <option value="MG">MG</option>
-                                        <option value="MS">MS</option>
-                                        <option value="MT">MT</option>
-                                        <option value="PA">PA</option>
-                                        <option value="PB">PB</option>
-                                        <option value="PE">PE</option>
-                                        <option value="PI">PI</option>
-                                        <option value="PR">PR</option>
-                                        <option value="RJ">RJ</option>
-                                        <option value="RN">RN</option>
-                                        <option value="RS">RS</option>
-                                        <option value="RO">RO</option>
-                                        <option value="RR">RR</option>
-                                        <option value="SC">SC</option>
-                                        <option value="SE">SE</option>
-                                        <option value="SP">SP</option>
-                                        <option value="TO">TO</option>
-                                    </select>
-                                </div>
-                                <div class="field-form">
-                                    <input name="Email"type="text" class="field-text" placeholder="Email*">
-                                </div>
-                                <div class="field-form">
-                                    <input type="text " class="field-text" id="Bairro" placeholder="Bairro " name="bairro"  maxlength="100" >
-                                </div>
-                                <div class="field-form">
-                                    <input type="text " class="field-text" id="CEP" placeholder="Digite o CEP " name="cep"  maxlength="8"onkeypress='return SomenteNumero(event)' >
-                                </div>
-                                <div class="field-form">
-                                    <input type="text " class="field-text" id="Telefone" placeholder="(11)000000000" maxlength="20" name="tel">
-                                </div>
-                                <div class="field-form">
-                                    <input type="text" class="field-text" id="CNH" placeholder="CNH" maxlength="20" name="cnh">
-                                </div>
-                                <div class="field-form">
-                                    <input name="Senha"type="password" class="field-text" placeholder="Senha*">
-                                    <span class="view-pass"><i class="lotus-icon-view"></i></span>
-                                </div>
+                            </div>
 
-                                <div class="field-form field-submit">
-                                    <button class="awe-btn awe-btn-13" type="submit">REGISTRAR</button>
+
+                            <!-- CONTENT -->
+                            <div class="col-md col-lg-6">
+
+
+
+                                <div class="reservation-billing-detail">
+                                    <form action="./registrar" method="post">
+                                        <div class="col-sm-12">
+                                            <label for="Name">Username:<sup>*</sup></label>
+                                            <input type="text" name="Username"class="input-text" placeholder="Ex: Gabriela627">
+
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="email">E-mail:<sup>*</sup></label>
+                                            <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="senha">Senha:<sup>*</sup></label>
+                                            <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha"/>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <label><span style="font-weight:bold;" for="rad" >Cadastrar dados pessoais?<sup style="color:red;">*</sup></span>
+                                                    <input type="radio" name="dadosP" id="radioS" value="s">Sim
+                                                <input type="radio" name="dadosP" id="radioN" value="n">não</label>
+
+                                        </div>
+                                        <div class="field-form field-submit">
+                                            <button class="awe-btn awe-btn-13" type="submit">Cadastrar</button>
+
+                                        </div>
+
+                                    </form>      
                                 </div>
-                            </form>
+                            </div>
+
+                            <!-- END / CONTENT -->
+
                         </div>
                     </div>
                 </div>
+
             </section>
-            <!-- END / ACCOUNT -->
+            <!-- END / RESERVATION -->
 
             <!-- FOOTER -->
-            <%@include file="../jspf/footer.jspf"%>
+            <%@include file="../jspf/footer.jspf" %>
             <!-- END / FOOTER -->
 
         </div>
@@ -179,5 +157,6 @@ Author     : adriano.rlourenco
         <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
         <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/procuraCEP.js"></script>
     </body>
 </html>

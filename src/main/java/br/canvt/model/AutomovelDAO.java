@@ -1,4 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.canvt.model;
+
 
 import static br.canvt.model.BDConexao.getConnection;
 import java.sql.Connection;
@@ -9,6 +15,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AutomovelDAO {
+
+    public List<Automovel> listarUltimos() {
+        String query = "SELECT * FROM AUTO ORDER BY VALORDELOCACAO DESC LIMIT 4";
+        List<Automovel> lista = new ArrayList();
+        Connection con = null;
+        PreparedStatement stmt = null;
+        try {
+            con = BDConexao.getConnection();
+
+            stmt = con.prepareStatement(query);
+            ResultSet resultados = stmt.executeQuery();
+
+            while (resultados.next()) {
+                Automovel auto = new Automovel();
+                auto.setRenavam(resultados.getString("RENAVAM"));
+                auto.setPlaca(resultados.getString("PLACA"));
+                auto.setMarca(resultados.getString("MARCA"));
+                auto.setModelo(resultados.getString("MODELO"));
+                auto.setAno(resultados.getString("ANO"));
+                auto.setCategoria(resultados.getString("CATEGORIA"));
+                auto.setKilometragem(resultados.getString("KILOMETRAGEM"));
+                auto.setNumeroChassi(resultados.getString("NUMEROCHASSI"));
+                auto.setPortas(resultados.getString("PORTAS"));
+                auto.setCor(resultados.getString("COR"));
+                auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
+
+                auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
+
+                lista.add(auto);
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+
+        }
+        return lista;
+    }
 
     public List<Automovel> listarAll() {
 
@@ -35,8 +77,9 @@ public class AutomovelDAO {
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
                 auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-                auto.setImagem(resultados.getString("IMAGEM"));
+
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
+
                 lista.add(auto);
             }
         } catch (SQLException ex) {
@@ -71,8 +114,7 @@ public class AutomovelDAO {
                 auto.setNumeroChassi(resultados.getString("NUMEROCHASSI"));
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
-                auto.setCombustivel(resultados.getString("COMBUSTIVEL"));                
-                auto.setImagem(resultados.getString("IMAGEM"));
+                auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
 
                 lista.add(auto);
@@ -92,7 +134,7 @@ public class AutomovelDAO {
         Connection con = null;
         PreparedStatement stmt = null;
         System.out.println(auto.getRenavam() + auto.getPlaca() + auto.getMarca() + auto.getModelo() + auto.getAno() + auto.getCategoria() + auto.getKilometragem()
-                + auto.getNumeroChassi() +auto.getImagem()+ auto.getCor() + auto.getPortas() + auto.getCombustivel() + auto.getValorDeLocacao());
+                + auto.getNumeroChassi() + "img" + auto.getCor() + auto.getPortas() + auto.getCombustivel() + auto.getValorDeLocacao());
         try {
             con = BDConexao.getConnection();
 
@@ -110,7 +152,7 @@ public class AutomovelDAO {
             stmt.setString(10, auto.getPortas());
             stmt.setString(11, auto.getCombustivel());
             stmt.setDouble(12, auto.getValorDeLocacao());
-            stmt.setString(13, auto.getImagem());
+            stmt.setBlob(13, auto.getImagem());
             stmt.setBoolean(14, true);
 
             stmt.execute();
@@ -152,6 +194,7 @@ public class AutomovelDAO {
                     auto.setPortas(resultados.getString("PORTAS"));
                     auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
                     auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
+                    auto.setImagem(resultados.getAsciiStream("IMAGEM"));
                     auto.setDisponivel(resultados.getBoolean("DISPONIVEL"));
                 }
             }

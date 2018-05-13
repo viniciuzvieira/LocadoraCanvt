@@ -83,9 +83,9 @@
                             <div class="col-md-10 col-lg-3">
 
 
-                                    <div class="reservation-date bg-gray">
+                                <div class="reservation-date bg-gray">
 
-                                    </div>
+                                </div>
 
                             </div>
 
@@ -93,32 +93,34 @@
                             <!-- CONTENT -->
                             <div class="col-md col-lg-6">
 
-                         
 
-                                    <div class="reservation-billing-detail">
 
+                                <div class="reservation-billing-detail">
+                                    <form action="./InserirCartao" method="post" >
                                         <div class="row">
-                                                <div class="col-sm-6">
+                                            <div class="col-sm-6">
                                                 <label>Número do cartão:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                                <input type="text" name="numCartao" class="input-text">
                                             </div>
                                             <div class="col-xs-4">
                                                 <label>Validade:<sup>*</sup></label>
-                                                <input type="text" class="input-text">
+                                                <input type="text" name="valCartao"class="input-text">
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <label>     CVC (código de segurança):<sup>*</sup></label>
+                                            <label>CVC (código de segurança):<sup>*</sup></label>
+                                            
                                             <div class="col-xs-2">
-                                                
+
                                                 <input type="text" class="input-text">
                                             </div>
                                         </div>
-                                        <button class="awe-btn awe-btn-13">AVANÇAR</button>
-                                    </div>
+                                        <button class="awe-btn awe-btn-13" type="submit">AVANÇAR</button>
+                                    </form>
 
-                              
+                                </div>
+
 
                             </div>
                             <!-- END / CONTENT -->

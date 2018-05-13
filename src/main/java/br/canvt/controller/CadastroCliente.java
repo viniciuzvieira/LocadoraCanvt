@@ -1,11 +1,17 @@
 package br.canvt.controller;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 import br.canvt.model.ClienteDao;
 import br.canvt.model.ClienteFisico;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +19,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ *
+ * @author viniciuzvieira
+ */
 @WebServlet(urlPatterns = {"/CadastroCliente"})
 public class CadastroCliente extends HttpServlet {
 
@@ -28,9 +38,10 @@ public class CadastroCliente extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String nomeCompleto = request.getParameter("nomecompleto");
+        String cpf = request.getParameter("cpf");
         String username = request.getParameter("Username");
         String senha = request.getParameter("senha");
-        String cpf = request.getParameter("cpf");
+
         String DataNasc = request.getParameter("datanasc");
         String setSexo = request.getParameter("sexo");
         String setNumeroCNH = request.getParameter("cnh");
@@ -58,7 +69,7 @@ public class CadastroCliente extends HttpServlet {
         cli.setNumero(setNumero);
         cli.setTelefone(setTelefone);
         cli.setCidade(setCidade);
-        cli.setUsername(username);
+        cli.setUsuario(username);
         cli.setHashSenha(senha);
         ClienteDao cliDao = new ClienteDao();
         try {
