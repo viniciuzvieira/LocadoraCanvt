@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.canvt.controller;
 
 import br.canvt.model.Automovel;
 import br.canvt.model.AutomovelDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -19,10 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author phantom
- */
 @WebServlet(name = "ConsultarAuto", urlPatterns = {"/ConsultarAuto"})
 public class ConsultarAuto extends HttpServlet {
 

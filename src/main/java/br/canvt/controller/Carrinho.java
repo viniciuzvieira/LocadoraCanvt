@@ -1,15 +1,8 @@
 package br.canvt.controller;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import br.canvt.model.Automovel;
 import br.canvt.model.AutomovelDAO;
 import br.canvt.model.CarrinhoDeCompras;
-import br.canvt.model.Venda;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -18,7 +11,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,10 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author adriano.rlourenco
- */
 @WebServlet(urlPatterns = {"/Carrinho"})
 public class Carrinho extends HttpServlet {
 

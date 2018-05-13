@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR" ng-app="carros" ng-controller="principal">
     <head>
-        <meta charset="utf-8">
-        <!-- TITLE -->
+        <meta charset="utf-8">        <!-- TITLE -->
         <title>Reserva</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -114,16 +113,14 @@
                                             <div class="col-xs-4">
                                                 <div class="accomd-modations-room">
                                                     <div class="img">
-                                                        <a href="#"><img src="${item.image}" class="cars" alt="Mercedes-Bens azul">${item.modelo}</a>
+                                                        <a><img src="${item.imagem}" class="cars" alt="${item.modelo}" width="100px"></a>
                                                     </div>
-
                                                     <div class="text">
                                                         <h2><a href="#">${item.marca}</a></h2>
                                                         <p class="price">
                                                             <span class="amout">${item.valorDeLocacao}</span>/dias
                                                         </p>
                                                     </div>
-
                                                     <div class="sub-banner">
                                                         <form action="./reserva" method="post"> 
                                                             <button class="btn btn-primary" name="botao"  value="detalhes"type="submit">Detalhes</button>
@@ -131,16 +128,12 @@
                                                             <input name="pagamento" type="hidden"  value="null">
                                                             <input type="hidden" name="renavam"value="${item.renavam}"/>
                                                         </form>
-
-
                                                     </div>
 
                                                 </div>
                                             </div>
                                         </c:forEach>
-
                                     </div>
-
                                 </div>  
                             </div>
                         </div>

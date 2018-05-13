@@ -1,22 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.canvt.model;
 
 //import br.com.candt.controller.ItensDeVenda;
-import br.canvt.model.Automovel;
-import br.canvt.model.BDConexao;
-import br.canvt.model.ClienteFisico;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class VendaDAO {
@@ -55,19 +45,12 @@ public class VendaDAO {
 
             for (CarrinhoDeCompras item : venda.getCar()) {
                 stmt = con.prepareStatement(query2);
-
                 stmt.setInt(1, venda.getId());
-
                 System.out.println(venda.getId());
-
                 stmt.setString(2, item.getAuto().getRenavam());
-
                 System.out.println(item.getAuto().getRenavam());
-
                 stmt.setString(3, item.getDataRetirada());
-
                 System.out.println(item.getDataRetirada());
-
                 stmt.setString(4, item.getDataDeDevolucao());
 
                 System.out.println(item.getDataDeDevolucao());
@@ -307,7 +290,7 @@ public class VendaDAO {
                         auto.setPortas(resultF.getString("PORTAS"));
                         auto.setCombustivel(resultF.getString("COMBUSTIVEL"));
                         auto.setValorDeLocacao(resultF.getDouble("VALORDELOCACAO"));
-                        auto.setImagem(resultF.getAsciiStream("IMAGEM"));
+                        auto.setImagem(resultF.getString("IMAGEM"));
                         auto.setDisponivel(resultF.getBoolean("DISPONIVEL"));
                         System.out.println("307 " + auto.getRenavam());
                         item.setAuto(auto);
