@@ -37,19 +37,22 @@ public class CadastroCliente extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nomeCompleto = request.getParameter("nomecompleto");     
-        String cpf = request.getParameter("cpf");                       
-        String DataNasc = request.getParameter("datanasc");             
-        String setSexo = request.getParameter("sexo");                  
-        String setNumeroCNH = request.getParameter("cnh");        
-        String setEnd = request.getParameter("endereco");               
-        String setCEP = request.getParameter("cep");                    
-        String setUF = request.getParameter("UF");                      
-        String setNumero = request.getParameter("numerocasa");          
-        String setComplemento = request.getParameter("complemento");    
-        String setBairro = request.getParameter("bairro");              
-        String setTelefone = request.getParameter("tel");               
-        String setEmail = request.getParameter("email");                
+        String nomeCompleto = request.getParameter("nomecompleto");
+        String cpf = request.getParameter("cpf");
+        String username = request.getParameter("Username");
+        String senha = request.getParameter("senha");
+
+        String DataNasc = request.getParameter("datanasc");
+        String setSexo = request.getParameter("sexo");
+        String setNumeroCNH = request.getParameter("cnh");
+        String setEnd = request.getParameter("endereco");
+        String setCEP = request.getParameter("cep");
+        String setUF = request.getParameter("UF");
+        String setNumero = request.getParameter("numerocasa");
+        String setComplemento = request.getParameter("complemento");
+        String setBairro = request.getParameter("bairro");
+        String setTelefone = request.getParameter("tel");
+        String setEmail = request.getParameter("email");
         String setCidade = request.getParameter("cidade");
         ClienteFisico cli = new ClienteFisico();
         cli.setBairro(setBairro);
@@ -66,7 +69,8 @@ public class CadastroCliente extends HttpServlet {
         cli.setNumero(setNumero);
         cli.setTelefone(setTelefone);
         cli.setCidade(setCidade);
-        
+        cli.setUsuario(username);
+        cli.setHashSenha(senha);
         ClienteDao cliDao = new ClienteDao();
         try {
             cliDao.incluirComTransacao(cli);

@@ -70,14 +70,54 @@
 
         <section class="section-room bg-white">
             <div class="container">
-                <h3>PAGAMENTO EFETUADO COM SUCESO NO CARTÃO 1234.****.****.5678</h3>
-                <p>O NÚMERO DO SEU PEDIDO É XXXXXX</p>
-                <button class="awe-btn awe-btn-13" style="position: absolute; left: 40%;">ACOMPANHAR PEDIDO</button>
+
+                <div class="room-wrap-1">
+                    <div class="row">            
+                        <br/>   
+                        <div class="shortcode-tab-price">
+                            <div class="tab-price">
+                                <div id="dvData">
+                                    <table>
+                                        <thead>
+
+                                            <tr>
+                                                <th>Modelo</th>
+                                                <th>Placa</th>
+                                                <th>Data da Retirada</th>
+                                                <th>Data de Entrega</th>
+                                                <th>Valor Parcial R$</th>
+
+                                            </tr>
+
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach items="${lista}" var="item">
+                                                <tr>
+                                                    <td>${item.id}</td>
+                                                    <td>${item.cliente.CPF}</td>
+                                                    <td>${item.car}</td>
+                                                    <td>${item.car}</td>
+                                                    <td>${item.valorTotal} </td>
+
+                                                </tr>
+                                            </c:forEach>
+                                        </tbody>
+                                    </table>
+                                    <br/>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- RELATORIO -->
         <%@include file="../jspf/footer.jspf" %>
         <!-- FOOTER -->
+
+
+
 
         <!-- END / PAGE WRAP -->
 

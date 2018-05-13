@@ -205,6 +205,8 @@ public class ClienteDao {
                     c.setDataNasc(resultados.getString("DATANASCIMENTO"));
                     c.setUF(resultados.getString("ESTADO"));
                     c.setDisabled(resultados.getBoolean("DISABLED"));
+                    c.setUsuario(resultados.getString("USERNAME"));
+                    c.setHashSenha(resultados.getString("SENHA"));
                 }
             }
         } catch (SQLException ex) {

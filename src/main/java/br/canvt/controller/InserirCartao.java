@@ -49,7 +49,7 @@ public class InserirCartao extends HttpServlet {
         List<CarrinhoDeCompras> carrinho = (List) session.getAttribute("carrinho");
         HttpSession session1 = request.getSession();
 
-        ClienteFisico cli = dao.procurar("96464654");
+        ClienteFisico cli = dao.procurar("49158745588");
         v.setCar(carrinho);
         v.setCliente(cli);
         v.setValorTotal(556200.00);
