@@ -5,7 +5,6 @@
  */
 package br.canvt.model;
 
-
 import static br.canvt.model.BDConexao.getConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -120,7 +119,8 @@ public class ClienteDao {
                 c.setDataNasc(resultados.getString("DATANASCIMENTO"));
                 c.setUF(resultados.getString("ESTADO"));
                 c.setDisabled(resultados.getBoolean("DISABLED"));
-
+                c.setUsuario(resultados.getString("USERNAME"));
+                c.setHashSenha(resultados.getString("SENHA"));
                 lista.add(c);
             }
         } catch (SQLException ex) {
@@ -133,11 +133,11 @@ public class ClienteDao {
     public void incluirComTransacao(ClienteFisico cli) throws SQLException {
         String query = "INSERT INTO CLIENTEF "
                 + "(NOME,CPF,SEXO,TELEFONE,EMAIL,NUMEROCNH,ENDERECO,COMPLEMENTO,NUMERO,BAIRRO,CEP,"
-                + "CIDADE,DATANASCIMENTO,ESTADO,DISABLED) "
-                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "CIDADE,DATANASCIMENTO,ESTADO,DISABLED,USERNAME,SENHA) "
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection con = null;
         PreparedStatement stmt = null;
-       
+
         try {
             con = BDConexao.getConnection();
 
@@ -158,6 +158,8 @@ public class ClienteDao {
             stmt.setString(13, cli.getDataNasc());
             stmt.setString(14, cli.getUF());
             stmt.setBoolean(15, false);
+            stmt.setString(16, cli.getUsuario());
+            stmt.setString(17, cli.getHashSenha());
 
             stmt.executeUpdate();
 
@@ -270,7 +272,7 @@ public class ClienteDao {
                 + "NUMEROCNH=?,ENDERECO=?,COMPLEMENTO=?,NUMERO=?,BAIRRO=?,CEP=?,CIDADE=?, "
                 + "DATANASCIMENTO=?,ESTADO=?, DISABLED=? "
                 + "WHERE (CPF=?)";
-         System.out.println(cli.getNomeCompleto() + cli.getCPF() + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
+        System.out.println(cli.getNomeCompleto() + cli.getCPF() + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
                 + cli.getComplemento() + cli.getNumero() + cli.getBairro() + cli.getCEP() + cli.getCidade() + cli.getDataNasc() + cli.getUF());
         Connection con = null;
         PreparedStatement stmt = null;

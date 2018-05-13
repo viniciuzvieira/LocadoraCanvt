@@ -89,10 +89,10 @@
                                         <br/>
                                         <table>
                                             <tr>
-                                                <td class="date-select">${sessionScope.auto.modelo}</td>     
+                                                <td class="date-select">${sessionScope.auto.renavam}</td>     
                                                 <td class="date-select">${sessionScope.auto.modelo}</td>
                                             <input name="auto" type="hidden"  value="${sessionScope.auto.renavam}">
-                                                 <input name="pagamento" type="hidden"  value="null">
+                                            <input name="pagamento" type="hidden"  value="null">
                                             </tr>
                                         </table>
                                         <br/>

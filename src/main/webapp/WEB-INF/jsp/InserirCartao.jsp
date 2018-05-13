@@ -96,7 +96,7 @@
 
 
                                 <div class="reservation-billing-detail">
-                                    <form >
+                                    <form action="./InserirCartao" method="post" >
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <label>Número do cartão:<sup>*</sup></label>

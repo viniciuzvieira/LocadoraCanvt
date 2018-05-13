@@ -57,12 +57,13 @@ public class reserva extends HttpServlet implements Serializable {
         String btn = request.getParameter("botao");
 
         if (btn.equals("alugar")) {
-            
-            String autoR = request.getParameter("auto");
-            Automovel auto1 = dao.procurar(autoR);
-            session.setAttribute("Selecionado", auto1);
-            
-            response.sendRedirect(request.getContextPath() + "/EscolherData");
+            String renavam = request.getParameter("renavam");
+//            String autoR = request.getParameter("auto");
+            Automovel auto1 = dao.procurar(renavam);
+            session.setAttribute("auto", auto1);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/EscolherData.jsp");
+            dispatcher.forward(request, response);
+//            response.sendRedirect(request.getContextPath() + "/EscolherData");
         } else {
 
             String renavam = request.getParameter("renavam");

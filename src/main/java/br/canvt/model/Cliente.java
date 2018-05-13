@@ -3,8 +3,10 @@ package br.canvt.model;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Cliente implements Serializable{
+public class Cliente implements Serializable {
 
+    private String usuario;
+    private String hashSenha;
     private String end;
     private String UF;
     private String complemento;
@@ -15,14 +17,16 @@ public class Cliente implements Serializable{
     private String CEP;
     private String numero;
     private Boolean disabled;
-    
+
     public Cliente() {
 
     }
 
-    public Cliente(Boolean disabled, String end, String UF, String complemento, String bairro, String telefone,
+    public Cliente(String usuario, String hashSenha, Boolean disabled, String end, String UF, String complemento, String bairro, String telefone,
             String email, String cidade, String numero, String CEP) {
         this.CEP = CEP;
+        this.usuario = usuario;
+        this.hashSenha = hashSenha;
         this.end = end;
         this.UF = UF;
         this.complemento = complemento;
@@ -30,10 +34,10 @@ public class Cliente implements Serializable{
         this.telefone = telefone;
         this.email = email;
         this.cidade = cidade;
-        this.disabled=disabled;
-        
+        this.disabled = disabled;
+
         this.numero = numero;
-       
+
     }
 
     public String getCEP() {
@@ -150,6 +154,20 @@ public class Cliente implements Serializable{
         this.disabled = disabled;
     }
 
-   
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getHashSenha() {
+        return hashSenha;
+    }
+
+    public void setHashSenha(String hashSenha) {
+        this.hashSenha = hashSenha;
+    }
 
 }

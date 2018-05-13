@@ -6,7 +6,6 @@
 package br.canvt.controller;
 
 import br.canvt.model.LoginDAO;
-import br.canvt.model.UserSistem;
 import java.io.IOException;
 import java.io.Serializable;
 import javax.servlet.RequestDispatcher;
@@ -39,11 +38,11 @@ public class login extends HttpServlet {
         String senha = request.getParameter("Senha");
 
         LoginDAO dao = new LoginDAO();
-        UserSistem usuario = dao.procurar(username, senha);
+//        UserSistem usuario = dao.procurar(username, senha);
         if (username != null) {
             // Sucesso - usuario autenticado
             HttpSession sessao = request.getSession();
-            sessao.setAttribute("usuario", usuario);
+//            sessao.setAttribute("usuario", usuario);
             response.sendRedirect(request.getContextPath()
                     + "/home");
         }

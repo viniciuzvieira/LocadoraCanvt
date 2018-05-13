@@ -6,7 +6,7 @@
 package br.canvt.controller;
 
 import br.canvt.model.LoginDAO;
-import br.canvt.model.UserSistem;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -62,21 +62,21 @@ public class novoLogin extends HttpServlet {
                         = request.getRequestDispatcher("/WEB-INF/jsp/Registrar.jsp");
                 dispatcher.forward(request, response);
             }
-            UserSistem user = new UserSistem();
-            user.setUsuario(login);
-            user.setEmail(email);
-            user.setHashSenha(senha);
-
-            LoginDAO dao = new LoginDAO();
-        
-
-            response.sendRedirect(request.getContextPath() + "/registrar");
-
-            try {
-                dao.incluirComTransacao(user);
-            } catch (SQLException ex) {
-                Logger.getLogger(novoLogin.class.getName()).log(Level.SEVERE, null, ex);
-            }
+////            UserSistem user = new UserSistem();
+//            user.setUsuario(login);
+//            user.setEmail(email);
+//            user.setHashSenha(senha);
+//
+//            LoginDAO dao = new LoginDAO();
+//        
+//
+//            response.sendRedirect(request.getContextPath() + "/registrar");
+//
+//            try {
+//                dao.incluirComTransacao(user);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(novoLogin.class.getName()).log(Level.SEVERE, null, ex);
+//            }
         }
     }
 }

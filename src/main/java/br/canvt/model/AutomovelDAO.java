@@ -194,6 +194,7 @@ public class AutomovelDAO {
                     auto.setPortas(resultados.getString("PORTAS"));
                     auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
                     auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
+                    auto.setImagem(resultados.getAsciiStream("IMAGEM"));
                     auto.setDisponivel(resultados.getBoolean("DISPONIVEL"));
                 }
             }

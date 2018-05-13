@@ -20,7 +20,7 @@ public class Venda {
 //    private Boolean seguro;
     private Boolean finalizada;
     private List<CarrinhoDeCompras> car;
-    private double total = 0;
+//    private double total = 0;
 
     public Venda() {
         this.finalizada = false;
@@ -40,11 +40,7 @@ public class Venda {
         this.car = car;
     }
 
-    public double calcularTot(double valor) {
-        total = total + valor;
-        return total;
-    }
-
+    
     public int getId() {
         return id;
     }
