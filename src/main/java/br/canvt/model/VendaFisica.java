@@ -6,7 +6,6 @@
 package br.canvt.model;
 
 //import br.com.candt.controller.ItensDeVenda;
-import br.canvt.model.ClienteFisico;
 import java.util.Date;
 import java.util.List;
 

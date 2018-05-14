@@ -5,7 +5,6 @@
  */
 package br.canvt.model;
 
-import br.canvt.model.ClienteFisico;
 import java.util.Date;
 import java.util.List;
 
@@ -14,6 +13,7 @@ public class Venda {
     private int id;
 //    private Date datadeEntrega;
     private Double valorTotal;
+    private Date dataVenda;
 //    private Double tarifa;
 //    private String servico;
     private ClienteFisico cliente;
@@ -27,7 +27,7 @@ public class Venda {
         this.finalizada = false;
     }
 
-    public Venda(List<CarrinhoDeCompras> car, ClienteFisico cliente, int id, String automovel, Double valorTotal) {
+    public Venda(Date dataVenda,List<CarrinhoDeCompras> car, ClienteFisico cliente, int id, String automovel, Double valorTotal) {
         this.cliente = cliente;
         this.id = id;
 //        this.datadeEntrega = datadeEntrega;
@@ -39,6 +39,7 @@ public class Venda {
 //        this.seguro=seguro;
         this.finalizada = false;
         this.car = car;
+        this.dataVenda=dataVenda;
     }
 
     
@@ -123,6 +124,14 @@ public class Venda {
 
     public void setCar(List<CarrinhoDeCompras> car) {
         this.car = car;
+    }
+
+    public Date getDataVenda() {
+        return dataVenda;
+    }
+
+    public void setDataVenda(Date dataVenda) {
+        this.dataVenda = dataVenda;
     }
 
 }

@@ -5,7 +5,6 @@
  */
 package br.canvt.model;
 
-import br.canvt.model.Automovel;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;

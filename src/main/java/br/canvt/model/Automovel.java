@@ -1,6 +1,8 @@
 package br.canvt.model;
 
+import java.io.InputStream;
 import java.io.Serializable;
+import java.sql.Blob;
 
 public class Automovel implements Serializable {
 
@@ -18,14 +20,14 @@ public class Automovel implements Serializable {
     private String combustivel;
     private String descricao;
     private Boolean disponivel;
-    private String imagem;
+    private InputStream imagem;
             
     public Automovel() {
         this.disponivel = true;
     }
 
     public Automovel( String marca, String modelo, String ano, String categoria, String placa,
-            String renavam, String imagem,String kilometragem,  Double valorDeLocacao,String numeroChassi, String cor, String portas, String combustivel, String descricao) {
+            String renavam, InputStream imagem,String kilometragem,  Double valorDeLocacao,String numeroChassi, String cor, String portas, String combustivel, String descricao) {
        
         this.marca = marca;
         this.modelo = modelo;
@@ -156,11 +158,11 @@ public class Automovel implements Serializable {
         this.disponivel = disponivel;
     }
 
-    public String getImagem() {
+    public InputStream getImagem() {
         return imagem;
     }
 
-    public void setImagem(String imagem) {
+    public void setImagem(InputStream imagem) {
         this.imagem = imagem;
     }
     

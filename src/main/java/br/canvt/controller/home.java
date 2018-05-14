@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ *
+ * @author vinicius.vsilva8
+ */
 @WebServlet(name = "home", urlPatterns = {"/home"})
 public class home extends HttpServlet {
 

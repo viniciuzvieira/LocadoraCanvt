@@ -1,5 +1,10 @@
 package br.canvt.controller;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 import br.canvt.model.CarrinhoDeCompras;
 import br.canvt.model.ClienteDao;
 import br.canvt.model.ClienteFisico;
@@ -10,6 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +24,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ *
+ * @author adriano.rlourenco
+ */
 @WebServlet(urlPatterns = {"/InserirCartao"})
 public class InserirCartao extends HttpServlet {
 
@@ -42,16 +52,15 @@ public class InserirCartao extends HttpServlet {
         ClienteFisico cli = dao.procurar("49158745588");
         v.setCar(carrinho);
         v.setCliente(cli);
-        v.setValorTotal(556200.00);
+        v.setValorTotal(12325.1);
         v.setFinalizada(false);
         try {
             daoV.incluirComTransacao(v);
         } catch (SQLException ex) {
             Logger.getLogger(InserirCartao.class.getName()).log(Level.SEVERE, null, ex);
         }
-         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("/WEB-INF/jsp/SucessoCartao.jsp");
-        dispatcher.forward(request, response);
+        response.sendRedirect(request.getContextPath()
+              + "/SucessoCartao");
     }
 
 }

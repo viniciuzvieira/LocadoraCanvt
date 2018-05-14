@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.canvt.model;
 
 //import br.com.candt.controller.ItensDeVenda;
@@ -6,7 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class VendaDAO {
@@ -14,8 +21,8 @@ public class VendaDAO {
     public void incluirComTransacao(Venda venda) throws SQLException {
         String query = "INSERT INTO VENDA "
                 + "(CLIENTECPF,VALORTOTAL,"
-                + "FINALIZADA) "
-                + "VALUES (?, ?, ?)";
+                + "FINALIZADA,DATAVENDA) "
+                + "VALUES (?, ?, ?, ?)";
         String query2 = "INSERT INTO ITENSCARRINHO"
                 + "(IDVENDA,RENAVAM,DATAENTREGA,DATADEVOLUCAO,VALORPARCIAL) "
                 + "VALUES (? ,?, ?, ?, ?)";
@@ -34,6 +41,10 @@ public class VendaDAO {
             stmt.setString(1, venda.getCliente().getCPF());
             stmt.setDouble(2, venda.getValorTotal());
             stmt.setBoolean(3, venda.getFinalizada());
+            Date data = new Date();
+            java.sql.Timestamp timestamp = new java.sql.Timestamp(data.getTime());
+            stmt.setTimestamp(4, timestamp);
+
 
             stmt.execute();
             try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
@@ -45,12 +56,19 @@ public class VendaDAO {
 
             for (CarrinhoDeCompras item : venda.getCar()) {
                 stmt = con.prepareStatement(query2);
+
                 stmt.setInt(1, venda.getId());
+
                 System.out.println(venda.getId());
+
                 stmt.setString(2, item.getAuto().getRenavam());
+
                 System.out.println(item.getAuto().getRenavam());
+
                 stmt.setString(3, item.getDataRetirada());
+
                 System.out.println(item.getDataRetirada());
+
                 stmt.setString(4, item.getDataDeDevolucao());
 
                 System.out.println(item.getDataDeDevolucao());
@@ -231,7 +249,7 @@ public class VendaDAO {
                 venda.setId(resultV.getInt("ID"));
                 System.out.println("246 " + venda.getId());
                 venda.setValorTotal(resultV.getDouble("VALORTOTAL"));
-
+                venda.setDataVenda(resultV.getDate("DATAVENDA"));
                 String idC = (resultV.getString("CLIENTECPF"));
                 System.out.println("250 " + idC);
                 stmt = con.prepareStatement(sql2);
@@ -290,7 +308,7 @@ public class VendaDAO {
                         auto.setPortas(resultF.getString("PORTAS"));
                         auto.setCombustivel(resultF.getString("COMBUSTIVEL"));
                         auto.setValorDeLocacao(resultF.getDouble("VALORDELOCACAO"));
-                        auto.setImagem(resultF.getString("IMAGEM"));
+                        auto.setImagem(resultF.getAsciiStream("IMAGEM"));
                         auto.setDisponivel(resultF.getBoolean("DISPONIVEL"));
                         System.out.println("307 " + auto.getRenavam());
                         item.setAuto(auto);
@@ -300,7 +318,9 @@ public class VendaDAO {
 
                     }
                     car.add(item);
+
                 }
+
                 venda.setCar(car);
                 lista.add(venda);
             }

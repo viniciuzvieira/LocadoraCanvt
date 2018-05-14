@@ -1,13 +1,19 @@
 package br.canvt.controller;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 import br.canvt.model.Automovel;
 import br.canvt.model.AutomovelDAO;
-import java.io.File;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -17,23 +23,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+/**
+ *
+ * @author viniciuzvieira
+ */
 @WebServlet(urlPatterns = {"/CadastroCarro"})
 @MultipartConfig(maxFileSize = 16177215) 
 
 public class CadastroCarro extends HttpServlet {
-
-    private String extractFileName(Part part){
-        String contentDisp = part.getHeader("content-disposition");
-        String[] items = contentDisp.split(";");
-        for (String s : items) {
-            if (s.trim().startsWith("filename")){
-                return s.substring(s.indexOf("=") + 2, s.length() - 1);
-            }
-        }
-        return "";
-    }
-
-
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -48,14 +45,9 @@ public class CadastroCarro extends HttpServlet {
             throws ServletException, IOException {
         Automovel auto = new Automovel();
         AutomovelDAO dao = new AutomovelDAO();
-        PrintWriter out = response.getWriter();
         
-        Part part = request.getPart("file");
-        String fileName = extractFileName(part);
-        String savePath = "C:\\Users\\Teruh\\Documents\\NetBeansProjects\\LocadoraCanvt\\src\\main\\webapp\\images\\Cars\\" + File.separator + fileName ;
-        File fileSaveDir = new File(savePath);
-        
-        part.write(savePath + File.separator);
+        Part filePart = request.getPart("file");
+        InputStream input = filePart.getInputStream();
         
         String r = request.getParameter("renavam");
         String val = request.getParameter("val");
@@ -71,7 +63,7 @@ public class CadastroCarro extends HttpServlet {
         auto.setPortas(request.getParameter("portas"));
         auto.setCombustivel(request.getParameter("combustivel"));
         auto.setKilometragem(request.getParameter("KMs"));
-        auto.setImagem(savePath);
+        auto.setImagem(input);
         
         
         try {

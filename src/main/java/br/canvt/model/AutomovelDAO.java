@@ -1,4 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.canvt.model;
+
 
 import static br.canvt.model.BDConexao.getConnection;
 import java.sql.Connection;
@@ -34,7 +40,7 @@ public class AutomovelDAO {
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
                 auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-                auto.setImagem(resultados.getString("IMAGEM"));
+
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
 
                 lista.add(auto);
@@ -71,7 +77,7 @@ public class AutomovelDAO {
                 auto.setPortas(resultados.getString("PORTAS"));
                 auto.setCor(resultados.getString("COR"));
                 auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
-                auto.setImagem(resultados.getString("IMAGEM"));
+
                 auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
 
                 lista.add(auto);
@@ -146,7 +152,7 @@ public class AutomovelDAO {
             stmt.setString(10, auto.getPortas());
             stmt.setString(11, auto.getCombustivel());
             stmt.setDouble(12, auto.getValorDeLocacao());
-            stmt.setString(13, auto.getImagem());
+            stmt.setBlob(13, auto.getImagem());
             stmt.setBoolean(14, true);
 
             stmt.execute();
@@ -188,7 +194,7 @@ public class AutomovelDAO {
                     auto.setPortas(resultados.getString("PORTAS"));
                     auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
                     auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
-                    auto.setImagem(resultados.getString("IMAGEM"));
+                    auto.setImagem(resultados.getAsciiStream("IMAGEM"));
                     auto.setDisponivel(resultados.getBoolean("DISPONIVEL"));
                 }
             }
