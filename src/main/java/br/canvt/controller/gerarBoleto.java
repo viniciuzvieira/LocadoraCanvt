@@ -64,7 +64,4 @@ public class gerarBoleto extends HttpServlet {
         response.sendRedirect(request.getContextPath()
               + "/SucessoCartao");
     }
-    }
-
-   
 }
