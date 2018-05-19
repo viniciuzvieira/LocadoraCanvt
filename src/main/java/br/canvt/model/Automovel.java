@@ -2,7 +2,6 @@ package br.canvt.model;
 
 import java.io.InputStream;
 import java.io.Serializable;
-import java.sql.Blob;
 
 public class Automovel implements Serializable {
 

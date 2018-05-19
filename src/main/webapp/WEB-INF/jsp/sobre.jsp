@@ -79,36 +79,24 @@
 
                             <div class="img owl-single">
                                 <img src="images/about/img-1.jpg" alt="">
-                                <img src="images/about/img-1.jpg" alt="">
                             </div>
 
                             <div class="text">
                                 <h2 class="heading">SOBRE A CANVT</h2>
                                 <div class="desc">
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <b>The point of using Lorem Ipsum is that it has a more-or-less normal</b> distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing<br> packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p><br>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                    <p>Fundada em 2010 na cidade de Campinas, interior de São Paulo, mais especificamente no
+                                       bairro de Novo Campos Elíseos, por um grupo de amigos, Adriano, Cássia, Gabriel, Vinicius e
+                                       Natália, a Locadora de Veículos CANVT era apenas uma pequena locadora com poucos veículos
+                                       disponíveis para locação. Em 2018, esse grupo de amigos, teve a ideia de criar um sistema de
+                                       e-commerce para que esta locadora atingisse um maior e novo público. Com base nisso, a
+                                       empresa aumentou a equipe de funcionários com a expectativa de sucesso. Hoje nossa equipe
+                                       conta com mais de 30 funcionários capacitados especialmente para atender as necessidades
+                                       de seus clientes.</p>
                                 </div>
                             </div>
 
                         </div>
-                        <!-- END / ITEM -->
-
-                        <!-- ITEM -->
-                        <div class="about-item about-right">
-
-                            <div class="img">
-                                <img src="images/about/img-1.jpg" alt="">
-                            </div>
-
-                            <div class="text">
-                                <h2 class="heading">WHY GUEST CHOOSE lotus HOTEL?</h2>
-                                <div class="desc">
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, <b>sometimes by accident, sometimes on purpose</b> (injected humour and the like).</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- END / ITEM -->
+                        <!-- END / ITEM -->                       
 
                     </div>
 
@@ -116,61 +104,7 @@
             </section>
             <!-- END / ABOUT -->
 
-            <!-- HOTEL STATISTICS -->
-            <section class="section-statistics ">
-
-                <div class="awe-overlay"></div>
-
-                <div class="container">
-                    <div class="statistics">
-
-                        <h2 class="heading white text-center">Hotel statistics</h2>
-
-                        <div class="statistics_content">
-                            <div class="row">
-
-                                <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="statistics_item">
-                                        <span class="count">768</span>
-                                        <span>Guest Stay</span>
-                                    </div>
-                                </div>
-                                <!-- END ITEM -->
-
-                                <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="statistics_item">
-                                        <span class="count">632</span>
-                                        <span>BOOK ROOM</span>
-                                    </div>
-                                </div>
-                                <!-- END ITEM -->
-
-                                <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="statistics_item">
-                                        <span class="count">1024</span>
-                                        <span>MEMBER STAY</span>
-                                    </div>
-                                </div>
-                                <!-- END ITEM -->
-
-                                <!-- ITEM -->
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="statistics_item">
-                                        <span class="count">256</span>
-                                        <span>MEALS SERVED</span>
-                                    </div>
-                                </div>
-                                <!-- END ITEM -->
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END / HOTEL STATISTICS -->
+            
 
             <!-- TEAM -->
             <section class="section-team">
@@ -178,7 +112,6 @@
 
                     <div class="team">
                         <h2 class="heading text-center">Membros da Equipe</h2>
-                        <p class="sub-heading text-center">co-fundadores da Empresa CANVT</p>
 
                         <div class="team_content">
                             <div class="row">
@@ -197,19 +130,13 @@
                                     <div class="team_item text-center">
 
                                         <div class="img">
-                                            <a href=""><img src="http://78.media.tumblr.com/avatar_c19b429fc35c_128.pnj" alt=""></a>
+                                            <img src="images/avatar/Adriano.jpg" alt="">
                                         </div> 
 
                                         <div class="text">
 
                                             <h2>ADRIANO LOURENÇO</h2>
-                                            <span>Manager lotus Hotel</span>
-                                            <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
-                                            <div class="team-share">
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            </div>
+                                            <span>Desenvolvedor chefe</span>                                            
                                         </div>
 
                                     </div>
@@ -221,18 +148,13 @@
                                     <div class="team_item text-center">
 
                                         <div class="img">
-                                            <a href=""><img src="https://www.promoview.com.br/uploads/2017/10/images/outubro_2017/23.10/michelin.jpg" alt=""></a>
+                                            <img src="images/avatar/Cassia.jpg" alt="">
                                         </div> 
 
                                         <div class="text">
                                             <h2>CASSIA BARBOSA</h2>
-                                            <span>Founder Hotel</span>
-                                            <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
-                                            <div class="team-share">
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            </div>
+                                            <span>Analista de Ssistemas Senior</span>
+                                            
                                         </div>
 
                                     </div>
@@ -244,18 +166,12 @@
                                     <div class="team_item text-center">
 
                                         <div class="img">
-                                            <a href=""><img src="https://78.media.tumblr.com/avatar_78effa373e65_128.pnj" alt=""></a>
+                                            <img src="images/avatar/Gabriel.jpg" alt="">
                                         </div> 
 
                                         <div class="text">
                                             <h2>GABRIEL TERUITHI</h2>
-                                            <span>Lorem lipsum</span>
-                                            <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
-                                            <div class="team-share">
-                                                <a href="https://www.facebook.com/gabrielteruithi.oguma.7"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            </div>
+                                            <span>Designer grafico</span>                                            
                                         </div>
 
                                     </div>
@@ -267,18 +183,13 @@
                                     <div class="team_item text-center">
 
                                         <div class="img">
-                                            <a href=""><img src="https://3.bp.blogspot.com/-GtIeae0S4mo/UpPqc8Mm-tI/AAAAAAAABF0/ZNEvfI8HCpg/s1600/menina_irritada.jpg alt=""></a>
+                                            <img src="images/avatar/Natália.jpg "alt="">    
                                         </div> 
 
                                         <div class="text">
                                             <h2>NATALIA BOAVENTURA</h2>
-                                            <span>Lorem lipsum</span>
-                                            <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
-                                            <div class="team-share">
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            </div>
+                                            <span>Gerente De Projetos</span>
+                                            
                                         </div>
 
                                     </div>
@@ -290,18 +201,13 @@
                                     <div class="team_item text-center">
 
                                         <div class="img">
-                                            <a href=""><img src="https://pm1.narvii.com/6530/3979111f3726d98a6928d8d22072dc514cfe205a_128.jpg" alt=""></a>
+                                            <img src="images/avatar/Vinicius.jpg" alt="">
                                         </div> 
 
                                         <div class="text">
                                             <h2>VINICIUS VIEIRA</h2>
-                                            <span>Founder Hotel</span>
-                                            <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
-                                            <div class="team-share">
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            </div>
+                                            <span>Desenvolvedor Chefe do Back-End</span>
+                                            
                                         </div>
 
                                     </div>
