@@ -1,0 +1,186 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<header id="header" class="header-v2">
+
+    <!-- HEADER TOP -->
+    <div class="header_top">
+        <div class="container">
+            <div class="header_left float-left">
+                <span><i class="lotus-icon-location"></i> Av. Eng. Eusébio Stevaux, 823</span>
+                <span><i class="lotus-icon-phone"></i> (11) 5682-7300</span>
+
+            </div>
+            <div class="header_right float-right">
+
+                <span class="login-register">
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('User')}">
+                        <a><span><i class="fas fa-user-circle"></i><c:out value="${sessionScope.UserLogado.usuario}" /></span></a>
+
+                        <a href="./Carrinho"><span><i class="fas fa-shopping-cart"></i></span></a>
+
+                    </c:if>
+                    <c:if test="${empty sessionScope.UserLogado}">
+
+
+                        <a href="login">Entrar</a>
+                    </c:if>
+
+
+                    <c:if test="${empty sessionScope.UserLogado}">
+                        <a href="CadastroCliente">registrar</a>
+                    </c:if>
+
+                    <c:if test="${not empty sessionScope.UserLogado}">
+                        <a href="./logout">Logout</a>
+                    </c:if>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="header_content" id="header_content">
+
+        <div class="container">
+
+            <div class="header_logo">
+                <a href="home"><img src="images/logo-header.png" alt=""></a>
+            </div>
+
+            <nav class="header_menu">
+                <ul class="menu">
+                    <li>
+                        <a href="home">Principal</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Categoria<span class="fa fa-caret-down"></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="categoria">Classicos</a></li>
+                            <li><a href="categoria">Esportivos</a></li>
+                            <li><a href="categoria">Luxuosos</a></li>
+                            <li><a href="categoria">Off Road</a></li>
+                            <li><a href="categoria">Super Esportivos</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="reserva">Reserva</a>
+                    </li>
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('User')}">
+                        <li><a href="./MeusPedidos">Meus Pedidos</a></li>
+                        </c:if>
+
+                    <!--                            VENDA-->
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('Admin')}">
+                        <li><a href="#">Vendas<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCliente">Venda</a></li>
+                                <li><a href="finalizarVenda">FinalizarVenda</a></li>
+
+                            </ul>
+                        </c:if>
+                        <c:if test="${sessionScope.UserLogado.tipoUser==('Gerente')}">
+                        <li><a href="#">Vendas<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCliente">Venda</a></li>
+                                <li><a href="finalizarVenda">FinalizarVenda</a></li>
+
+                            </ul>
+                        </c:if>
+                        <c:if test="${sessionScope.UserLogado.tipoUser==('Funcionario')}">
+                        <li><a href="#">Vendas<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+
+                                <li><a href="finalizarVenda">FinalizarVenda</a></li>
+
+                            </ul>
+                        </c:if>
+
+                        <!--                            FIM VENDA -->
+
+                        <!--                            CLIENTE-->
+                        <c:if test="${sessionScope.UserLogado.tipoUser==('Funcionario')}">
+                        <li><a href="#">Cliente<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCliente">Cadastro</a></li>
+                                <li><a href="consultarCliente">Consultar</a></li>
+
+                            </ul>
+                        </li>
+                    </c:if>
+
+
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('Gerente')}">
+                        <li><a href="#">Cliente<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCliente">Cadastro</a></li>
+                                <li><a href="consultarCliente">Consultar</a></li>
+
+                            </ul>
+                        </li>
+                    </c:if>
+
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('Admin')}">
+                        <li><a href="#">Cliente<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCliente">Cadastro</a></li>
+                                <li><a href="consultarCliente">Consultar</a></li>
+
+                            </ul>
+                        </li>
+                    </c:if>
+
+                    <!--                            FIM CLIENTE-->
+                    <!--                            PRODUTO-->
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('Admin')}">
+                        <li><a href="#">Produto<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCarro">Cadastro</a></li>
+                                <li><a href="ConsultarAuto">Consultar</a></li>
+
+                            </ul>
+                        </li>
+                    </c:if>
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('Gerente')}">
+                        <li><a href="#">Produto<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCarro">Cadastro</a></li>
+                                <li><a href="ConsultarAuto">Consultar</a></li>
+
+                            </ul>
+                        </li>
+                    </c:if>
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('Funcionario')}">
+                        <li><a href="#">Produto<span class="fa fa-caret-down"></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="CadastroCarro">Cadastro</a></li>
+                                <li><a href="ConsultarAuto">Consultar</a></li>  
+
+                            </ul>
+                        </li>
+                    </c:if>
+                    <!--                            FIM PRODUTO-->
+
+                    <c:if test="${sessionScope.UserLogado.tipoUser==('Admin')}">
+                        <li><a href="CriarLogin">CriarLogin</a>
+
+                        </c:if>
+                        <c:if test="${sessionScope.UserLogado.tipoUser==('Gerente')}">
+                        <li><a href="CriarLogin">CriarLogin</a>
+
+                        </c:if>
+                    <li><a href="contato">Contato</a></li>
+
+                </ul>
+            </nav>
+
+            <span class="menu-bars">
+                <span></span>
+            </span>
+
+        </div>
+    </div>
+
+</header>
