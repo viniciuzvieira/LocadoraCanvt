@@ -101,10 +101,10 @@
                                         <div class="col-sm-12">
                                             <label><sup>* Campos obrigatórios</sup></label>
                                             <label for="Name">Username:<sup>*</sup></label>
-                                            <input type="text" name="Username"class="input-text" placeholder="Ex: Gabriela627">
+                                            <input type="text" id="Username" name="Username" class="input-text" placeholder="Ex: Gabriela627">
 
                                             <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
-                                            <input type="text"name="nomecompleto"class="input-text">
+                                            <input type="text" id="nomecompleto" name="nomecompleto" class="input-text">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="cpf">CPF:<sup>*</sup></label>
@@ -159,7 +159,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="celular">Celular:<sup>*</sup></label>
-                                            <input type="text" name="tel" class="input-text" placeholder="Ex:(11)951231234">
+                                            <input type="text" id="tel" name="tel" class="input-text" placeholder="Ex:(11)951231234">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="senha">Senha:<sup>*</sup></label>
