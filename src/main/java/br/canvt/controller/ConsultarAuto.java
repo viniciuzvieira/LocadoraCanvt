@@ -57,11 +57,12 @@ public class ConsultarAuto extends HttpServlet {
                 dispatcher.forward(request, response);
             }
         } else if (btn.equals("editar")) {
-            HttpSession sessao = request.getSession(true);
+            HttpSession sessao = request.getSession();
             search = request.getParameter("auto");
             auto = dao.procurar(search);
-            sessao.setAttribute("nenhum", auto);
-            response.sendRedirect(request.getContextPath() + "/editarAuto");
+            sessao.setAttribute("automovel", auto);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/AtualizaCarro.jsp");
+            dispatcher.forward(request, response);
         } else if (btn.equals("excluir")) {
             HttpSession sessao = request.getSession(true);
 

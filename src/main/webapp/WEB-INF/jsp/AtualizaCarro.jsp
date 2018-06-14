@@ -94,7 +94,7 @@
                             <div class="col-md col-lg-6">
 
 
-                                <form action="./CadastroCarro" method="post">
+                                <form action="./AtualizaCarro" method="post">
 
                                     <div class="reservation-billing-detail">
                                         <label>Categoria<sup>*</sup></label>
@@ -109,11 +109,11 @@
                                         <div class="row">
                                             <div class="col-sm-4 ">
                                                 <label for="modelo">Modelo</label>
-                                                <input type="text" class="form-control" id="modeloAuto" value="${sessionScope.automovel.marca}" placeholder="Digite o modelo do carro" name="model">
+                                                <input type="text" class="form-control" id="modeloAuto" value="${sessionScope.automovel.modelo}" placeholder="Digite o modelo do carro" name="model">
                                             </div>
                                             <div class="col-sm-4">
                                                 <label for="marcaAuto" >Marca</label>
-                                                <input type="text "class="form-control" id="marcaAuto" placeholder="Digite a marca do automóvel" name="marca">
+                                                <input type="text "class="form-control" value="${sessionScope.automovel.marca}"id="marcaAuto" placeholder="Digite a marca do automóvel" name="marca">
                                             </div>
                                             <div class="col-sm-4">
                                                 <label>Combustível:<sup>*</sup></label>
@@ -129,28 +129,28 @@
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="Portas" class=" control-label ">Portas</label>
-                                                <input type="text " class="form-control" id="Portas" placeholder="numero de portas " name="portas">
+                                                <input type="text " class="form-control" value="${sessionScope.automovel.portas}" id="Portas" placeholder="numero de portas " name="portas">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="Kilometragem" class=" control-label ">Kilometragem</label>
-                                                <input type="text " class="form-control" id="Portas" placeholder="KM " name="KMs">
+                                                <input type="text " class="form-control" id="Portas" value="${sessionScope.automovel.kilometragem}" placeholder="KM " name="KMs">
                                             </div>
 
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-4">
                                                 <label for="ano" >Ano</label>
-                                                <input type="text " class="form-control" id="anoAuto" placeholder="Digite o ano do automóvel" name="anoAuto">
+                                                <input type="text " value="${sessionScope.automovel.ano}" class="form-control" id="anoAuto" placeholder="Digite o ano do automóvel" name="anoAuto">
                                             </div>   
 
                                             <div class="form-group col-md-4">
                                                 <label for="renavam" class=" control-label ">Renavam</label>
-                                                <input type="text " class="form-control" id="renavam" placeholder="Digite o renavam do automóvel" name="renavam">
+                                                <input type="text " value="${sessionScope.automovel.renavam}" class="form-control" id="renavam" placeholder="Digite o renavam do automóvel" name="renavam">
 
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="cor" class=" control-label ">Cor</label>
-                                                <input type="text " class="form-control" id="cor" placeholder="Digite a cor " name="cor">
+                                                <input type="text " class="form-control"value="${sessionScope.automovel.cor}" id="cor" placeholder="Digite a cor " name="cor">
 
                                             </div>
 
@@ -158,18 +158,25 @@
                                         <div class="row">
                                             <div class="form-group col-md-4">
                                                 <label for="numeroChassi" class=" control-label ">Numero do Chassi</label>
-                                                <input type="text" class="form-control" id="numeroChassi" placeholder="Digite o número do chassi" name="nchassi">
+                                                <input type="text" class="form-control" value="${sessionScope.automovel.numeroChassi}" id="numeroChassi" placeholder="Digite o número do chassi" name="nchassi">
                                             </div>
                                             <div class="form-group col-sm-4">
                                                 <label for="placa" class="control-label">Placa</label>
-                                                <input type="text" class="form-control" id="placaAuto" placeholder="Digite a placa do automóvel" name="placa">
+                                                <input type="text" class="form-control" value="${sessionScope.automovel.placa}" id="placaAuto" placeholder="Digite a placa do automóvel" name="placa">
                                             </div>
                                             <div class="form-group col-sm-4">
                                                 <label>Preço diária R$:<sup>*</sup></label>
-                                                <input type="text" class="form-control" id="val" placeholder=" " name="val">
+                                                <input type="text" value="${sessionScope.automovel.valorDeLocacao}" class="form-control" id="val" placeholder=" " name="val">
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col md-12 col-lg-6 col-sm-4">
+                                                    <label for="file">Escolha a imagem do veiculo</label>
+                                                    <input type="file" id="file" name="file" multiple>
+                                                </div>
+
                                             </div>
                                         </div>
-                                        <button class="awe-btn awe-btn-13" type="submit">CADASTRAR</button>
+                                        <button class="awe-btn awe-btn-13" type="submit">Atualizar</button>
                                     </div>
                                 </form>
 

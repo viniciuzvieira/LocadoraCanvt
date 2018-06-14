@@ -17,13 +17,14 @@ public class Cliente implements Serializable {
     private String CEP;
     private String numero;
     private Boolean disabled;
+    private String tipoUser;
 
     public Cliente() {
 
     }
 
     public Cliente(String usuario, String hashSenha, Boolean disabled, String end, String UF, String complemento, String bairro, String telefone,
-            String email, String cidade, String numero, String CEP) {
+            String email, String cidade, String numero, String CEP,String tipoUser) {
         this.CEP = CEP;
         this.usuario = usuario;
         this.hashSenha = hashSenha;
@@ -35,7 +36,7 @@ public class Cliente implements Serializable {
         this.email = email;
         this.cidade = cidade;
         this.disabled = disabled;
-
+        this.tipoUser=tipoUser;
         this.numero = numero;
 
     }
@@ -168,6 +169,14 @@ public class Cliente implements Serializable {
 
     public void setHashSenha(String hashSenha) {
         this.hashSenha = hashSenha;
+    }
+
+    public String getTipoUser() {
+        return tipoUser;
+    }
+
+    public void setTipoUser(String tipoUser) {
+        this.tipoUser = tipoUser;
     }
 
 }

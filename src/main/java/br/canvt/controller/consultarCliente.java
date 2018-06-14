@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "consultarCliente", urlPatterns = {"/consultarCliente"})
-public class consultarCliente extends HttpServlet  {
+public class consultarCliente extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,7 +58,8 @@ public class consultarCliente extends HttpServlet  {
             search = request.getParameter("repeat");//repeat= cpf do cliente para busca
             Cliente cliente = cli.procurar(search);//retorna cliente
             nova.setAttribute("usuario", cliente);//passa a sessão    
-            response.sendRedirect(request.getContextPath() + "/AtualizaCliente");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/AtualizaCliente.jsp");
+            dispatcher.forward(request, response);
 
         } else if (btn.equals("excluir")) {
             HttpSession sessao = request.getSession(true);

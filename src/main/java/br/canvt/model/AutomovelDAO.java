@@ -5,7 +5,6 @@
  */
 package br.canvt.model;
 
-
 import static br.canvt.model.BDConexao.getConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -219,7 +218,7 @@ public class AutomovelDAO {
     public void Atualizar(Automovel auto, String renavamAtual) throws SQLException {
         String query = "UPDATE AUTO SET MARCA=?, MODELO=?,ANO=?,CATEGORIA=?, "
                 + "PLACA=?,KILOMETRAGEM=?,NUMEROCHASSI=?,COR=?, "
-                + "PORTAS=?,COMBUSTIVEL=?,DESCRICAO=?,VALORDELOCACAO=? "
+                + "PORTAS=?,COMBUSTIVEL=?,VALORDELOCACAO=?,IMAGEM=? "
                 + "WHERE RENAVAM=? ";
         Connection con = null;
         PreparedStatement stmt = null;
@@ -238,8 +237,9 @@ public class AutomovelDAO {
             stmt.setString(8, auto.getCor());
             stmt.setString(9, auto.getPortas());
             stmt.setString(10, auto.getCombustivel());
-            stmt.setString(11, auto.getDescricao());
-            stmt.setDouble(12, auto.getValorDeLocacao());
+            stmt.setDouble(11, auto.getValorDeLocacao());
+            stmt.setBlob(12, auto.getImagem());
+
             stmt.setString(13, renavamAtual);
             stmt.execute();
         } finally {

@@ -27,7 +27,7 @@ public class categoria extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("/WEB-INF/jsp/Categorias.jsp");
+                = request.getRequestDispatcher("/WEB-INF/jsp/page404.jsp");
         dispatcher.forward(request, response);
     }
 

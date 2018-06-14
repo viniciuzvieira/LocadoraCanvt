@@ -98,17 +98,17 @@
 
 
                                 <div class="reservation-billing-detail">
-                                    <form action="./CadastroCliente" method="post">
+                                    <form action="./AtualizaCliente" method="post">
                                         <div class="col-sm-12">
                                             <label for="Name">Username:<sup>*</sup></label>
-                                            <input type="text" name="Username"class="input-text" placeholder="Ex: Gabriela627">
+                                            <input type="text" name="Username" class="input-text" value="${sessionScope.usuario.usuario}">
 
                                             <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
                                             <input type="text" value="${sessionScope.usuario.nomeCompleto}" name="nomecompleto"class="input-text">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="cpf">CPF:<sup>*</sup></label>
-                                            <input type="text" value="${sessionScope.usuario.CPF}" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
+                                            <input type="text" value="${sessionScope.usuario.CPF}" class="input-text" id="cpf"  style="background-color:#808080;"placeholder="CPF" name="cpf" maxlength="11">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="datanasc">Data de nascimento:<sup>*</sup></label>
@@ -157,25 +157,19 @@
 
                                         <div class="col-sm-12">
                                             <label for="numeroCNH">Número da CNH:<sup>*</sup></label>
-                                            <input type="text" value="${sessionScope.usuario.numeroCNH}" class="input-text" id="NumeroCNH" name="cnh" placeholder="Número da CNH">
+                                            <input type="text" class="input-text" value="${sessionScope.usuario.numeroCNH}" id="NumeroCNH" name="cnh" placeholder="Número da CNH">
                                         </div>
-
-                                        <div class="col-sm-6">
-                                            <label for="telefone">Telefone:</label>
-                                            <input type="text" value="${sessionScope.usuario.telefone}" name="tel"class="input-text" placeholder="Ex:(11)51231234">
+                                        <div class="col-sm-12">
+                                            <label for="email">E-mail:<sup>*</sup></label>
+                                            <input type="email" class="input-text" value="${sessionScope.usuario.email}"id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="celular">Celular:<sup>*</sup></label>
-                                            <input type="text" class="input-text" placeholder="Ex:(11)951231234">
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <label for="email">E-mail:<sup>*</sup></label>
-                                            <input type="email" value="${sessionScope.usuario.email}" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
+                                            <input type="text" name="tel" value="${sessionScope.usuario.telefone}" class="input-text" placeholder="Ex:(11)951231234">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="senha">Senha:<sup>*</sup></label>
-                                            <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha">
+                                            <input type="password" class="input-text" value="${sessionScope.usuario.hashSenha}" id="senha" placeholder="Senha" name="senha">
                                         </div>
                                         <div class="col-sm-6">
                                             <button class="awe-btn awe-btn-13" type="submit">ATUALIZAR</button>

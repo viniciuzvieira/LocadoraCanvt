@@ -28,6 +28,7 @@
 
         <!-- MAIN STYLE -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/swal.css">
 
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -101,18 +102,18 @@
                                         <div class="col-sm-12">
                                             <label><sup>* Campos obrigatórios</sup></label>
                                             <label for="Name">Username:<sup>*</sup></label>
-                                            <input type="text" name="Username"class="input-text" placeholder="Ex: Gabriela627">
+                                            <input type="text" name="Username" id="Username" class="input-text" placeholder="Ex: Gabriela627">
 
                                             <label for="nomecompleto">Nome Completo:<sup>*</sup></label>
-                                            <input type="text"name="nomecompleto"class="input-text">
+                                            <input type="text" name="nomecompleto" id="nomecompleto" class="input-text">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="cpf">CPF:<sup>*</sup></label>
-                                            <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
+                                            <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="datanasc">Data de nascimento:<sup>*</sup></label>
-                                            <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" onkeypress="mascara(this, '##/##/####')">
+                                            <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc">
                                         </div>
 
                                         <div class="col-sm-3">
@@ -159,7 +160,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="celular">Celular:<sup>*</sup></label>
-                                            <input type="text" name="tel" class="input-text" placeholder="Ex:(11)951231234">
+                                            <input type="text" name="tel" id="tel" class="input-text" placeholder="Ex:(11)951231234">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="senha">Senha:<sup>*</sup></label>
@@ -209,5 +210,6 @@
         <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript" src="js/procuraCEP.js"></script>
         <script type="text/javascript" src="js/validaCadastroCliente.js"></script>
+        <script type="text/javascript" src="js/sweetalert.min.js"></script>
     </body>
 </html>

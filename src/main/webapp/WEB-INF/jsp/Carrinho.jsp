@@ -77,6 +77,9 @@
                         <div class="shortcode-tab-price">
                             <div class="tab-price">
                                 <div id="dvData">
+                                    <c:if test="${not empty erro}">
+                                        <h2><c:out value="${erro}" /></h2>
+                                    </c:if>
                                     <table>
                                         <thead>
 
@@ -86,9 +89,9 @@
                                                 <th>Data da Retirada</th>
                                                 <th>Data de Entrega</th>
                                                 <th>Valor Parcial R$</th>
-
+                                                <th></th>
                                             </tr>
-                                            
+
                                         </thead>
                                         <tbody>
                                             <c:forEach items="${carrinho}" var="item">
@@ -99,14 +102,22 @@
                                                     <td>${item.dataRetirada}</td>
                                                     <td>${item.dataDeDevolucao}</td>
                                                     <td>${item.valorParcial} </td>
+                                                    
+                                                    <td>
+                                                        <form action="./Carrinho" method="post">
 
+                                                            <input type="hidden" name="retirado" value="${item.auto.renavam}">
+                                                            <button name="remove" value="true" type="submit"><span class="alert-warning">X</span></button>
+                                                        </form>
+                                                    </td> 
                                                 </tr>
                                             </c:forEach>
-                                        <td>Total:</td>
+
+                                        <td>${Total}</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>                               
-                                        <td>12325.1</td>
+                                        <td></td>
                                         </tbody>
                                     </table>
                                     <br/>
@@ -129,8 +140,8 @@
                                         </table>
                                         <br/>
 
-
-                                        <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">VOLTAR</button>
+                                        <input name="remove" value="false" type="hidden">
+                                        <!--                                        <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">VOLTAR</button>-->
                                         <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; float: right">CONFIRMAR</button>
                                     </form>
                                 </div>

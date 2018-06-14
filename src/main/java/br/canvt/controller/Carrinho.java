@@ -8,6 +8,7 @@ package br.canvt.controller;
 import br.canvt.model.Automovel;
 import br.canvt.model.AutomovelDAO;
 import br.canvt.model.CarrinhoDeCompras;
+import br.canvt.model.ClienteFisico;
 import br.canvt.model.Venda;
 
 import java.io.IOException;
@@ -37,6 +38,7 @@ public class Carrinho extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         RequestDispatcher dispatcher
                 = request.getRequestDispatcher("/WEB-INF/jsp/Carrinho.jsp");
         dispatcher.forward(request, response);
@@ -45,22 +47,73 @@ public class Carrinho extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession sessao = request.getSession();
 
         AutomovelDAO dao = new AutomovelDAO();
-        HttpSession sessao = request.getSession();
+        HttpSession sessaolog = request.getSession();
+        String btn = request.getParameter("remove");
+        ClienteFisico usuario = (ClienteFisico) sessaolog.getAttribute("UserLogado");
+
+        if (usuario == null) {
+            sessaolog.setAttribute("msgErro", "Voce precisa estar logado primeiro");
+            response.sendRedirect(request.getContextPath() + "/login");
+            return;
+        }
+
+        if ("true".equals(btn)) {
+            String autoretirado = request.getParameter("retirado");
+            Automovel auto = dao.procurar(autoretirado);
+
+            int index = 0;
+            List<CarrinhoDeCompras> carrinho = (List) sessao.getAttribute("reserva");
+            if (carrinho == null) {
+                carrinho = new ArrayList();
+
+            } else {
+                for (CarrinhoDeCompras item : carrinho) {
+
+                    if (item.getAuto().getRenavam().equals(autoretirado)) {
+                        carrinho.remove(auto);
+//                        int i = carrinho.indexOf();
+//                        carrinho.remove(i);
+                        break;
+                    }
+
+                }
+            }
+
+            response.sendRedirect(request.getContextPath() + "/reserva");
+            return;
+        }
+
         HttpSession sessao1 = request.getSession();
+
         double valorParcial = 0;
         String rena = request.getParameter("auto");
         String pagamento = request.getParameter("pagamento");
         Automovel auto = dao.procurar(rena);
+        dao.retirarAuto(rena);
         List<CarrinhoDeCompras> carrinho = (List) sessao.getAttribute("carrinho");
         if ("CC".equals(pagamento)) {
+            if (carrinho == null) {
+                sessao.setAttribute("erro", "Lista vazia");
+                response.sendRedirect(request.getContextPath() + "/Carrinho");
+                return;
+            }
+            Double total = (Double) sessao.getAttribute("Total");
             carrinho = (List) sessao.getAttribute("carrinho");
+            sessao1.setAttribute("Total", total);
             sessao.setAttribute("carrinho", carrinho);
             response.sendRedirect(request.getContextPath() + "/InserirCartao");
 
         } else if ("boleto".equals(pagamento)) {
-
+            if (carrinho == null) {
+                sessao.setAttribute("erro", "Lista vazia");
+                response.sendRedirect(request.getContextPath() + "/Carrinho");
+                return;
+            }
+            Double total = (Double) sessao.getAttribute("Total");
+            sessao1.setAttribute("Total", total);
             carrinho = (List) sessao.getAttribute("carrinho");
             sessao.setAttribute("carrinho", carrinho);
             response.sendRedirect(request.getContextPath() + "/gerarBoleto");
@@ -71,6 +124,10 @@ public class Carrinho extends HttpServlet {
             }
 
             double dif = 0;
+            Double total = (Double) sessao.getAttribute("Total");
+            if (total == null) {
+                total = 0.0;
+            }
             SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
             String retirada = (String) request.getParameter("dataRetirada");
             String entrega = (String) request.getParameter("dataEntrega");
@@ -78,16 +135,16 @@ public class Carrinho extends HttpServlet {
                 Date Dretirada = formato.parse(retirada);
                 Date Dentrega = formato.parse(entrega);
                 dif = ((Dentrega.getTime() - Dretirada.getTime()) / 86400000 + 1);
-//                System.out.println(auto.getValorDeLocacao());
-//                System.out.println(dif);
+
                 valorParcial = dif * auto.getValorDeLocacao();
+                total = valorParcial + total;
             } catch (ParseException ex) {
                 Logger.getLogger(Carrinho.class.getName()).log(Level.SEVERE, null, ex);
             }
 
             CarrinhoDeCompras c = new CarrinhoDeCompras(auto, retirada, valorParcial, entrega);
             carrinho.add(c);
-//            sessao1.setAttribute("total", total);
+            sessao1.setAttribute("Total", total);
             sessao.setAttribute("carrinho", carrinho);
             RequestDispatcher dispatcher
                     = request.getRequestDispatcher("/WEB-INF/jsp/Carrinho.jsp");

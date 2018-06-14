@@ -105,11 +105,11 @@
                                                     <td>${item.placa}</td>
                                                     <td class="actions">
                                                         <form action="./ConsultarAuto" method="post">    
+                                                            <input name="auto" type="hidden"  value="${item.renavam}">
 
                                                             <button type="submit" name="tipodeuser" value="editar" class="awe-btn awe-btn-13" >Editar</button>
                                                             <button type="submit" name="tipodeuser" value="excluir" class="awe-btn awe-btn-13" >Excluir</button>
 
-                                                            <input name="auto" type="hidden"  value="${item.renavam}">
 
 
 

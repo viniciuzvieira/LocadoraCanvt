@@ -43,16 +43,18 @@ public class InserirCartao extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        VendaDAO daoV= new VendaDAO();
+        HttpSession sessao = request.getSession();
+        HttpSession sessionTot = request.getSession();
+        VendaDAO daoV = new VendaDAO();
         Venda v = new Venda();
         ClienteDao dao = new ClienteDao();
         List<CarrinhoDeCompras> carrinho = (List) session.getAttribute("carrinho");
         HttpSession session1 = request.getSession();
-
-        ClienteFisico cli = dao.procurar("49158745588");
+        Double total = (Double) sessionTot.getAttribute("Total");
+        ClienteFisico usuario = (ClienteFisico) sessao.getAttribute("UserLogado");
         v.setCar(carrinho);
-        v.setCliente(cli);
-        v.setValorTotal(12325.1);
+        v.setCliente(usuario);
+        v.setValorTotal(total);
         v.setFinalizada(false);
         try {
             daoV.incluirComTransacao(v);
@@ -60,7 +62,7 @@ public class InserirCartao extends HttpServlet {
             Logger.getLogger(InserirCartao.class.getName()).log(Level.SEVERE, null, ex);
         }
         response.sendRedirect(request.getContextPath()
-              + "/SucessoCartao");
+                + "/MeusPedidos");
     }
 
 }

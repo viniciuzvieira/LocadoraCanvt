@@ -7,6 +7,7 @@ package br.canvt.controller;
  */
 import br.canvt.model.ClienteDao;
 import br.canvt.model.ClienteFisico;
+import br.canvt.model.EnviaEmail;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -71,6 +72,9 @@ public class CadastroCliente extends HttpServlet {
         cli.setCidade(setCidade);
         cli.setUsuario(username);
         cli.setHashSenha(senha);
+         EnviaEmail a = new EnviaEmail();
+            a.EnviarnEmail(setEmail);
+        cli.setTipoUser("User");
         ClienteDao cliDao = new ClienteDao();
         try {
             cliDao.incluirComTransacao(cli);

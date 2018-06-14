@@ -73,59 +73,87 @@
 
                 <div class="room-wrap-1">
                     <div class="row">            
-                        <br/>
-                                <p>Número do Pedido: XXXXXX</p>
-                                <p>Status: XXXXXX</p>
-                                <div class="shortcode-tab-price">
-                                    <div class="tab-price">
-                                        <div id="dvData">
-                                            <table>
-                                                <td class="date-select">Carro</td>
-                                                <td class="date-select">Data da Retirada</td>
-                                                <td class="date-select">Data de Entrega</td>
-                                                <td class="date-select">Preço diária R$</td>
-                                                <td class="date-select">Valor Total R$</td>
+                        <br/>   
+                        <div class="shortcode-tab-price">
+                            <div class="tab-price">
+                                <div id="dvData">
+                                    <table>
+                                        <thead>
+
+                                            <tr>
+                                                <th>Código da Venda</th>
+                                                <th>CPF Cliente</th>
+                                                <th>Valor total R$</th>
+                                                <th>Data da efetuação</th>
+                                            </tr>
+
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach items="${lista}" var="item">
                                                 <tr>
-                                                    <td>xxxxxxxxx</td>
-                                                    <td>xxxxxxxxx</td>
-                                                    <td>xxxxxxxxx</td>
-                                                    <td>xxxxxxxxx</td>
-                                                    <td>xxxxxxxxx</td>
+                                                    <td>${item.id}</td>
+                                                    <td>${item.cliente.CPF}</td>
+
+                                                    <td>${item.valorTotal}</td>
+                                                    <td>${item.dataVenda}</td>
                                                 </tr>
-                                            </table>    
-                                            <br/>
-                                            <button class="awe-btn awe-btn-13" style="font-size:11pt; padding:11px; width:auto; height:auto; float: right">INÍCIO</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                </section>
-                                <!-- RELATORIO -->
-                                <%@include file="../jspf/footer.jspf" %>
-                                <!-- FOOTER -->
-
-                                <!-- END / PAGE WRAP -->
+                                            </c:forEach>
 
 
-                                <!-- LOAD JQUERY -->
-                                <script type="text/javascript" src="js/lib/jquery-1.11.0.min.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
-                                <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-                                <script type="text/javascript" src="js/lib/bootstrap-select.js"></script>
-                                <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
-                                <script type="text/javascript" src="js/lib/isotope.pkgd.min.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery.themepunch.revolution.min.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery.themepunch.tools.min.js"></script>
-                                <script type="text/javascript" src="js/lib/owl.carousel.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery.appear.min.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery.countTo.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery.countdown.min.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery.parallax-1.1.3.js"></script>
-                                <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
-                                <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
-                                <script type="text/javascript" src="js/scripts.js"></script>
-                                <script type="text/javascript" src="js/exportExcel.js"></script>
-                                </body>
-                                </html>
+
+
+
+
+                                        </tbody>
+                                    </table>
+                                    <table> 
+                                        <td>Carros:</td>
+                                        
+                                        <c:forEach items="${carros}" var="item">
+
+
+
+                                            <td>${item.auto.modelo}</td>
+
+
+
+                                        </c:forEach>
+                                    </table>
+
+
+                                    <br/>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- RELATORIO -->
+        <%@include file="../jspf/footer.jspf" %>
+        <!-- FOOTER -->
+
+        <!-- END / PAGE WRAP -->
+
+
+        <!-- LOAD JQUERY -->
+        <script type="text/javascript" src="js/lib/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap-select.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
+        <script type="text/javascript" src="js/lib/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="js/lib/owl.carousel.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.appear.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.countdown.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/exportExcel.js"></script>
+    </body>
+</html>

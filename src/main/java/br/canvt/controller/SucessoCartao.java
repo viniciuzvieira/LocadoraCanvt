@@ -30,21 +30,13 @@ public class SucessoCartao extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Venda v = new Venda();
-        HttpSession session = request.getSession();
-        HttpSession session2 = request.getSession();
-        VendaDAO dao = new VendaDAO();
-        List<Venda> ve = dao.listarAbertas();
-        List<CarrinhoDeCompras> Car = new ArrayList();
 
-        for (Venda item : ve) {
-           Car=item.getCar();
-            
-        }        
-        session.setAttribute("lista", ve);
-        session2.setAttribute("carros", Car);
+        HttpSession session = request.getSession();
+
+        session.setAttribute("Sucesso", "Sua locação foi efetuada com Sucesso ");
+
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("/WEB-INF/jsp/SucessoCartao.jsp");
+                = request.getRequestDispatcher("/WEB-INF/jsp/MeusPedidos.jsp");
         dispatcher.forward(request, response);
     }
 

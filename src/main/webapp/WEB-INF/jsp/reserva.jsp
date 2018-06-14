@@ -121,7 +121,7 @@
                                                         <h2><a href="#">${item.marca}</a></h2>
                                                         <p class="price">
                                                             <span class="amout">${item.valorDeLocacao}</span>/dias
-                                                        <s/p>
+                                                        </p>
                                                     </div>
 
                                                     <div class="sub-banner">

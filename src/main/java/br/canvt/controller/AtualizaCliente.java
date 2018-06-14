@@ -37,8 +37,12 @@ public class AtualizaCliente extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nomeCompleto = request.getParameter("nomecompleto");
+      String nomeCompleto = request.getParameter("nomecompleto");
         String cpf = request.getParameter("cpf");
+        String username = request.getParameter("Username");
+        System.out.println(username);
+        String senha = request.getParameter("senha");
+
         String DataNasc = request.getParameter("datanasc");
         String setSexo = request.getParameter("sexo");
         String setNumeroCNH = request.getParameter("cnh");
@@ -51,9 +55,9 @@ public class AtualizaCliente extends HttpServlet {
         String setBairro = request.getParameter("bairro");
         String setTelefone = request.getParameter("tel");
         String setEmail = request.getParameter("email");
+        
         String setCidade = request.getParameter("cidade");
         ClienteFisico cli = new ClienteFisico();
-        ClienteDao cliDao = new ClienteDao();
         cli.setBairro(setBairro);
         cli.setCEP(setCEP);
         cli.setEnd(setEnd);
@@ -63,12 +67,14 @@ public class AtualizaCliente extends HttpServlet {
         cli.setNomeCompleto(nomeCompleto);
         cli.setComplemento(setComplemento);
         cli.setUF(setUF);
-//        cli.setCPF(cpf);
+       
         cli.setNumeroCNH(setNumeroCNH);
-        System.out.println(cli.getNumeroCNH());
         cli.setNumero(setNumero);
         cli.setTelefone(setTelefone);
         cli.setCidade(setCidade);
+        cli.setUsuario(username);
+        cli.setHashSenha(senha);
+        ClienteDao cliDao = new ClienteDao();
         try {
             cliDao.Atualizar(cli, cpf);
 

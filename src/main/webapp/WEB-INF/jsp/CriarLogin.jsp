@@ -95,33 +95,26 @@
                             <div class="col-md col-lg-6">
 
                                 <div class="reservation-billing-detail">
-                                    <form action="./criarLogin "method="post">
+                                    <form action="./CriarLogin "method="post">
                                         <label for="Name">Nome Completo:<sup>*</sup></label>
-                                        <input type="text" class="input-text">
+                                        <input type="text" name="nomecompleto"class="input-text">
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label for="inputPassword4">CPF:<sup>*</sup></label>
-                                                <input type="text" class="input-text" id="cpf" placeholder="CPF" name="cpf" maxlength="11">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="datanasc ">Data de nascimento:<sup>*</sup></label>
-                                                <input type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
-                                            </div>
-                                        </div>
 
                                         <br/>
                                         <span style="font-weight:bold;" for="rad" >Função:<sup style="color:red;">*</sup></span>
 
-                                        <input type="radio" name="sexo" id="radioAdmin" value="Admin">Admin
-                                        <input type="radio" name="sexo" id="radioGerente" value="Gerente">Gerente
-                                        <input type="radio" name="sexo" id="radioFunc" value="Funcionario">Funcionario
-
+                                        <input type="radio" name="tipoUser" id="radioAdmin" value="Admin">Admin
+                                        <input type="radio" name="tipoUser" id="radioGerente" value="Gerente">Gerente
+                                        <input type="radio" name="tipoUser" id="radioFunc" value="Funcionario">Funcionario
+                                        <label for="user">Username<sup>*</sup></label>
+                                        <input type="text" class="input-text" placeholder="user" name="Username">
+                                        <label for="cpf">CPF<sup>*</sup></label>
+                                        <input type="text" class="input-text" placeholder="CPF" name="CPF">
                                         <label for="email">E-mail:<sup>*</sup></label>
-                                        <input type="email" class="input-text" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
+                                        <input type="email" class="input-text" name="email" id="email" placeholder="Digite o seu e-mail" maxlength="100" name="email">
 
                                         <label for="senha">Senha:<sup>*</sup></label>
-                                        <input type="password" class="input-text" id="senha" placeholder="Senha" name="password">
+                                        <input type="password" class="input-text" name="senha"id="senha" placeholder="Senha" name="password">
                                         <br/>
                                         <button type="submit" class="awe-btn awe-btn-13">CADASTRAR</button>
                                     </form>

@@ -24,7 +24,7 @@ public class contato extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("/WEB-INF/jsp/contato.jsp");
+                = request.getRequestDispatcher("/WEB-INF/jsp/page404.jsp");
         dispatcher.forward(request, response);
     }
 

@@ -133,8 +133,8 @@ public class ClienteDao {
     public void incluirComTransacao(ClienteFisico cli) throws SQLException {
         String query = "INSERT INTO CLIENTEF "
                 + "(NOME,CPF,SEXO,TELEFONE,EMAIL,NUMEROCNH,ENDERECO,COMPLEMENTO,NUMERO,BAIRRO,CEP,"
-                + "CIDADE,DATANASCIMENTO,ESTADO,DISABLED,USERNAME,SENHA) "
-                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "CIDADE,DATANASCIMENTO,ESTADO,DISABLED,USERNAME,SENHA,TIPOUSER) "
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         Connection con = null;
         PreparedStatement stmt = null;
 
@@ -160,7 +160,7 @@ public class ClienteDao {
             stmt.setBoolean(15, false);
             stmt.setString(16, cli.getUsuario());
             stmt.setString(17, cli.getHashSenha());
-
+            stmt.setString(18, cli.getTipoUser());
             stmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -207,6 +207,7 @@ public class ClienteDao {
                     c.setDisabled(resultados.getBoolean("DISABLED"));
                     c.setUsuario(resultados.getString("USERNAME"));
                     c.setHashSenha(resultados.getString("SENHA"));
+                    c.setTipoUser(resultados.getString("TIPOUSER"));
                 }
             }
         } catch (SQLException ex) {
@@ -216,15 +217,15 @@ public class ClienteDao {
         return c;
     }
 
-    public List<ClienteFisico> procurarEspecial(String CPF) {
+    public List<ClienteFisico> procurarEspecial(String Nome) {
         String query = "SELECT * FROM CLIENTEF "
-                + "WHERE (CPF LIKE ?) AND DISABLED = ?";
+                + "WHERE (NOME LIKE ?) AND DISABLED = ?";
         List<ClienteFisico> lista = new ArrayList<>();
         ClienteFisico c = null;
         try (Connection conn = getConnection();
                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
-            stmt.setString(1, "%" + CPF + "%");
+            stmt.setString(1, "%" + Nome + "%");
             stmt.setBoolean(2, false);
 
             try (ResultSet resultados = stmt.executeQuery()) {
@@ -246,6 +247,9 @@ public class ClienteDao {
                     c.setDataNasc(resultados.getString("DATANASCIMENTO"));
                     c.setUF(resultados.getString("ESTADO"));
                     c.setDisabled(resultados.getBoolean("DISABLED"));
+                    c.setUsuario(resultados.getString("USERNAME"));
+                    c.setHashSenha(resultados.getString("SENHA"));
+                    c.setTipoUser(resultados.getString("TIPOUSER"));
                     lista.add(c);
                 }
             }
@@ -269,13 +273,50 @@ public class ClienteDao {
         }
     }
 
+    public ClienteFisico UserListar(String user, String senha) throws SQLException {
+        String query = "SELECT * FROM CLIENTEF  WHERE (USERNAME=?) AND"
+                + "(SENHA=?)";
+        ClienteFisico c = null;
+        try (Connection conn = getConnection();
+                PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, user);
+            stmt.setString(2, senha);
+            try (ResultSet resultados = stmt.executeQuery()) {
+
+                while (resultados.next()) {
+                    c = new ClienteFisico();
+                    c.setCPF(resultados.getString("CPF"));
+                    c.setNomeCompleto(resultados.getString("NOME"));
+                    c.setSexo(resultados.getString("SEXO"));
+                    c.setTelefone(resultados.getString("TELEFONE"));
+                    c.setEmail(resultados.getString("EMAIL"));
+                    c.setNumeroCNH(resultados.getString("NUMEROCNH"));
+                    c.setEnd(resultados.getString("ENDERECO"));
+                    c.setComplemento(resultados.getString("COMPLEMENTO"));
+                    c.setNumero(resultados.getString("NUMERO"));
+                    c.setBairro(resultados.getString("BAIRRO"));
+                    c.setCEP(resultados.getString("CEP"));
+                    c.setCidade(resultados.getString("CIDADE"));
+                    c.setDataNasc(resultados.getString("DATANASCIMENTO"));
+                    c.setUF(resultados.getString("ESTADO"));
+                    c.setDisabled(resultados.getBoolean("DISABLED"));
+                    c.setUsuario(resultados.getString("USERNAME"));
+                    c.setHashSenha(resultados.getString("SENHA"));
+                    c.setTipoUser(resultados.getString("TIPOUSER"));
+                }
+            }
+        }
+        return c;
+    }
+
     public void Atualizar(ClienteFisico cli, String CPF) throws SQLException {
         String query = "UPDATE CLIENTEF SET NOME=?,SEXO=?,TELEFONE=?,EMAIL=?, "
                 + "NUMEROCNH=?,ENDERECO=?,COMPLEMENTO=?,NUMERO=?,BAIRRO=?,CEP=?,CIDADE=?, "
-                + "DATANASCIMENTO=?,ESTADO=?, DISABLED=? "
+                + "DATANASCIMENTO=?,ESTADO=?, DISABLED=?, USERNAME=?, SENHA=? "
                 + "WHERE (CPF=?)";
-        System.out.println(cli.getNomeCompleto() + cli.getCPF() + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
-                + cli.getComplemento() + cli.getNumero() + cli.getBairro() + cli.getCEP() + cli.getCidade() + cli.getDataNasc() + cli.getUF());
+        System.out.println(cli.getNomeCompleto() + CPF + cli.getSexo() + cli.getEmail() + cli.getNumeroCNH() + cli.getEnd()
+                + cli.getComplemento() + cli.getNumero() + cli.getBairro() + cli.getCEP() + cli.getCidade() + cli.getDataNasc() + cli.getUF() + cli.getUsuario() + cli.getHashSenha());
         Connection con = null;
         PreparedStatement stmt = null;
         try {
@@ -295,7 +336,11 @@ public class ClienteDao {
             stmt.setString(12, cli.getDataNasc());
             stmt.setString(13, cli.getUF());
             stmt.setBoolean(14, false);
-            stmt.setString(15, CPF);
+            stmt.setString(15, cli.getUsuario());
+            stmt.setString(16, cli.getHashSenha());
+
+            stmt.setString(17, CPF);
+
             stmt.execute();
         } catch (SQLException e) {
 

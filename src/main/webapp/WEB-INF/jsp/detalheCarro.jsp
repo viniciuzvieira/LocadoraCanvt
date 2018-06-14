@@ -78,9 +78,9 @@
                             <div class="room-detail_img">
                                 <div class="room_img-item">
                                     <img src="images/Cars/ferrari-carro.jpg" alt="">    
-                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+                                    <!--<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>-->
                                 </div>
-                                <div class="room_img-item">
+<!--                                <div class="room_img-item">
                                     <img src="images/room/detail/lager/img-1.jpg" alt="">    
                                     <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
                                 </div>
@@ -103,12 +103,12 @@
                                 <div class="room_img-item">
                                     <img src="images/room/detail/lager/img-1.jpg" alt="">    
                                     <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-                                </div>
+                                </div>-->
                             </div>
                             <!-- END / LAGER IMGAE -->
 
                             <!-- THUMBNAIL IMAGE -->
-                            <div class="room-detail_thumbs">
+<!--                            <div class="room-detail_thumbs">
                                 <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
                                 <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
                                 <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
@@ -117,7 +117,7 @@
                                 <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
                                 <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
                                 <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                            </div>
+                            </div>-->
                             <!-- END / THUMBNAIL IMAGE -->
 
                         </div>
@@ -131,7 +131,7 @@
                                     <img src="images/icon-logo.png" alt="" class="icon-logo">
 
                                     <h6>${sessionScope.auto.modelo}</h6>
-                                    <h6>${sessionScope.auto.renavam}</h6>
+                                    <!--<h6>${sessionScope.auto.renavam}</h6>-->
                                     <p class="price">
                                         <span class="amout">${sessionScope.auto.valorDeLocacao}</span>  /dia
                                     </p>
@@ -155,7 +155,7 @@
                 <!-- END / DETAIL -->
 
                 <!-- TAB -->
-                <div class="room-detail_tab">
+<!--                <div class="room-detail_tab">
 
                     <div class="row">
                         <div class="col-md-3">
@@ -171,7 +171,7 @@
                         <div class="col-md-9">
                             <div class="room-detail_tab-content tab-content">
 
-                                <!-- OVERVIEW -->
+                                 OVERVIEW 
                                 <div class="tab-pane fade" id="overview">
 
                                     <div class="room-detail_overview">
@@ -202,18 +202,18 @@
                                     </div>
 
                                 </div>
-                                <!-- END / OVERVIEW -->
+                                 END / OVERVIEW 
 
-                                <!-- AMENITIES -->
+                                 AMENITIES 
 
-                                <!-- END / AMENITIES -->
+                                 END / AMENITIES 
 
-                                <!-- PACKAGE -->
+                                 PACKAGE 
                                 <div class="tab-pane fade" id="package">
 
                                     <div class="room-detail_package">
 
-                                        <!-- ITEM package -->
+                                         ITEM package 
                                         <div class="room-package_item">
 
                                             <div class="text">
@@ -228,9 +228,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- END / ITEM package -->
+                                         END / ITEM package 
 
-                                        <!-- ITEM package -->
+                                         ITEM package 
                                         <div class="room-package_item">
 
                                             <div class="text">
@@ -245,9 +245,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- END / ITEM package -->
+                                         END / ITEM package 
 
-                                        <!-- ITEM package -->
+                                         ITEM package 
                                         <div class="room-package_item">
 
                                             <div class="text">
@@ -262,23 +262,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- END / ITEM package -->
+                                         END / ITEM package 
                                     </div>
 
                                 </div>
-                                <!-- END / PACKAGE -->
+                                 END / PACKAGE 
 
-                                <!-- RATES -->
+                                 RATES 
 
-                                <!-- END / RATES -->
+                                 END / RATES 
 
-                                <!-- CALENDAR -->
+                                 CALENDAR -->
                                 <div class="tab-pane fade" id="calendar">
 
-                                    <div class="room-detail_calendar-wrap row">
+<!--                                    <div class="room-detail_calendar-wrap row">
 
                                         <div class="col-sm-6">
-                                            <!-- CALENDAR ITEM -->
+                                             CALENDAR ITEM 
                                             <div class="calendar_custom">
 
                                                 <div class="calendar_title">
@@ -357,12 +357,12 @@
                                                 </table>
 
                                             </div>
-                                            <!-- END CALENDAR ITEM -->
+                                             END CALENDAR ITEM 
                                         </div>
 
                                         <div class="col-sm-6">
 
-                                            <!-- CALENDAR ITEM -->
+                                             CALENDAR ITEM 
                                             <div class="calendar_custom">
 
                                                 <div class="calendar_title">
@@ -441,7 +441,7 @@
                                                 </table>
 
                                             </div>
-                                            <!-- END CALENDAR ITEM -->
+                                             END CALENDAR ITEM 
                                         </div>
 
                                         <div class="calendar_status text-center col-sm-12">
@@ -451,15 +451,15 @@
                                     </div>
 
                                 </div>
-                                <!-- END / CALENDAR -->
+                             
 
                             </div>
                         </div>
 
-                    </div>
+                    </div>-->
 
                 </div>
-                <!-- END / TAB -->
+            
 
                 <!-- COMPARE ACCOMMODATION -->
                 <div class="room-detail_compare">

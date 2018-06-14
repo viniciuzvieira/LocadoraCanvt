@@ -65,8 +65,8 @@ public class ClienteFisico extends Cliente implements Serializable {
     }
 
     public ClienteFisico(String usuario, String hashSenha,Boolean disabled, String end, String UF, String complemento, String bairro, String telefone,
-            String email, String nomeCompleto, String CPF, String dataNasc, String valCNH, String sexo, String numeroCNH, String cidade, String numero, String CEP) {
-        super(usuario,hashSenha,disabled, end, UF, complemento, bairro, telefone, email, cidade, numero, CEP);
+            String email, String nomeCompleto, String CPF, String dataNasc, String valCNH, String sexo, String numeroCNH, String cidade, String numero, String CEP,String tipoUser) {
+        super(usuario,hashSenha,disabled, end, UF, complemento, bairro, telefone, email, cidade, numero, CEP,tipoUser);
         this.nomeCompleto = nomeCompleto;
         this.CPF = CPF;
         this.dataNasc = dataNasc;

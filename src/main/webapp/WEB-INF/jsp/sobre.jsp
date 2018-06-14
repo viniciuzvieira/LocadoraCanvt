@@ -78,7 +78,7 @@
                         <div class="about-item">
 
                             <div class="img owl-single">
-                                <img src="images/about/img-1.jpg" alt="">
+                                <!--<img src="images/logo-header.png" alt="">-->    
                             </div>
 
                             <div class="text">
@@ -153,7 +153,7 @@
 
                                         <div class="text">
                                             <h2>CASSIA BARBOSA</h2>
-                                            <span>Analista de Ssistemas Senior</span>
+                                            <span>Analista de Sistemas Senior</span>
                                             
                                         </div>
 
