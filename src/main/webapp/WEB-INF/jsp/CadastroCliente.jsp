@@ -113,7 +113,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="datanasc">Data de nascimento:<sup>*</sup></label>
-                                            <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc">
+                                            <input  type="text" class="input-text" id="datanasc" placeholder="DD/MM/AAAA" name="datanasc" maxlength="11" onkeypress="mascara(this, '##/##/####')">
                                         </div>
 
                                         <div class="col-sm-3">
@@ -167,7 +167,7 @@
                                             <input type="password" class="input-text" id="senha" placeholder="Senha" name="senha">
                                         </div>
                                         <div class="col-sm-6">
-                                            <button id="cadastro" class="awe-btn awe-btn-13" type="submit">CADASTRAR</button>
+                                            <button id="" class="awe-btn awe-btn-13" type="submit">CADASTRAR</button>
                                         </div>
                                         
                                     </form>      
@@ -208,6 +208,7 @@
         <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
         <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/criaCampo.js"></script>
         <script type="text/javascript" src="js/procuraCEP.js"></script>
         <script type="text/javascript" src="js/validaCadastroCliente.js"></script>
         <script type="text/javascript" src="js/sweetalert.min.js"></script>

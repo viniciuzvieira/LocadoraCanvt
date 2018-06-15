@@ -62,7 +62,7 @@ public class InserirCartao extends HttpServlet {
             Logger.getLogger(InserirCartao.class.getName()).log(Level.SEVERE, null, ex);
         }
         response.sendRedirect(request.getContextPath()
-                + "/MeusPedidos");
+                + "/SucessoCartao");
     }
 
 }

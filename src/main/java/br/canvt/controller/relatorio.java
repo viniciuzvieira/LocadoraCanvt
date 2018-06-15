@@ -54,8 +54,9 @@ public class relatorio extends HttpServlet {
         String dAte = request.getParameter("ate");
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         List<Venda> relatorio = (List) sessao.getAttribute("relatorio");
-        if(relatorio==null){
-            relatorio=new ArrayList();
+    
+        if (relatorio == null) {
+            relatorio = new ArrayList();
         }
         Date Dretirada = null;
         Date Dentrega = null;

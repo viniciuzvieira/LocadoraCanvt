@@ -96,7 +96,7 @@
 
 
                                 <div class="reservation-billing-detail">
-                                    <form action="./InserirCartao" method="post" >
+                                    <form action="./gerarBoleto" method="post" >
                                         <h2>GERAR BOLETO </h2>
                                         <button class="awe-btn awe-btn-13" type="submit">Gerar Boleto</button>
                                     </form>

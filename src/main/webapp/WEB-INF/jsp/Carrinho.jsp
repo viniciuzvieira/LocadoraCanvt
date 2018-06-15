@@ -102,22 +102,24 @@
                                                     <td>${item.dataRetirada}</td>
                                                     <td>${item.dataDeDevolucao}</td>
                                                     <td>${item.valorParcial} </td>
-                                                    
+
                                                     <td>
                                                         <form action="./Carrinho" method="post">
 
                                                             <input type="hidden" name="retirado" value="${item.auto.renavam}">
+                                                            <input type="hidden" name="dataD" value="${item.dataDeDevolucao}">
+                                                            <input type="hidden" name="dataR" value="${item.dataRetirada}">
                                                             <button name="remove" value="true" type="submit"><span class="alert-warning">X</span></button>
                                                         </form>
                                                     </td> 
                                                 </tr>
                                             </c:forEach>
 
-                                        <td>${Total}</td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>                               
-                                        <td></td>
+                                        <td>${Total}</td>
                                         </tbody>
                                     </table>
                                     <br/>

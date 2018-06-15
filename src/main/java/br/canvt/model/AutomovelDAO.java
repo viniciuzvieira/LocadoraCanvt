@@ -169,14 +169,14 @@ public class AutomovelDAO {
 
     public Automovel procurar(String Renavam) {
         String query = "SELECT * FROM AUTO "
-                + "WHERE (RENAVAM=?) AND (DISPONIVEL=?)";
+                + "WHERE (RENAVAM=?)";
 
         Automovel auto = new Automovel();
         try (Connection conn = getConnection();
                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
             stmt.setString(1, Renavam);
-            stmt.setBoolean(2, true);
+//            stmt.setBoolean(2, true);
 
             try (ResultSet resultados = stmt.executeQuery()) {
 
@@ -220,6 +220,10 @@ public class AutomovelDAO {
                 + "PLACA=?,KILOMETRAGEM=?,NUMEROCHASSI=?,COR=?, "
                 + "PORTAS=?,COMBUSTIVEL=?,VALORDELOCACAO=?,IMAGEM=? "
                 + "WHERE RENAVAM=? ";
+        
+        System.out.println(auto.getMarca()+auto.getModelo()+auto.getAno()+auto.getCategoria()+
+                auto.getPlaca()+auto.getKilometragem()+auto.getNumeroChassi()+auto.getCor()+
+                auto.getPortas()+auto.getCombustivel()+auto.getValorDeLocacao());
         Connection con = null;
         PreparedStatement stmt = null;
         try {

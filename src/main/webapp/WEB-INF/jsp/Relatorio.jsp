@@ -98,16 +98,28 @@
 
                                         </thead>
                                         <tbody>
-                                        <c:forEach items="${relatorio}" var="item">
-                                            <tr>
-                                                <td>${item.id}</td>
-                                                <td>${item.cliente.CPF}</td>
+                                            <c:forEach items="${relatorio}" var="item">
+                                                <tr class="menu">
+                                                    <td>${item.id}</td>
+                                                    <td>${item.cliente.CPF}</td>
+                                                    <td>${item.valorTotal}</td>
+                                                    <td>${item.dataVenda}</td>
 
-                                                <td>${item.valorTotal}</td>
-                                                <td>${item.dataVenda}</td>
-                                                <td>${item.finalizada}</td>
+                                                    <td>
+                                            <li style="list-style-type: none;">
+                                                <a href="#"><span class="fas fa-plus"></span></a>
+                                                <ul class="sub-menu">
+                                                    <div>
+                                                        ${item.valorTotal}
+                                                    </div> 
+                                                </ul>
+                                            </li>
 
-                                              
+
+
+
+                                            </td>
+
                                             </tr>
 
                                         </c:forEach>

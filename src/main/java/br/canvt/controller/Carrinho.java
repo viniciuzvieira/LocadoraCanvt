@@ -48,7 +48,7 @@ public class Carrinho extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession sessao = request.getSession();
-
+        HttpSession sessao1 = request.getSession();
         AutomovelDAO dao = new AutomovelDAO();
         HttpSession sessaolog = request.getSession();
         String btn = request.getParameter("remove");
@@ -61,32 +61,52 @@ public class Carrinho extends HttpServlet {
         }
 
         if ("true".equals(btn)) {
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
             String autoretirado = request.getParameter("retirado");
+            String dataD = request.getParameter("dataD");
+            System.out.println(dataD);
+            String dataR = request.getParameter("dataR");
             Automovel auto = dao.procurar(autoretirado);
-
+            
+            Double total = (Double) sessao.getAttribute("Total");
             int index = 0;
-            List<CarrinhoDeCompras> carrinho = (List) sessao.getAttribute("reserva");
+            List<CarrinhoDeCompras> carrinho = (List) sessao.getAttribute("carrinho");
+
             if (carrinho == null) {
                 carrinho = new ArrayList();
 
             } else {
                 for (CarrinhoDeCompras item : carrinho) {
+                    System.out.println(carrinho.size());
+                    if (autoretirado.equals(item.getAuto().getRenavam())) {
+                        Date Dretirada = null;
+                        Date Dentrega = null;
+                        try {
+                            Dretirada = formato.parse(dataR);
+                            Dentrega = formato.parse(dataD);
+                            double dif = ((Dentrega.getTime() - Dretirada.getTime()) / 86400000 + 1);
+                            System.out.println("88"+dif);
+                            System.out.println(auto.getValorDeLocacao());
+                            double valorParcial = dif * auto.getValorDeLocacao();
+                            total = total - valorParcial;
+                            System.out.println(total);
+                        } catch (ParseException ex) {
+                            Logger.getLogger(Carrinho.class.getName()).log(Level.SEVERE, null, ex);
+                        }
 
-                    if (item.getAuto().getRenavam().equals(autoretirado)) {
-                        carrinho.remove(auto);
-//                        int i = carrinho.indexOf();
-//                        carrinho.remove(i);
+                        carrinho.remove(item);
+                        dao.receberAuto(autoretirado);
                         break;
                     }
 
                 }
-            }
 
+            }
+            sessao1.setAttribute("Total", total);
+            sessao.setAttribute("carrinho", carrinho);
             response.sendRedirect(request.getContextPath() + "/reserva");
             return;
         }
-
-        HttpSession sessao1 = request.getSession();
 
         double valorParcial = 0;
         String rena = request.getParameter("auto");

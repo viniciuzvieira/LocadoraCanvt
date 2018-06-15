@@ -6,7 +6,7 @@
 //}
 
 $("#form2").submit(function () {
-    if (document.getElementById("dataRetirada").value > document.getElementById("dataEntrega").value) {
+    if (document.getElementById("dataEntrega").value < document.getElementById("dataRetirada").value) {
         swal('Erro: Data de entrega tem que ser depois da data de retirada.');
         return false;
     }

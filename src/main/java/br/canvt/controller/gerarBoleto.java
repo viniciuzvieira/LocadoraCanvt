@@ -63,6 +63,6 @@ public class gerarBoleto extends HttpServlet {
             Logger.getLogger(InserirCartao.class.getName()).log(Level.SEVERE, null, ex);
         }
         response.sendRedirect(request.getContextPath()
-                + "/SucessoCartao");
+                + "/SucessoBoleto");
     }
 }
