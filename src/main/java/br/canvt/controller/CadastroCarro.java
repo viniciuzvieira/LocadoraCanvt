@@ -63,6 +63,7 @@ public class CadastroCarro extends HttpServlet {
         auto.setPortas(request.getParameter("portas"));
         auto.setCombustivel(request.getParameter("combustivel"));
         auto.setKilometragem(request.getParameter("KMs"));
+      
         auto.setImagem(input);
         
         

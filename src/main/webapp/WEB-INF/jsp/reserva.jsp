@@ -77,30 +77,7 @@
                     <div class="accomd-modations">
                         <div class="row">
                             <div class="col-md-12">
-                                <form action= "./ConsultaCliete" method="post">
-                                    <br/>
-                                    <input type="text" class="input-text" placeholder="Buscar">
-                                    <button class="awe-btn awe-btn-13" type="submit" style="font-size:11pt; padding:11px; width:auto; height:auto;">Buscar</button>
-
-
-
-                                    <div style="float: right">
-                                        <label>Categoria:</label>
-                                        <select>
-                                            <option>Clássicos</option>
-                                            <option>Esportivos</option>
-                                            <option>Luxuosos</option>
-                                            <option>Off Road</option>
-                                            <option>Super Esportivos</option>
-                                        </select>
-                                        <br/>
-                                        <label>Preço:</label>
-                                        <select>
-                                            <option>Menor preço</option>
-                                            <option>Maior preço</option>
-                                        </select>
-                                    </div>
-                                </form>
+                             
 
                                 <div class="accomd-modations-header">
                                     <img src="images/icon-accmod.png" alt="icon">

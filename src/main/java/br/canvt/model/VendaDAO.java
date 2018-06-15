@@ -349,6 +349,118 @@ public class VendaDAO {
     }
 //
 
+    public Venda listarAbertasID(int id) {
+        String sql = "SELECT * FROM VENDA WHERE ID = ?";
+        String sql2 = "SELECT * FROM CLIENTEF WHERE CPF = ?";
+        String sql4 = "SELECT * FROM AUTO WHERE RENAVAM = ?";
+        String sql3 = "SELECT * FROM ITENSCARRINHO WHERE IDVENDA = ?";
+        Connection con = null;
+        PreparedStatement stmt = null;
+        List<Venda> lista = new ArrayList();
+        ResultSet resultV = null;
+        ResultSet resultados = null;
+        ResultSet resultP = null;
+        List<CarrinhoDeCompras> car = new ArrayList();
+        ResultSet resultF = null;
+        Venda venda = new Venda();
+        try {
+
+            con = BDConexao.getConnection();
+            stmt = con.prepareStatement(sql);
+            stmt.setInt(1, id);
+            resultV = stmt.executeQuery();
+
+            while (resultV.next()) {
+                System.out.println("372"
+                        + "");
+                ClienteFisico c = new ClienteFisico();
+
+                venda.setId(resultV.getInt("ID"));
+                venda.setValorTotal(resultV.getDouble("VALORTOTAL"));
+                venda.setDataVenda(resultV.getDate("DATAVENDA"));
+                String idC = (resultV.getString("CLIENTECPF"));
+
+                stmt = con.prepareStatement(sql2);
+                stmt.setString(1, idC);
+                resultados = stmt.executeQuery();
+                while (resultados.next()) {
+                    c.setCPF(resultados.getString("CPF"));
+                    c.setNomeCompleto(resultados.getString("NOME"));
+                    c.setSexo(resultados.getString("SEXO"));
+                    System.out.println("390");
+                    c.setTelefone(resultados.getString("TELEFONE"));
+                    c.setEmail(resultados.getString("EMAIL"));
+                    c.setNumeroCNH(resultados.getString("NUMEROCNH"));
+                    c.setEnd(resultados.getString("ENDERECO"));
+                    c.setComplemento(resultados.getString("COMPLEMENTO"));
+                    c.setNumero(resultados.getString("NUMERO"));
+                    c.setBairro(resultados.getString("BAIRRO"));
+                    c.setCEP(resultados.getString("CEP"));
+                    c.setCidade(resultados.getString("CIDADE"));
+                    c.setDataNasc(resultados.getString("DATANASCIMENTO"));
+                    c.setUF(resultados.getString("ESTADO"));
+                    c.setDisabled(resultados.getBoolean("DISABLED"));
+                    c.setUsuario(resultados.getString("USERNAME"));
+                    c.setHashSenha(resultados.getString("SENHA"));
+                }
+                venda.setCliente(c);
+                venda.setFinalizada(resultV.getBoolean("FINALIZADA"));
+                System.out.println(venda.getId());
+                stmt = con.prepareStatement(sql3);
+//                String renavam = resultV.getString("AUTORENAVAM");
+                stmt.setInt(1, venda.getId());
+
+                resultP = stmt.executeQuery();
+                System.out.println("414");
+                while (resultP.next()) {
+                    System.out.println("416");
+                    CarrinhoDeCompras item = new CarrinhoDeCompras();
+                    String dataEntrega = resultP.getString("DATAENTREGA");
+                    String DataDeDevolucao = resultP.getString("DATADEVOLUCAO");
+                    Double val = resultP.getDouble("VALORPARCIAL");
+                    String Renavam = resultP.getString("RENAVAM");
+
+                    stmt = con.prepareStatement(sql4);
+                    stmt.setString(1, Renavam);
+                    resultF = stmt.executeQuery();
+                    while (resultF.next()) {
+
+                        Automovel auto = new Automovel();
+
+                        auto.setMarca(resultF.getString("MARCA"));
+                        auto.setModelo(resultF.getString("MODELO"));
+                        auto.setAno(resultF.getString("ANO"));
+                        auto.setCategoria(resultF.getString("CATEGORIA"));
+                        auto.setPlaca(resultF.getString("PLACA"));
+                        auto.setRenavam(resultF.getString("RENAVAM"));
+                        auto.setKilometragem(resultF.getString("KILOMETRAGEM"));
+                        auto.setNumeroChassi(resultF.getString("NUMEROCHASSI"));
+                        auto.setCor(resultF.getString("COR"));
+                        auto.setPortas(resultF.getString("PORTAS"));
+                        auto.setCombustivel(resultF.getString("COMBUSTIVEL"));
+                        auto.setValorDeLocacao(resultF.getDouble("VALORDELOCACAO"));
+                        auto.setImagem(resultF.getAsciiStream("IMAGEM"));
+                        auto.setDisponivel(resultF.getBoolean("DISPONIVEL"));
+                        System.out.println("444");
+                        item.setAuto(auto);
+                        item.setDataDeDevolucao(DataDeDevolucao);
+                        item.setDataRetirada(dataEntrega);
+                        item.setValorParcial(val);
+
+                    }
+                    car.add(item);
+
+                }
+                System.out.println(venda.getId());
+                venda.setCar(car);
+
+            }
+        } catch (SQLException e) {
+
+        }
+        return venda;
+    }
+
     public List<Venda> listarAbertasCPF(String CPF) {
         String sql = "SELECT * FROM VENDA WHERE CLIENTECPF = ?";
         String sql2 = "SELECT * FROM CLIENTEF WHERE CPF = ?";
@@ -460,4 +572,5 @@ public class VendaDAO {
         }
         return lista;
     }
+
 }

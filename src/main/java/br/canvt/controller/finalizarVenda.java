@@ -68,13 +68,16 @@ public class finalizarVenda extends HttpServlet {
                 dispatcher.forward(request, response);
             }
         } else if ("true".equals(finalizar)) {
-            int id = Integer.parseInt(request.getParameter("id"));
-
-            for (CarrinhoDeCompras c : Car) {
-
-                String renavam = c.getAuto().getRenavam();
-
-                autoDao.receberAuto(renavam);
+            String idS =(request.getParameter("id"));
+            Integer id=Integer.parseInt(idS);
+            System.out.println(id+" 72");
+                Venda venda1=dao.listarAbertasID(id);
+                System.out.println("74 "+venda1.getId());
+                List<CarrinhoDeCompras> novoCar=venda1.getCar();
+                System.out.println("SIZE"+novoCar.size());
+            for (CarrinhoDeCompras car1 : novoCar) {
+                   autoDao.receberAuto(car1.getAuto().getRenavam());
+              
             }
             dao.finalizarVenda(id);
             session.invalidate();

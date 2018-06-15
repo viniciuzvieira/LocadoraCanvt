@@ -66,17 +66,7 @@
                         <a href="home">Principal</a>
                     </li>
 
-                    <li>
-                        <a href="#">Categoria<span class="fa fa-caret-down"></span></a>
-                        <ul class="sub-menu">
-                            <li><a href="categoria">Classicos</a></li>
-                            <li><a href="categoria">Esportivos</a></li>
-                            <li><a href="categoria">Luxuosos</a></li>
-                            <li><a href="categoria">Off Road</a></li>
-                            <li><a href="categoria">Super Esportivos</a></li>
-                        </ul>
-                    </li>
-
+                 
                     <li>
                         <a href="reserva">Reserva</a>
                     </li>
@@ -183,7 +173,7 @@
                         <li><a href="CriarLogin">CriarLogin</a>
 
                         </c:if>
-                    <li><a href="contato">Contato</a></li>
+                    
 
                 </ul>
             </nav>

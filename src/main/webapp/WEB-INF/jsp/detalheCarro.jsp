@@ -80,44 +80,44 @@
                                     <img src="images/Cars/ferrari-carro.jpg" alt="">    
                                     <!--<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>-->
                                 </div>
-<!--                                <div class="room_img-item">
-                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
-                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-                                </div>
-                                <div class="room_img-item">
-                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
-                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-                                </div>
-                                <div class="room_img-item">
-                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
-                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-                                </div>
-                                <div class="room_img-item">
-                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
-                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-                                </div>
-                                <div class="room_img-item">
-                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
-                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-                                </div>
-                                <div class="room_img-item">
-                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
-                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-                                </div>-->
+                                <!--                                <div class="room_img-item">
+                                                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
+                                                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+                                                                </div>
+                                                                <div class="room_img-item">
+                                                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
+                                                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+                                                                </div>
+                                                                <div class="room_img-item">
+                                                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
+                                                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+                                                                </div>
+                                                                <div class="room_img-item">
+                                                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
+                                                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+                                                                </div>
+                                                                <div class="room_img-item">
+                                                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
+                                                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+                                                                </div>
+                                                                <div class="room_img-item">
+                                                                    <img src="images/room/detail/lager/img-1.jpg" alt="">    
+                                                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
+                                                                </div>-->
                             </div>
                             <!-- END / LAGER IMGAE -->
 
                             <!-- THUMBNAIL IMAGE -->
-<!--                            <div class="room-detail_thumbs">
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                                <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
-                            </div>-->
+                            <!--                            <div class="room-detail_thumbs">
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                            <a href="#"><img src="images/room/detail/img-2.jpg" alt=""></a>
+                                                        </div>-->
                             <!-- END / THUMBNAIL IMAGE -->
 
                         </div>
@@ -155,311 +155,15 @@
                 <!-- END / DETAIL -->
 
                 <!-- TAB -->
-<!--                <div class="room-detail_tab">
+                <div class="room-detail_tab">
 
                     <div class="row">
-                        <div class="col-md-3">
-                            <ul class="room-detail_tab-header">
-                                <li><a href="#overview" data-toggle="tab">Descrição</a></li>
+                        <h1>${itens.descricao}</h1>
+                    </div>
 
-                                <li><a href="#package" data-toggle="tab">Pacotes</a></li>
-
-                                <li><a href="#calendar" data-toggle="tab">Calendario</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-md-9">
-                            <div class="room-detail_tab-content tab-content">
-
-                                 OVERVIEW 
-                                <div class="tab-pane fade" id="overview">
-
-                                    <div class="room-detail_overview">
-                                        <h5 class='text-uppercase
-                                            '>de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
-                                        <p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
-
-                                        <div class="row">
-                                            <div class="col-xs-6 col-md-4">
-                                                <h6>SPECIAL ROOM</h6>
-                                                <ul>
-                                                    <li>Max: 4 Person(s)</li>
-                                                    <li>Size: 35 m2 / 376 ft2</li>
-                                                    <li>View: Ocen</li>
-                                                    <li>Bed: King-size or twin beds</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-xs-6 col-md-4">
-                                                <h6>SERVICE ROOM</h6>
-                                                <ul>
-                                                    <li>Oversized work desk</li>
-                                                    <li>Hairdryer</li>
-                                                    <li>Iron/ironing board upon request</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                 END / OVERVIEW 
-
-                                 AMENITIES 
-
-                                 END / AMENITIES 
-
-                                 PACKAGE 
-                                <div class="tab-pane fade" id="package">
-
-                                    <div class="room-detail_package">
-
-                                         ITEM package 
-                                        <div class="room-package_item">
-
-                                            <div class="text">
-                                                <h4><a href="#">package standar</a></h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-
-                                                <div class="room-package_price">
-                                                    <p class="price">
-                                                        <span class="amout">$260</span> / Package
-                                                    </p>
-                                                    <a href="#" class="awe-btn awe-btn-default">Book package</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                         END / ITEM package 
-
-                                         ITEM package 
-                                        <div class="room-package_item">
-
-                                            <div class="text">
-                                                <h4><a href="#">package standar</a></h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-
-                                                <div class="room-package_price">
-                                                    <p class="price">
-                                                        <span class="amout">$260</span> / Package
-                                                    </p>
-                                                    <a href="#" class="awe-btn awe-btn-default">Book package</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                         END / ITEM package 
-
-                                         ITEM package 
-                                        <div class="room-package_item">
-
-                                            <div class="text">
-                                                <h4><a href="#">package standar</a></h4>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-
-                                                <div class="room-package_price">
-                                                    <p class="price">
-                                                        <span class="amout">$260</span> / Package
-                                                    </p>
-                                                    <a href="#" class="awe-btn awe-btn-default">Book package</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                         END / ITEM package 
-                                    </div>
-
-                                </div>
-                                 END / PACKAGE 
-
-                                 RATES 
-
-                                 END / RATES 
-
-                                 CALENDAR -->
-                                <div class="tab-pane fade" id="calendar">
-
-<!--                                    <div class="room-detail_calendar-wrap row">
-
-                                        <div class="col-sm-6">
-                                             CALENDAR ITEM 
-                                            <div class="calendar_custom">
-
-                                                <div class="calendar_title">
-                                                    <span class="calendar_month">JUNE</span>
-                                                    <span class="calendar_year">2015</span>
-
-                                                    <a href="#" class="calendar_prev calendar_corner"><i class="lotus-icon-left-arrow"></i></a>
-                                                </div>
-
-                                                <table class="calendar_tabel">
-
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Su</th>
-                                                            <th>Mo</th>
-                                                            <th>Tu</th>
-                                                            <th>We</th>
-                                                            <th>Th</th>
-                                                            <th>Fr</th>
-                                                            <th>Sa</th>
-                                                        </tr>
-                                                    </thead>
-
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apb-calendar_current-date">
-                                                            <a href="#"><small>1</small></a>
-                                                        </td>
-                                                        <td><a href="#"><small>2</small></a></td>
-                                                        <td><a href="#"><small>3</small></a></td>
-                                                        <td><a href="#"><small>4</small></a></td>
-                                                        <td><a href="#"><small>5</small></a></td>
-                                                        <td><a href="#"><small>6</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>7</small></a></td>
-                                                        <td><a href="#"><small>8</small></a></td>
-                                                        <td><a href="#"><small>9</small></a></td>
-                                                        <td><a href="#"><small>10</small></a></td>
-                                                        <td class="apb-calendar_current-select"><a href="#"><small>11</small></a></td>
-                                                        <td class="apb-calendar_current-select"><a href="#"><small>12</small></a></td>
-                                                        <td><a href="#"><small>13</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>14</small></a></td>
-                                                        <td><a href="#"><small>15</small></a></td>
-                                                        <td class="not-available"><a href="#"><small>16</small></a></td>
-                                                        <td class="not-available"><a href="#"><small>17</small></a></td>
-                                                        <td><a href="#"><small>18</small></a></td>
-                                                        <td><a href="#"><small>19</small></a></td>
-                                                        <td><a href="#"><small>20</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>21</small></a></td>
-                                                        <td><a href="#"><small>22</small></a></td>
-                                                        <td><a href="#"><small>23</small></a></td>
-                                                        <td><a href="#"><small>24</small></a></td>
-                                                        <td><a href="#"><small>25</small></a></td>
-                                                        <td><a href="#"><small>26</small></a></td>
-                                                        <td><a href="#"><small>27</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>28</small></a></td>
-                                                        <td><a href="#"><small>29</small></a></td>
-                                                        <td><a href="#"><small>30</small></a></td>
-                                                        <td><a href="#"><small>31</small></a></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-
-                                                </table>
-
-                                            </div>
-                                             END CALENDAR ITEM 
-                                        </div>
-
-                                        <div class="col-sm-6">
-
-                                             CALENDAR ITEM 
-                                            <div class="calendar_custom">
-
-                                                <div class="calendar_title">
-                                                    <span class="calendar_month">JUNE</span>
-                                                    <span class="calendar_year">2015</span>
-
-                                                    <a href="#" class="calendar_next calendar_corner"><i class="lotus-icon-right-arrow"></i></a>
-                                                </div>
-
-                                                <table class="calendar_tabel">
-
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Su</th>
-                                                            <th>Mo</th>
-                                                            <th>Tu</th>
-                                                            <th>We</th>
-                                                            <th>Th</th>
-                                                            <th>Fr</th>
-                                                            <th>Sa</th>
-                                                        </tr>
-                                                    </thead>
-
-                                                    <tr>
-                                                        <td></td>
-                                                        <td class="apb-calendar_current-date">
-                                                            <a href="#"><small>1</small></a>
-                                                        </td>
-                                                        <td><a href="#"><small>2</small></a></td>
-                                                        <td><a href="#"><small>3</small></a></td>
-                                                        <td><a href="#"><small>4</small></a></td>
-                                                        <td><a href="#"><small>5</small></a></td>
-                                                        <td><a href="#"><small>6</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>7</small></a></td>
-                                                        <td><a href="#"><small>8</small></a></td>
-                                                        <td><a href="#"><small>9</small></a></td>
-                                                        <td><a href="#"><small>10</small></a></td>
-                                                        <td class="apb-calendar_current-select"><a href="#"><small>11</small></a></td>
-                                                        <td class="apb-calendar_current-select"><a href="#"><small>12</small></a></td>
-                                                        <td><a href="#"><small>13</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>14</small></a></td>
-                                                        <td><a href="#"><small>15</small></a></td>
-                                                        <td class="not-available"><a href="#"><small>16</small></a></td>
-                                                        <td class="not-available"><a href="#"><small>17</small></a></td>
-                                                        <td><a href="#"><small>18</small></a></td>
-                                                        <td><a href="#"><small>19</small></a></td>
-                                                        <td><a href="#"><small>20</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>21</small></a></td>
-                                                        <td><a href="#"><small>22</small></a></td>
-                                                        <td><a href="#"><small>23</small></a></td>
-                                                        <td><a href="#"><small>24</small></a></td>
-                                                        <td><a href="#"><small>25</small></a></td>
-                                                        <td><a href="#"><small>26</small></a></td>
-                                                        <td><a href="#"><small>27</small></a></td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td><a href="#"><small>28</small></a></td>
-                                                        <td><a href="#"><small>29</small></a></td>
-                                                        <td><a href="#"><small>30</small></a></td>
-                                                        <td><a href="#"><small>31</small></a></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-
-                                                </table>
-
-                                            </div>
-                                             END CALENDAR ITEM 
-                                        </div>
-
-                                        <div class="calendar_status text-center col-sm-12">
-                                            <span>Available</span>
-                                            <span class="not-available">Not Available</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                             
-
-                            </div>
-                        </div>
-
-                    </div>-->
 
                 </div>
-            
+
 
                 <!-- COMPARE ACCOMMODATION -->
                 <div class="room-detail_compare">

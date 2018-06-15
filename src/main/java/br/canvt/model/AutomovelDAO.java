@@ -152,6 +152,7 @@ public class AutomovelDAO {
             stmt.setString(11, auto.getCombustivel());
             stmt.setDouble(12, auto.getValorDeLocacao());
             stmt.setBlob(13, auto.getImagem());
+
             stmt.setBoolean(14, true);
 
             stmt.execute();
@@ -195,6 +196,7 @@ public class AutomovelDAO {
                     auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
                     auto.setImagem(resultados.getAsciiStream("IMAGEM"));
                     auto.setDisponivel(resultados.getBoolean("DISPONIVEL"));
+
                 }
             }
         } catch (SQLException ex) {
@@ -203,6 +205,42 @@ public class AutomovelDAO {
         return auto;
     }
 
+    public Automovel procurarByModel(String model) {
+        String query = "SELECT * FROM AUTO "
+                + "WHERE (MODELO=?)";
+
+        Automovel auto = new Automovel();
+        try (Connection conn = getConnection();
+                PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, model);
+//            stmt.setBoolean(2, true);
+
+            try (ResultSet resultados = stmt.executeQuery()) {
+
+                if (resultados.next()) {
+                    auto.setMarca(resultados.getString("MARCA"));
+                    auto.setModelo(resultados.getString("MODELO"));
+                    auto.setAno(resultados.getString("ANO"));
+                    auto.setCategoria(resultados.getString("CATEGORIA"));
+                    auto.setPlaca(resultados.getString("PLACA"));
+                    auto.setRenavam(resultados.getString("RENAVAM"));
+                    auto.setKilometragem(resultados.getString("KILOMETRAGEM"));
+                    auto.setNumeroChassi(resultados.getString("NUMEROCHASSI"));
+                    auto.setCor(resultados.getString("COR"));
+                    auto.setPortas(resultados.getString("PORTAS"));
+                    auto.setCombustivel(resultados.getString("COMBUSTIVEL"));
+                    auto.setValorDeLocacao(resultados.getDouble("VALORDELOCACAO"));
+                    auto.setImagem(resultados.getAsciiStream("IMAGEM"));
+                    auto.setDisponivel(resultados.getBoolean("DISPONIVEL"));
+
+                }
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return auto;
+    }
 //    public void excluir(String user) {
 //        String sql = "DELETE FROM LOGIN WHERE (USUARIO=?)";
 //        Connection connection = null;
@@ -215,15 +253,16 @@ public class AutomovelDAO {
 //            System.err.println(ex.getMessage());
 //        }
 //    }
+
     public void Atualizar(Automovel auto, String renavamAtual) throws SQLException {
         String query = "UPDATE AUTO SET MARCA=?, MODELO=?,ANO=?,CATEGORIA=?, "
                 + "PLACA=?,KILOMETRAGEM=?,NUMEROCHASSI=?,COR=?, "
                 + "PORTAS=?,COMBUSTIVEL=?,VALORDELOCACAO=?,IMAGEM=? "
                 + "WHERE RENAVAM=? ";
-        
-        System.out.println(auto.getMarca()+auto.getModelo()+auto.getAno()+auto.getCategoria()+
-                auto.getPlaca()+auto.getKilometragem()+auto.getNumeroChassi()+auto.getCor()+
-                auto.getPortas()+auto.getCombustivel()+auto.getValorDeLocacao());
+
+        System.out.println(auto.getMarca() + auto.getModelo() + auto.getAno() + auto.getCategoria()
+                + auto.getPlaca() + auto.getKilometragem() + auto.getNumeroChassi() + auto.getCor()
+                + auto.getPortas() + auto.getCombustivel() + auto.getValorDeLocacao());
         Connection con = null;
         PreparedStatement stmt = null;
         try {
@@ -245,6 +284,7 @@ public class AutomovelDAO {
             stmt.setBlob(12, auto.getImagem());
 
             stmt.setString(13, renavamAtual);
+
             stmt.execute();
         } finally {
             if (stmt != null && !stmt.isClosed()) {

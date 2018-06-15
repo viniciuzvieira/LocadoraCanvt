@@ -168,6 +168,7 @@
                                                 <label>Preço diária R$:<sup>*</sup></label>
                                                 <input type="text" value="${sessionScope.automovel.valorDeLocacao}" class="form-control" id="val" placeholder=" " name="val">
                                             </div>
+                                       
                                             <div class="row">
                                                 <div class="form-group col md-12 col-lg-6 col-sm-4">
                                                     <label for="file">Escolha a imagem do veiculo</label>
